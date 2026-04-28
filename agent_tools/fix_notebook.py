@@ -1,0 +1,121 @@
+import json
+import os
+
+# 設定檔案路徑
+ipynb_path = r"c:\Users\0419mch\Desktop\project_0414\影片偵測.ipynb"
+
+# 1. 讀取 Notebook
+with open(ipynb_path, 'r', encoding='utf-8') as f:
+    nb = json.load(f)
+
+# 2. 定義批量處理的新原始碼
+new_source = [
+    "# ==========================================\n",
+    "# --- 批量自動偵測版：多影片處理 + 統計報告 ---\n",
+    "# ==========================================\n",
+    "import os, sys, glob, cv2, time\n",
+    "import numpy as np\n",
+    "from ultralytics import YOLO\n",
+    "from tqdm.notebook import tqdm\n",
+    "from collections import defaultdict\n",
+    "\n",
+    "# --- 1. 批量任務清單 ---\n",
+    "TARGET_VIDEOS = [\n",
+    "    r\"c:\\Users\\0419mch\\Desktop\\project_0414\\測試模型用\\模擬_1.mp4\",\n",
+    "    r\"c:\\Users\\0419mch\\Desktop\\project_0414\\測試模型用\\模擬_2.mp4\",\n",
+    "    r\"c:\\Users\\0419mch\\Desktop\\project_0414\\測試模型用\\模擬_3.mp4\"\n",
+    "]\n",
+    "\n",
+    "# --- 2. 偵測設定 ---\n",
+    "CUSTOM_TRAIN_ID = 7\n",
+    "IMG_SIZE       = 640\n",
+    "CONF_THRESHOLD = 0.5\n",
+    "VID_STRIDE     = 1\n",
+    "ENABLE_SAVING  = True\n",
+    "ENABLE_SHOWING = False\n",
+    "\n",
+    "def _run_batch_inference(model, video_list):\n",
+    "    print(f\"準備開始批次任務，共 {len(video_list)} 支影片\")\n",
+    "    \n",
+    "    main_pbar = tqdm(video_list, desc=\"Batch Progress\")\n",
+    "    \n",
+    "    for video_path in main_pbar:\n",
+    "        if not os.path.exists(video_path):\n",
+    "            print(f\"Skip: {video_path}\")\n",
+    "            continue\n",
+    "            \n",
+    "        video_name = os.path.basename(video_path)\n",
+    "        main_pbar.set_description(f\"Processing: {video_name}\")\n",
+    "        \n",
+    "        cap = cv2.VideoCapture(video_path)\n",
+    "        out = None\n",
+    "        class_stats = defaultdict(list)\n",
+    "        frame_count = 0\n",
+    "        \n",
+    "        try:\n",
+    "            w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))\n",
+    "            h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))\n",
+    "            fps = cap.get(cv2.CAP_PROP_FPS) or 30\n",
+    "            total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))\n",
+    "            \n",
+    "            if ENABLE_SAVING:\n",
+    "                save_path = video_path.replace('.mp4', '_detected.mp4')\n",
+    "                out = cv2.VideoWriter(save_path, cv2.VideoWriter_fourcc(*'mp4v'), fps/VID_STRIDE, (w, h))\n",
+    "            \n",
+    "            sub_pbar = tqdm(total=total_frames, desc=f\"  > Frames\", leave=False)\n",
+    "            \n",
+    "            while True:\n",
+    "                success, frame = cap.read()\n",
+    "                if not success: break\n",
+    "                \n",
+    "                frame_count += 1\n",
+    "                sub_pbar.update(1)\n",
+    "                if frame_count % VID_STRIDE != 0: continue\n",
+    "\n",
+    "                results = model.track(frame, imgsz=IMG_SIZE, conf=CONF_THRESHOLD, persist=True, verbose=False)\n",
+    "                annotated = results[0].plot()\n",
+    "\n",
+    "                current_classes = results[0].boxes.cls.cpu().numpy().astype(int)\n",
+    "                for cls_id in model.names.keys():\n",
+    "                    count = np.sum(current_classes == cls_id)\n",
+    "                    class_stats[cls_id].append(count)\n",
+    "\n",
+    "                total_now = len(results[0].boxes)\n",
+    "                overlay = annotated.copy()\n",
+    "                cv2.rectangle(overlay, (10, 10), (420, 80), (0, 0, 0), -1)\n",
+    "                cv2.addWeighted(overlay, 0.6, annotated, 0.4, 0, annotated)\n",
+    "                cv2.putText(annotated, f\"Total: {total_now}\", (25, 55), \n",
+    "                            cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 255), 2)\n",
+    "\n",
+    "                if out: out.write(annotated)\n",
+    "                \n",
+    "            sub_pbar.close()\n",
+    "            \n",
+    "            print(f\"Summary for {video_name}:\")\n",
+    "            for cls_id, name in model.names.items():\n",
+    "                counts = class_stats[cls_id]\n",
+    "                if counts:\n",
+    "                    print(f\"  [{name}]: Max={max(counts)}, Avg={sum(counts)/len(counts):.2f}\")\n",
+    "            \n",
+    "        finally:\n",
+    "            cap.release()\n",
+    "            if out: out.release()\n",
+    "            cv2.destroyAllWindows()\n",
+    "\n",
+    "best_pt = os.path.join(\"runs\", \"detect\", f\"train{CUSTOM_TRAIN_ID}\", \"weights\", \"best.pt\")\n",
+    "if os.path.exists(best_pt):\n",
+    "    model = YOLO(best_pt)\n",
+    "    _run_batch_inference(model, TARGET_VIDEOS)\n",
+    "    print(\"Batch complete!\")\n",
+    "else:\n",
+    "    print(\"Weights not found\")\n"
+]
+
+# 3. 替換 Cell
+nb['cells'][-1]['source'] = new_source
+
+# 4. 存檔
+with open(ipynb_path, 'w', encoding='utf-8') as f:
+    json.dump(nb, f, indent=1, ensure_ascii=False)
+
+print("Batch update successful!")

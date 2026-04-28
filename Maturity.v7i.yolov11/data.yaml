@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['Ripened', 'Semi-Ripened', 'Unripened']
+
+roboflow:
+  workspace: ibsp-u8x8i
+  project: maturity-hehap
+  version: 7
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/ibsp-u8x8i/maturity-hehap/dataset/7

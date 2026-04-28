@@ -1,0 +1,8 @@
+# YOLO Dataset
+path: c:\Users\0419mch\Desktop\project_0414\roboflow_1000_側拍_split
+train: train/images
+val: val/images
+test: test/images
+
+nc: 3
+names: ['level_1', 'level_2', 'level_3']

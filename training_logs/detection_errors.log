@@ -1,0 +1,107 @@
+
+============================================================
+[2026-04-22 12:06:57] ❌ 錯誤發生於：YOLO 二階段微調訓練
+錯誤類型：ZeroDivisionError
+錯誤訊息：division by zero
+完整 Traceback：
+Traceback (most recent call last):
+  File "C:\Users\0419mch\AppData\Local\Temp\ipykernel_25764\682586594.py", line 59, in <module>
+    model_stage2.train(
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\engine\model.py", line 788, in train
+    self.trainer.train()
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\engine\trainer.py", line 244, in train
+    self._do_train()
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\engine\trainer.py", line 430, in _do_train
+    batch = self.preprocess_batch(batch)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\models\yolo\detect\train.py", line 135, in preprocess_batch
+    imgs = nn.functional.interpolate(imgs, size=ns, mode="bilinear", align_corners=False)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\nn\functional.py", line 4692, in interpolate
+    )._upsample_linear_vec(input, output_size, align_corners, scale_factors)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\_decomp\decompositions.py", line 3704, in _upsample_linear_vec
+    return _upsample_linear(input, osize, align_corners, scales)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\_decomp\decompositions.py", line 83, in inner
+    r = f(*tree_map(increase_prec, args), **tree_map(increase_prec, kwargs))
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\_decomp\decompositions.py", line 3813, in _upsample_linear
+    values = [
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\_decomp\decompositions.py", line 3814, in <listcomp>
+    get_values(inp_size, out_size, scales, n_dims - 1 - i)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\_decomp\decompositions.py", line 3802, in get_values
+    scale_factor = _compute_scale(inp_size, out_size, align_corners, scales)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\_decomp\decompositions.py", line 3754, in _compute_scale
+    return 1.0 / scale if scale is not None and scale > 0 else in_size / out_size
+ZeroDivisionError: division by zero
+============================================================
+
+============================================================
+[2026-04-22 12:51:47] ❌ 錯誤發生於：YOLO 一階段基礎訓練
+錯誤類型：KeyError
+錯誤訊息：'CBAM'
+完整 Traceback：
+Traceback (most recent call last):
+  File "C:\Users\0419mch\AppData\Local\Temp\ipykernel_36024\983283656.py", line 33, in <module>
+    model = YOLO(MODEL_CFG).load(PRETRAINED_WEIGHTS)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\models\yolo\model.py", line 76, in __init__
+    super().__init__(model=model, task=task, verbose=verbose)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\engine\model.py", line 142, in __init__
+    self._new(model, task=task, verbose=verbose)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\engine\model.py", line 250, in _new
+    self.model = (model or self._smart_load("model"))(cfg_dict, verbose=verbose and RANK == -1)  # build model
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\nn\tasks.py", line 393, in __init__
+    self.model, self.save = parse_model(deepcopy(self.yaml), ch=ch, verbose=verbose)  # model, savelist
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\nn\tasks.py", line 1638, in parse_model
+    else globals()[m]
+KeyError: 'CBAM'
+============================================================
+
+============================================================
+[2026-04-22 12:53:57] ❌ 錯誤發生於：YOLO 一階段基礎訓練
+錯誤類型：RuntimeError
+錯誤訊息：Given groups=1, weight of size [8, 128, 1, 1], expected input[1, 64, 1, 1] to have 128 channels, but got 64 channels instead
+完整 Traceback：
+Traceback (most recent call last):
+  File "C:\Users\0419mch\AppData\Local\Temp\ipykernel_27716\983283656.py", line 33, in <module>
+    model = YOLO(MODEL_CFG).load(PRETRAINED_WEIGHTS)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\models\yolo\model.py", line 76, in __init__
+    super().__init__(model=model, task=task, verbose=verbose)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\engine\model.py", line 142, in __init__
+    self._new(model, task=task, verbose=verbose)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\engine\model.py", line 250, in _new
+    self.model = (model or self._smart_load("model"))(cfg_dict, verbose=verbose and RANK == -1)  # build model
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\nn\tasks.py", line 412, in __init__
+    m.stride = torch.tensor([s / x.shape[-2] for x in _forward(torch.zeros(1, ch, s, s))])  # forward
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\nn\tasks.py", line 405, in _forward
+    output = self.forward(x)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\nn\tasks.py", line 142, in forward
+    return self.predict(x, *args, **kwargs)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\nn\tasks.py", line 159, in predict
+    return self._predict_once(x, profile, visualize, embed)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\ultralytics\nn\tasks.py", line 181, in _predict_once
+    x = m(x)  # run
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "c:\Users\0419mch\Desktop\project_0414\agent_tools\yolo_utils.py", line 43, in forward
+    x_out = x * self.ca(x)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "c:\Users\0419mch\Desktop\project_0414\agent_tools\yolo_utils.py", line 17, in forward
+    avg_out = self.fc(self.avg_pool(x))
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\nn\modules\container.py", line 250, in forward
+    input = module(input)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\nn\modules\conv.py", line 554, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "d:\Program\anaconda3\envs\pytorch\lib\site-packages\torch\nn\modules\conv.py", line 549, in _conv_forward
+    return F.conv2d(
+RuntimeError: Given groups=1, weight of size [8, 128, 1, 1], expected input[1, 64, 1, 1] to have 128 channels, but got 64 channels instead
+============================================================
