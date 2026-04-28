@@ -1,0 +1,34 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS files
+.DS_Store
+desktop.ini
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IDEs
+.vscode/
+.idea/
+
+# YOLO / Dataset Caches (模型快取)
+*.cache
+labels.cache
+Maturity.v7i.yolov11/**/*.cache
+
+# Training logs (Optional: can include if needed, but often large)
+# training_logs/*.log
+
+# Weights (User wants models, typically best.pt is enough)
+# If you want to sync ALL runs, uncomment next line
+# runs/
+
+# Local configuration
+.env
+venv/
+env/
