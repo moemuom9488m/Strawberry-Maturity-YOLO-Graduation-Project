@@ -7,7 +7,7 @@ ultralytics>=8.4.33
 torch>=2.0.0
 torchvision
 torchaudio
-segment-anything-2    # 若使用 Meta SAM2 官方實作
+# segment-anything-2    # 請手動執行: pip install "git+https://github.com/facebookresearch/sam2.git"
 
 # --- 影像處理與電腦視覺 ---
 opencv-python>=4.9.0
