@@ -28,6 +28,9 @@ tqdm
 # --- 資料集管理 ---
 roboflow
 
+# --- 硬體監控 ---
+nvidia-ml-py
+
 # --- Jupyter 開發環境 ---
 ipykernel
 notebook

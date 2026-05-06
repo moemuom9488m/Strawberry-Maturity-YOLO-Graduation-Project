@@ -66,3 +66,32 @@ def register_yolo_modules():
         return True
     except Exception:
         return False
+
+def find_latest_model_path(base_dir='runs/detect'):
+    """自動搜尋最新的模型權重路徑 (支援 train*, exp* 與 best_weights/)"""
+    import glob
+    import os
+    
+    # 1. 優先搜尋 runs/detect/ 下的實驗資料夾
+    search_patterns = [os.path.join(base_dir, 'train*'), os.path.join(base_dir, 'exp*')]
+    dirs = []
+    for pattern in search_patterns:
+        dirs.extend(glob.glob(pattern))
+    
+    if dirs:
+        # 過濾出含有 weights/best.pt 的資料夾
+        valid_dirs = [d for d in dirs if os.path.exists(os.path.join(d, 'weights', 'best.pt'))]
+        if valid_dirs:
+            latest_dir = max(valid_dirs, key=os.path.getmtime)
+            return os.path.join(latest_dir, 'weights', 'best.pt')
+
+    # 2. 若 runs 下無結果，搜尋 best_weights/ 資料夾
+    best_weights_dir = 'best_weights'
+    if os.path.exists(best_weights_dir):
+        weights = glob.glob(os.path.join(best_weights_dir, '*.pt'))
+        if weights:
+            # 傳回最新修改的權重
+            return max(weights, key=os.path.getmtime)
+
+    # 3. 最終備案
+    return 'yolov11n.pt'

@@ -16,19 +16,40 @@ Thumbs.db
 .vscode/
 .idea/
 
-# YOLO / Dataset Caches (模型快取)
+# === YOLO / 專題相關過濾 ===
+
+# 1. 訓練結果 (非常大，不建議進 Git)
+runs/
+
+# 2. 模型權重 (建議只手動備份 best.pt)
+*.pt
+
+# 3. 資料集 (各式資料集備份)
+roboflow_*/
+datasets/
+Maturity.v7i.yolov11/
+dataset_snapshot/
+labelImg-master/
+yolo_data/
+大湖草莓園/
+*資料集/
+strawberry-maturity-*/
+
+# 4. 影片檔案 (Git 不適合存大影片)
+*.mp4
+*.avi
+*.mov
+偵測結果影片/
+測試模型用/模擬_*_detected.mp4
+
+# 5. 模型快取與監控
 *.cache
 labels.cache
-Maturity.v7i.yolov11/**/*.cache
+wandb/
+tea_debug.log
 
-# Training logs (Optional: can include if needed, but often large)
-# training_logs/*.log
-
-# Weights (User wants models, typically best.pt is enough)
-# If you want to sync ALL runs, uncomment next line
-# runs/
-
-# Local configuration
+# 6. 其他大型文件或暫存
 .env
 venv/
 env/
+training_logs/*.log

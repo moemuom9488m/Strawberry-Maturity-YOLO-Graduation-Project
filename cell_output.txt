@@ -1,0 +1,39 @@
+[
+  {
+    "name": "stdout",
+    "output_type": "stream",
+    "text": [
+      "🎯 使用權重: runs/detect\\exp2b_1a_img800\\weights\\best.pt\n",
+      "\n",
+      "🚀 開始處理: 模擬_1.mp4\n",
+      "💾 儲存路徑: 偵測結果影片\\best_20260505_模擬_1.mp4\n"
+    ]
+  },
+  {
+    "data": {
+      "application/vnd.jupyter.widget-view+json": {
+        "model_id": "c45eab272b8d40a2ac90a62fc5a7d051",
+        "version_major": 2,
+        "version_minor": 0
+      },
+      "text/plain": [
+        "Processing 模擬_1.mp4:   0%|          | 0/192 [00:00<?, ?it/s]"
+      ]
+    },
+    "metadata": {},
+    "output_type": "display_data"
+  },
+  {
+    "ename": "error",
+    "evalue": "OpenCV(4.10.0) D:\\a\\opencv-python\\opencv-python\\opencv\\modules\\highgui\\src\\window.cpp:1301: error: (-2:Unspecified error) The function is not implemented. Rebuild the library with Windows, GTK+ 2.x or Cocoa support. If you are on Ubuntu or Debian, install libgtk2.0-dev and pkg-config, then re-run cmake or configure script in function 'cvShowImage'\n",
+    "output_type": "error",
+    "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31merror\u001b[0m                                     Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[1], line 115\u001b[0m\n\u001b[0;32m    112\u001b[0m     cv2\u001b[38;5;241m.\u001b[39mdestroyAllWindows()\n\u001b[0;32m    114\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;18m__name__\u001b[39m \u001b[38;5;241m==\u001b[39m \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m__main__\u001b[39m\u001b[38;5;124m\"\u001b[39m:\n\u001b[1;32m--> 115\u001b[0m     \u001b[43mprocess_videos\u001b[49m\u001b[43m(\u001b[49m\u001b[43mSOURCE_LIST\u001b[49m\u001b[43m)\u001b[49m\n",
+      "Cell \u001b[1;32mIn[1], line 102\u001b[0m, in \u001b[0;36mprocess_videos\u001b[1;34m(sources)\u001b[0m\n\u001b[0;32m     98\u001b[0m cv2\u001b[38;5;241m.\u001b[39mputText(annotated_frame, \u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mTotal Strawberry IDs: \u001b[39m\u001b[38;5;132;01m{\u001b[39;00mmax_id\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m\"\u001b[39m, (\u001b[38;5;241m50\u001b[39m, \u001b[38;5;241m50\u001b[39m), \n\u001b[0;32m     99\u001b[0m             cv2\u001b[38;5;241m.\u001b[39mFONT_HERSHEY_SIMPLEX, \u001b[38;5;241m1.2\u001b[39m, (\u001b[38;5;241m0\u001b[39m, \u001b[38;5;241m255\u001b[39m, \u001b[38;5;241m0\u001b[39m), \u001b[38;5;241m3\u001b[39m)\n\u001b[0;32m    101\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m ENABLE_SHOWING:\n\u001b[1;32m--> 102\u001b[0m     \u001b[43mcv2\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mimshow\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[38;5;124;43mStrawberry Detection\u001b[39;49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mannotated_frame\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m    103\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m cv2\u001b[38;5;241m.\u001b[39mwaitKey(\u001b[38;5;241m1\u001b[39m) \u001b[38;5;241m&\u001b[39m \u001b[38;5;241m0xFF\u001b[39m \u001b[38;5;241m==\u001b[39m \u001b[38;5;28mord\u001b[39m(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mq\u001b[39m\u001b[38;5;124m'\u001b[39m): \u001b[38;5;28;01mbreak\u001b[39;00m\n\u001b[0;32m    105\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m out: out\u001b[38;5;241m.\u001b[39mwrite(annotated_frame)\n",
+      "File \u001b[1;32md:\\Program\\anaconda3\\envs\\pytorch\\lib\\site-packages\\ultralytics\\utils\\patches.py:150\u001b[0m, in \u001b[0;36mimshow\u001b[1;34m(winname, mat)\u001b[0m\n\u001b[0;32m    133\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;21mimshow\u001b[39m(winname: \u001b[38;5;28mstr\u001b[39m, mat: np\u001b[38;5;241m.\u001b[39mndarray) \u001b[38;5;241m-\u001b[39m\u001b[38;5;241m>\u001b[39m \u001b[38;5;28;01mNone\u001b[39;00m:\n\u001b[0;32m    134\u001b[0m \u001b[38;5;250m    \u001b[39m\u001b[38;5;124;03m\"\"\"Display an image in the specified window with multilanguage window name support.\u001b[39;00m\n\u001b[0;32m    135\u001b[0m \n\u001b[0;32m    136\u001b[0m \u001b[38;5;124;03m    This function is a wrapper around OpenCV's imshow function that displays an image in a named window. It handles\u001b[39;00m\n\u001b[1;32m   (...)\u001b[0m\n\u001b[0;32m    148\u001b[0m \u001b[38;5;124;03m        >>> imshow(\"Example Window\", img)  # Display the image\u001b[39;00m\n\u001b[0;32m    149\u001b[0m \u001b[38;5;124;03m    \"\"\"\u001b[39;00m\n\u001b[1;32m--> 150\u001b[0m     \u001b[43m_imshow\u001b[49m\u001b[43m(\u001b[49m\u001b[43mwinname\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mencode\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[38;5;124;43municode_escape\u001b[39;49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[43m)\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mdecode\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mmat\u001b[49m\u001b[43m)\u001b[49m\n",
+      "\u001b[1;31merror\u001b[0m: OpenCV(4.10.0) D:\\a\\opencv-python\\opencv-python\\opencv\\modules\\highgui\\src\\window.cpp:1301: error: (-2:Unspecified error) The function is not implemented. Rebuild the library with Windows, GTK+ 2.x or Cocoa support. If you are on Ubuntu or Debian, install libgtk2.0-dev and pkg-config, then re-run cmake or configure script in function 'cvShowImage'\n"
+    ]
+  }
+]
