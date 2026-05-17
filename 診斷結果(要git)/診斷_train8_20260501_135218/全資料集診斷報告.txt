@@ -1,0 +1,1206 @@
+=== 草莓資料集全量交叉驗證報告 ===
+執行時間: 2026-05-01 13:52:18
+診斷模型: train8
+實際訓練回合: 107
+訓練指標: mAP50=0.8262, Recall=0.7716
+--------------------------------------------------
+[ISSUE] 1.jpg | 漏:2 | 多:0 | 誤:2
+[OK]    2.jpg
+[OK]    3.jpg
+[ISSUE] 4.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 5.jpg | 漏:2 | 多:1 | 誤:1
+[ISSUE] 6.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 7.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 8.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 9.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    10.jpg
+[OK]    11.jpg
+[ISSUE] 12.jpg | 漏:0 | 多:2 | 誤:0
+[ISSUE] 13.jpg | 漏:2 | 多:1 | 誤:0
+[ISSUE] 14.jpg | 漏:0 | 多:1 | 誤:1
+[OK]    15.jpg
+[ISSUE] 16.jpg | 漏:5 | 多:0 | 誤:1
+[ISSUE] 17.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 18.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 19.jpg | 漏:1 | 多:1 | 誤:2
+[OK]    20.jpg
+[OK]    21.jpg
+[ISSUE] 22.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 23.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 24.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 25.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    26.jpg
+[OK]    27.jpg
+[OK]    28.jpg
+[OK]    29.jpg
+[ISSUE] 30.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 31.jpg | 漏:8 | 多:0 | 誤:1
+[ISSUE] 32.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 33.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    34.jpg
+[ISSUE] 35.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    36.jpg
+[OK]    37.jpg
+[ISSUE] 38.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    39.jpg
+[ISSUE] 40.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 41.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    42.jpg
+[ISSUE] 43.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 44.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 45.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    46.jpg
+[OK]    47.jpg
+[OK]    48.jpg
+[ISSUE] 49.jpg | 漏:2 | 多:1 | 誤:0
+[OK]    50.jpg
+[ISSUE] 51.jpg | 漏:0 | 多:1 | 誤:2
+[ISSUE] 52.jpg | 漏:0 | 多:0 | 誤:3
+[ISSUE] 53.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 54.jpg | 漏:2 | 多:1 | 誤:2
+[ISSUE] 55.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    56.jpg
+[ISSUE] 57.jpg | 漏:0 | 多:1 | 誤:1
+[OK]    58.jpg
+[OK]    59.jpg
+[ISSUE] 60.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 61.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 62.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    63.jpg
+[ISSUE] 64.jpg | 漏:0 | 多:1 | 誤:2
+[ISSUE] 65.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    66.jpg
+[ISSUE] 67.jpg | 漏:1 | 多:0 | 誤:2
+[OK]    68.jpg
+[ISSUE] 69.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 70.jpg | 漏:8 | 多:4 | 誤:2
+[OK]    71.jpg
+[OK]    72.jpg
+[OK]    73.jpg
+[ISSUE] 74.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    75.jpg
+[OK]    76.jpg
+[OK]    77.jpg
+[OK]    78.jpg
+[ISSUE] 79.jpg | 漏:1 | 多:1 | 誤:1
+[ISSUE] 80.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    81.jpg
+[ISSUE] 82.jpg | 漏:4 | 多:1 | 誤:0
+[OK]    83.jpg
+[OK]    84.jpg
+[OK]    85.jpg
+[ISSUE] 86.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 87.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 88.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    89.jpg
+[OK]    90.jpg
+[OK]    91.jpg
+[OK]    92.jpg
+[ISSUE] 93.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 94.jpg | 漏:1 | 多:0 | 誤:2
+[OK]    95.jpg
+[ISSUE] 96.jpg | 漏:1 | 多:2 | 誤:1
+[OK]    97.jpg
+[OK]    98.jpg
+[OK]    99.jpg
+[ISSUE] 100.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 101.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 102.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    103.jpg
+[OK]    104.jpg
+[OK]    105.jpg
+[OK]    106.jpg
+[ISSUE] 107.jpg | 漏:2 | 多:0 | 誤:1
+[ISSUE] 108.jpg | 漏:2 | 多:1 | 誤:1
+[OK]    109.jpg
+[ISSUE] 110.jpg | 漏:2 | 多:0 | 誤:1
+[ISSUE] 111.jpg | 漏:1 | 多:0 | 誤:7
+[ISSUE] 112.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    113.jpg
+[ISSUE] 114.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    115.jpg
+[OK]    116.jpg
+[ISSUE] 117.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 118.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    119.jpg
+[ISSUE] 120.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 121.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    122.jpg
+[OK]    123.jpg
+[ISSUE] 124.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 125.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 126.jpg | 漏:3 | 多:0 | 誤:0
+[OK]    127.jpg
+[ISSUE] 128.jpg | 漏:1 | 多:1 | 誤:1
+[OK]    129.jpg
+[ISSUE] 130.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    131.jpg
+[ISSUE] 132.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 133.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    134.jpg
+[ISSUE] 135.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    136.jpg
+[OK]    137.jpg
+[ISSUE] 138.jpg | 漏:2 | 多:0 | 誤:2
+[ISSUE] 139.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 140.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 141.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    142.jpg
+[ISSUE] 143.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 144.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 145.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    146.jpg
+[ISSUE] 147.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 148.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    149.jpg
+[OK]    150.jpg
+[ISSUE] 151.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    152.jpg
+[OK]    153.jpg
+[OK]    154.jpg
+[ISSUE] 155.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    156.jpg
+[ISSUE] 157.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    158.jpg
+[OK]    159.jpg
+[ISSUE] 160.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 161.jpg | 漏:1 | 多:1 | 誤:1
+[ISSUE] 162.jpg | 漏:4 | 多:0 | 誤:1
+[ISSUE] 163.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    164.jpg
+[ISSUE] 165.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 166.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 167.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 168.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 169.jpg | 漏:0 | 多:1 | 誤:1
+[OK]    170.jpg
+[OK]    171.jpg
+[ISSUE] 172.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 173.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    174.jpg
+[OK]    175.jpg
+[ISSUE] 176.jpg | 漏:6 | 多:0 | 誤:2
+[ISSUE] 177.jpg | 漏:2 | 多:0 | 誤:0
+[OK]    178.jpg
+[ISSUE] 179.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    180.jpg
+[OK]    181.jpg
+[OK]    182.jpg
+[OK]    183.jpg
+[OK]    184.jpg
+[OK]    185.jpg
+[ISSUE] 186.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 187.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 188.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    189.jpg
+[OK]    190.jpg
+[OK]    191.jpg
+[ISSUE] 192.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 193.jpg | 漏:9 | 多:1 | 誤:2
+[ISSUE] 194.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    195.jpg
+[ISSUE] 196.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 197.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 198.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    199.jpg
+[ISSUE] 200.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    201.jpg
+[OK]    202.jpg
+[OK]    203.jpg
+[OK]    204.jpg
+[ISSUE] 205.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 206.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    207.jpg
+[OK]    208.jpg
+[ISSUE] 209.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 210.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 211.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 212.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 213.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 214.jpg | 漏:3 | 多:0 | 誤:2
+[ISSUE] 215.jpg | 漏:6 | 多:1 | 誤:0
+[ISSUE] 216.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 217.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 218.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 219.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 220.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 221.jpg | 漏:2 | 多:0 | 誤:3
+[ISSUE] 222.jpg | 漏:0 | 多:0 | 誤:3
+[OK]    223.jpg
+[ISSUE] 224.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 225.jpg | 漏:1 | 多:0 | 誤:2
+[ISSUE] 226.jpg | 漏:86 | 多:2 | 誤:0
+[ISSUE] 227.jpg | 漏:3 | 多:1 | 誤:7
+[OK]    228.jpg
+[ISSUE] 229.jpg | 漏:1 | 多:0 | 誤:4
+[OK]    230.jpg
+[ISSUE] 231.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 232.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 233.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 234.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 235.jpg | 漏:2 | 多:0 | 誤:2
+[OK]    236.jpg
+[ISSUE] 237.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 238.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 239.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 240.jpg | 漏:0 | 多:1 | 誤:2
+[ISSUE] 241.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    242.jpg
+[ISSUE] 243.jpg | 漏:3 | 多:1 | 誤:4
+[ISSUE] 244.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 245.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    246.jpg
+[ISSUE] 247.jpg | 漏:10 | 多:1 | 誤:0
+[ISSUE] 248.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 249.jpg | 漏:1 | 多:0 | 誤:2
+[ISSUE] 250.jpg | 漏:3 | 多:0 | 誤:0
+[ISSUE] 251.jpg | 漏:3 | 多:0 | 誤:2
+[ISSUE] 252.jpg | 漏:2 | 多:0 | 誤:1
+[OK]    253.jpg
+[ISSUE] 254.jpg | 漏:3 | 多:0 | 誤:2
+[ISSUE] 255.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 256.jpg | 漏:2 | 多:0 | 誤:1
+[ISSUE] 257.jpg | 漏:2 | 多:0 | 誤:1
+[ISSUE] 258.jpg | 漏:2 | 多:0 | 誤:2
+[ISSUE] 259.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 260.jpg | 漏:1 | 多:2 | 誤:2
+[ISSUE] 261.jpg | 漏:1 | 多:2 | 誤:2
+[ISSUE] 262.jpg | 漏:2 | 多:1 | 誤:0
+[ISSUE] 263.jpg | 漏:3 | 多:0 | 誤:1
+[ISSUE] 264.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 265.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 266.jpg | 漏:2 | 多:1 | 誤:3
+[OK]    267.jpg
+[ISSUE] 268.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 269.jpg | 漏:2 | 多:0 | 誤:3
+[ISSUE] 270.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 271.jpg | 漏:2 | 多:1 | 誤:0
+[ISSUE] 272.jpg | 漏:4 | 多:0 | 誤:0
+[ISSUE] 273.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 274.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    275.jpg
+[OK]    276.jpg
+[OK]    277.jpg
+[ISSUE] 278.jpg | 漏:0 | 多:2 | 誤:0
+[ISSUE] 279.jpg | 漏:1 | 多:2 | 誤:0
+[ISSUE] 280.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 281.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 282.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 283.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 284.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 285.jpg | 漏:0 | 多:2 | 誤:1
+[ISSUE] 286.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    287.jpg
+[OK]    288.jpg
+[ISSUE] 289.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 290.jpg | 漏:3 | 多:1 | 誤:0
+[OK]    291.jpg
+[ISSUE] 292.jpg | 漏:20 | 多:1 | 誤:1
+[ISSUE] 293.jpg | 漏:0 | 多:3 | 誤:2
+[ISSUE] 294.jpg | 漏:1 | 多:1 | 誤:1
+[OK]    295.jpg
+[ISSUE] 296.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    297.jpg
+[ISSUE] 298.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    299.jpg
+[ISSUE] 300.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    301.jpg
+[ISSUE] 302.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 303.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 304.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    305.jpg
+[OK]    306.jpg
+[ISSUE] 307.jpg | 漏:0 | 多:6 | 誤:1
+[ISSUE] 308.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    309.jpg
+[ISSUE] 310.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 311.jpg | 漏:1 | 多:2 | 誤:1
+[OK]    312.jpg
+[ISSUE] 313.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 314.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    315.jpg
+[OK]    316.jpg
+[ISSUE] 317.jpg | 漏:0 | 多:2 | 誤:0
+[OK]    318.jpg
+[ISSUE] 319.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 320.jpg | 漏:4 | 多:3 | 誤:1
+[ISSUE] 321.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 322.jpg | 漏:3 | 多:0 | 誤:1
+[ISSUE] 323.jpg | 漏:0 | 多:5 | 誤:0
+[ISSUE] 324.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 325.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    326.jpg
+[ISSUE] 327.jpg | 漏:0 | 多:2 | 誤:1
+[ISSUE] 328.jpg | 漏:3 | 多:0 | 誤:1
+[ISSUE] 329.jpg | 漏:1 | 多:2 | 誤:0
+[ISSUE] 330.jpg | 漏:10 | 多:0 | 誤:0
+[OK]    331.jpg
+[ISSUE] 332.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    333.jpg
+[ISSUE] 334.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 335.jpg | 漏:0 | 多:3 | 誤:0
+[ISSUE] 336.jpg | 漏:16 | 多:1 | 誤:0
+[ISSUE] 337.jpg | 漏:5 | 多:1 | 誤:0
+[OK]    338.jpg
+[OK]    339.jpg
+[ISSUE] 340.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 341.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 342.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 343.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 344.jpg | 漏:0 | 多:4 | 誤:0
+[ISSUE] 345.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 346.jpg | 漏:1 | 多:2 | 誤:0
+[ISSUE] 347.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 348.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 349.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    350.jpg
+[OK]    351.jpg
+[ISSUE] 352.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 353.jpg | 漏:1 | 多:2 | 誤:1
+[ISSUE] 354.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    355.jpg
+[ISSUE] 356.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    357.jpg
+[OK]    358.jpg
+[ISSUE] 359.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 360.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 361.jpg | 漏:0 | 多:3 | 誤:0
+[OK]    362.jpg
+[ISSUE] 363.jpg | 漏:0 | 多:1 | 誤:1
+[OK]    364.jpg
+[ISSUE] 365.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 366.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    367.jpg
+[ISSUE] 368.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    369.jpg
+[ISSUE] 370.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 371.jpg | 漏:1 | 多:1 | 誤:1
+[ISSUE] 372.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    373.jpg
+[ISSUE] 374.jpg | 漏:1 | 多:2 | 誤:1
+[ISSUE] 375.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 376.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 377.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    378.jpg
+[ISSUE] 379.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 380.jpg | 漏:0 | 多:2 | 誤:1
+[ISSUE] 381.jpg | 漏:33 | 多:0 | 誤:0
+[ISSUE] 382.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    383.jpg
+[ISSUE] 384.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 385.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 386.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 387.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    388.jpg
+[OK]    389.jpg
+[OK]    390.jpg
+[OK]    391.jpg
+[OK]    392.jpg
+[ISSUE] 393.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 394.jpg | 漏:1 | 多:3 | 誤:1
+[OK]    395.jpg
+[OK]    396.jpg
+[OK]    397.jpg
+[ISSUE] 398.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    399.jpg
+[OK]    400.jpg
+[OK]    401.jpg
+[OK]    402.jpg
+[ISSUE] 403.jpg | 漏:10 | 多:2 | 誤:4
+[ISSUE] 404.jpg | 漏:1 | 多:0 | 誤:2
+[ISSUE] 405.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 406.jpg | 漏:2 | 多:2 | 誤:2
+[ISSUE] 407.jpg | 漏:0 | 多:2 | 誤:1
+[ISSUE] 408.jpg | 漏:2 | 多:1 | 誤:1
+[OK]    409.jpg
+[ISSUE] 410.jpg | 漏:1 | 多:1 | 誤:1
+[ISSUE] 411.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 412.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 413.jpg | 漏:2 | 多:2 | 誤:3
+[ISSUE] 414.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    415.jpg
+[ISSUE] 416.jpg | 漏:0 | 多:3 | 誤:0
+[ISSUE] 417.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 418.jpg | 漏:0 | 多:2 | 誤:0
+[OK]    419.jpg
+[ISSUE] 420.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    421.jpg
+[ISSUE] 422.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 423.jpg | 漏:3 | 多:1 | 誤:0
+[OK]    424.jpg
+[ISSUE] 425.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    426.jpg
+[OK]    427.jpg
+[ISSUE] 428.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 429.jpg | 漏:4 | 多:1 | 誤:0
+[OK]    430.jpg
+[ISSUE] 431.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    432.jpg
+[ISSUE] 433.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    434.jpg
+[ISSUE] 435.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 436.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 437.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 438.jpg | 漏:0 | 多:2 | 誤:1
+[ISSUE] 439.jpg | 漏:0 | 多:2 | 誤:0
+[ISSUE] 440.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 441.jpg | 漏:1 | 多:2 | 誤:1
+[ISSUE] 442.jpg | 漏:1 | 多:2 | 誤:0
+[ISSUE] 443.jpg | 漏:1 | 多:1 | 誤:1
+[ISSUE] 444.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 445.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 446.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 447.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 448.jpg | 漏:0 | 多:1 | 誤:2
+[ISSUE] 449.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    450.jpg
+[ISSUE] 451.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 452.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    453.jpg
+[ISSUE] 454.jpg | 漏:1 | 多:2 | 誤:0
+[OK]    455.jpg
+[OK]    456.jpg
+[ISSUE] 457.jpg | 漏:1 | 多:2 | 誤:0
+[ISSUE] 458.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 459.jpg | 漏:3 | 多:2 | 誤:1
+[OK]    460.jpg
+[ISSUE] 461.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 462.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 463.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 464.jpg | 漏:0 | 多:2 | 誤:0
+[ISSUE] 465.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 466.jpg | 漏:0 | 多:3 | 誤:0
+[OK]    467.jpg
+[OK]    468.jpg
+[ISSUE] 469.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 470.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    471.jpg
+[OK]    472.jpg
+[OK]    473.jpg
+[OK]    474.jpg
+[ISSUE] 475.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    476.jpg
+[ISSUE] 477.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 478.jpg | 漏:0 | 多:2 | 誤:0
+[OK]    479.jpg
+[OK]    480.jpg
+[OK]    481.jpg
+[OK]    482.jpg
+[OK]    483.jpg
+[ISSUE] 484.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    485.jpg
+[ISSUE] 486.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 487.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 488.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 489.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 490.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    491.jpg
+[ISSUE] 492.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    493.jpg
+[OK]    494.jpg
+[OK]    495.jpg
+[ISSUE] 496.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 497.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 498.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    499.jpg
+[OK]    500.jpg
+[ISSUE] 501.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 502.jpg | 漏:0 | 多:1 | 誤:2
+[ISSUE] 503.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    504.jpg
+[OK]    505.jpg
+[OK]    506.jpg
+[ISSUE] 507.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 508.jpg | 漏:0 | 多:3 | 誤:0
+[ISSUE] 509.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 510.jpg | 漏:0 | 多:3 | 誤:0
+[ISSUE] 511.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    512.jpg
+[ISSUE] 513.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    514.jpg
+[ISSUE] 515.jpg | 漏:13 | 多:0 | 誤:6
+[OK]    516.jpg
+[ISSUE] 517.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    518.jpg
+[ISSUE] 519.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 520.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    521.jpg
+[ISSUE] 522.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    523.jpg
+[ISSUE] 524.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 525.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    526.jpg
+[OK]    527.jpg
+[OK]    528.jpg
+[OK]    529.jpg
+[ISSUE] 530.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 531.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 532.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    533.jpg
+[ISSUE] 534.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    535.jpg
+[OK]    536.jpg
+[ISSUE] 537.jpg | 漏:2 | 多:2 | 誤:0
+[OK]    538.jpg
+[ISSUE] 539.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 540.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 541.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 542.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 543.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 544.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    545.jpg
+[OK]    546.jpg
+[ISSUE] 547.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    548.jpg
+[ISSUE] 549.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    550.jpg
+[OK]    551.jpg
+[ISSUE] 552.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 553.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 554.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 555.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 556.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 557.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 558.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 559.jpg | 漏:1 | 多:0 | 誤:4
+[ISSUE] 560.jpg | 漏:3 | 多:0 | 誤:0
+[ISSUE] 561.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 562.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 563.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 564.jpg | 漏:0 | 多:2 | 誤:0
+[OK]    565.jpg
+[ISSUE] 566.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 567.jpg | 漏:2 | 多:1 | 誤:0
+[ISSUE] 568.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 569.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    570.jpg
+[ISSUE] 571.jpg | 漏:2 | 多:0 | 誤:0
+[OK]    572.jpg
+[ISSUE] 573.jpg | 漏:0 | 多:1 | 誤:2
+[ISSUE] 574.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 575.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    576.jpg
+[OK]    577.jpg
+[OK]    578.jpg
+[ISSUE] 579.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 580.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    581.jpg
+[ISSUE] 582.jpg | 漏:3 | 多:2 | 誤:1
+[OK]    583.jpg
+[OK]    584.jpg
+[ISSUE] 585.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 586.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    587.jpg
+[ISSUE] 588.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    589.jpg
+[OK]    590.jpg
+[OK]    591.jpg
+[ISSUE] 592.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 593.jpg | 漏:4 | 多:0 | 誤:1
+[OK]    594.jpg
+[ISSUE] 595.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 596.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 597.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 598.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    599.jpg
+[ISSUE] 600.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 601.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 602.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 603.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    604.jpg
+[OK]    605.jpg
+[ISSUE] 606.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 607.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    608.jpg
+[ISSUE] 609.jpg | 漏:2 | 多:0 | 誤:1
+[OK]    610.jpg
+[OK]    611.jpg
+[OK]    612.jpg
+[ISSUE] 613.jpg | 漏:17 | 多:0 | 誤:0
+[OK]    614.jpg
+[OK]    615.jpg
+[OK]    616.jpg
+[ISSUE] 617.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 618.jpg | 漏:7 | 多:0 | 誤:0
+[ISSUE] 619.jpg | 漏:4 | 多:0 | 誤:0
+[OK]    620.jpg
+[ISSUE] 621.jpg | 漏:0 | 多:3 | 誤:2
+[ISSUE] 622.jpg | 漏:5 | 多:0 | 誤:0
+[ISSUE] 623.jpg | 漏:5 | 多:0 | 誤:0
+[ISSUE] 624.jpg | 漏:13 | 多:2 | 誤:5
+[ISSUE] 625.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 626.jpg | 漏:0 | 多:1 | 誤:1
+[OK]    627.jpg
+[ISSUE] 628.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    629.jpg
+[OK]    630.jpg
+[OK]    631.jpg
+[ISSUE] 632.jpg | 漏:7 | 多:0 | 誤:1
+[OK]    633.jpg
+[ISSUE] 634.jpg | 漏:7 | 多:0 | 誤:1
+[OK]    635.jpg
+[ISSUE] 636.jpg | 漏:1 | 多:0 | 誤:2
+[ISSUE] 637.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    638.jpg
+[ISSUE] 639.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    640.jpg
+[ISSUE] 641.jpg | 漏:17 | 多:0 | 誤:0
+[ISSUE] 642.jpg | 漏:1 | 多:3 | 誤:0
+[OK]    643.jpg
+[OK]    644.jpg
+[OK]    645.jpg
+[ISSUE] 646.jpg | 漏:0 | 多:2 | 誤:0
+[ISSUE] 647.jpg | 漏:3 | 多:1 | 誤:1
+[ISSUE] 648.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 649.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    650.jpg
+[OK]    651.jpg
+[OK]    652.jpg
+[ISSUE] 653.jpg | 漏:0 | 多:3 | 誤:1
+[OK]    654.jpg
+[OK]    655.jpg
+[OK]    656.jpg
+[OK]    657.jpg
+[OK]    658.jpg
+[ISSUE] 659.jpg | 漏:3 | 多:2 | 誤:2
+[ISSUE] 660.jpg | 漏:0 | 多:0 | 誤:4
+[ISSUE] 661.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    662.jpg
+[OK]    663.jpg
+[ISSUE] 664.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    665.jpg
+[ISSUE] 666.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    667.jpg
+[ISSUE] 668.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 669.jpg | 漏:0 | 多:3 | 誤:0
+[ISSUE] 670.jpg | 漏:4 | 多:1 | 誤:0
+[OK]    671.jpg
+[ISSUE] 672.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 673.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    674.jpg
+[OK]    675.jpg
+[OK]    676.jpg
+[OK]    677.jpg
+[OK]    678.jpg
+[OK]    679.jpg
+[OK]    680.jpg
+[OK]    681.jpg
+[ISSUE] 682.jpg | 漏:3 | 多:4 | 誤:3
+[ISSUE] 683.jpg | 漏:1 | 多:2 | 誤:1
+[ISSUE] 684.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 685.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    686.jpg
+[ISSUE] 687.jpg | 漏:5 | 多:0 | 誤:5
+[OK]    688.jpg
+[ISSUE] 689.jpg | 漏:0 | 多:0 | 誤:3
+[ISSUE] 690.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    691.jpg
+[OK]    692.jpg
+[ISSUE] 693.jpg | 漏:3 | 多:0 | 誤:0
+[OK]    694.jpg
+[ISSUE] 695.jpg | 漏:5 | 多:0 | 誤:1
+[OK]    696.jpg
+[ISSUE] 697.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    698.jpg
+[ISSUE] 699.jpg | 漏:4 | 多:1 | 誤:0
+[ISSUE] 700.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 701.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 702.jpg | 漏:1 | 多:4 | 誤:0
+[OK]    703.jpg
+[OK]    704.jpg
+[ISSUE] 705.jpg | 漏:0 | 多:3 | 誤:0
+[ISSUE] 706.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 707.jpg | 漏:3 | 多:0 | 誤:2
+[ISSUE] 708.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    709.jpg
+[ISSUE] 710.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    711.jpg
+[ISSUE] 712.jpg | 漏:3 | 多:0 | 誤:0
+[OK]    713.jpg
+[ISSUE] 714.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 715.jpg | 漏:3 | 多:0 | 誤:0
+[OK]    716.jpg
+[OK]    717.jpg
+[OK]    718.jpg
+[OK]    719.jpg
+[ISSUE] 720.jpg | 漏:15 | 多:0 | 誤:3
+[OK]    721.jpg
+[ISSUE] 722.jpg | 漏:3 | 多:0 | 誤:1
+[OK]    723.jpg
+[OK]    724.jpg
+[ISSUE] 725.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 726.jpg | 漏:6 | 多:0 | 誤:1
+[ISSUE] 727.jpg | 漏:3 | 多:0 | 誤:0
+[ISSUE] 728.jpg | 漏:5 | 多:7 | 誤:0
+[ISSUE] 729.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    730.jpg
+[OK]    731.jpg
+[ISSUE] 732.jpg | 漏:7 | 多:3 | 誤:0
+[ISSUE] 733.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 734.jpg | 漏:0 | 多:2 | 誤:2
+[ISSUE] 735.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    736.jpg
+[ISSUE] 737.jpg | 漏:3 | 多:1 | 誤:1
+[ISSUE] 738.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 739.jpg | 漏:0 | 多:1 | 誤:5
+[OK]    740.jpg
+[OK]    741.jpg
+[ISSUE] 742.jpg | 漏:2 | 多:1 | 誤:0
+[ISSUE] 743.jpg | 漏:3 | 多:1 | 誤:0
+[ISSUE] 744.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 745.jpg | 漏:8 | 多:0 | 誤:0
+[OK]    746.jpg
+[OK]    747.jpg
+[OK]    748.jpg
+[OK]    749.jpg
+[OK]    750.jpg
+[ISSUE] 751.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 752.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    753.jpg
+[ISSUE] 754.jpg | 漏:4 | 多:0 | 誤:0
+[ISSUE] 755.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    756.jpg
+[ISSUE] 757.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 758.jpg | 漏:9 | 多:2 | 誤:1
+[OK]    759.jpg
+[OK]    760.jpg
+[ISSUE] 761.jpg | 漏:1 | 多:0 | 誤:3
+[OK]    762.jpg
+[OK]    763.jpg
+[OK]    764.jpg
+[OK]    765.jpg
+[ISSUE] 766.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    767.jpg
+[OK]    768.jpg
+[ISSUE] 769.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 770.jpg | 漏:5 | 多:1 | 誤:1
+[OK]    771.jpg
+[OK]    772.jpg
+[ISSUE] 773.jpg | 漏:0 | 多:2 | 誤:2
+[OK]    774.jpg
+[ISSUE] 775.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 776.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 777.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 778.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 779.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 780.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 781.jpg | 漏:3 | 多:0 | 誤:1
+[ISSUE] 782.jpg | 漏:6 | 多:2 | 誤:0
+[ISSUE] 783.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 784.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    785.jpg
+[OK]    786.jpg
+[OK]    787.jpg
+[OK]    788.jpg
+[OK]    789.jpg
+[OK]    790.jpg
+[ISSUE] 791.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 792.jpg | 漏:4 | 多:0 | 誤:2
+[OK]    793.jpg
+[ISSUE] 794.jpg | 漏:1 | 多:1 | 誤:7
+[ISSUE] 795.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    796.jpg
+[OK]    797.jpg
+[ISSUE] 798.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    799.jpg
+[OK]    800.jpg
+[OK]    801.jpg
+[OK]    802.jpg
+[OK]    803.jpg
+[OK]    804.jpg
+[OK]    805.jpg
+[ISSUE] 806.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 807.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 808.jpg | 漏:2 | 多:0 | 誤:0
+[OK]    809.jpg
+[OK]    810.jpg
+[ISSUE] 811.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 812.jpg | 漏:1 | 多:0 | 誤:2
+[OK]    813.jpg
+[OK]    814.jpg
+[OK]    815.jpg
+[ISSUE] 816.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 817.jpg | 漏:1 | 多:0 | 誤:2
+[ISSUE] 818.jpg | 漏:6 | 多:3 | 誤:0
+[ISSUE] 819.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    820.jpg
+[OK]    821.jpg
+[ISSUE] 822.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 823.jpg | 漏:1 | 多:1 | 誤:1
+[OK]    824.jpg
+[OK]    825.jpg
+[OK]    826.jpg
+[ISSUE] 827.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 828.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    829.jpg
+[OK]    830.jpg
+[ISSUE] 831.jpg | 漏:2 | 多:1 | 誤:1
+[OK]    832.jpg
+[OK]    833.jpg
+[ISSUE] 834.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 835.jpg | 漏:1 | 多:1 | 誤:1
+[OK]    836.jpg
+[OK]    837.jpg
+[ISSUE] 838.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 839.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 840.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 841.jpg | 漏:7 | 多:3 | 誤:0
+[OK]    842.jpg
+[ISSUE] 843.jpg | 漏:5 | 多:0 | 誤:1
+[OK]    844.jpg
+[OK]    845.jpg
+[OK]    846.jpg
+[ISSUE] 847.jpg | 漏:1 | 多:1 | 誤:1
+[OK]    848.jpg
+[OK]    849.jpg
+[ISSUE] 850.jpg | 漏:4 | 多:1 | 誤:0
+[ISSUE] 851.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    852.jpg
+[OK]    853.jpg
+[OK]    854.jpg
+[ISSUE] 855.jpg | 漏:7 | 多:2 | 誤:1
+[ISSUE] 856.jpg | 漏:0 | 多:3 | 誤:0
+[OK]    857.jpg
+[OK]    858.jpg
+[OK]    859.jpg
+[OK]    860.jpg
+[OK]    861.jpg
+[OK]    862.jpg
+[OK]    863.jpg
+[OK]    864.jpg
+[ISSUE] 865.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 866.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 867.jpg | 漏:3 | 多:0 | 誤:0
+[ISSUE] 868.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 869.jpg | 漏:3 | 多:0 | 誤:1
+[OK]    870.jpg
+[ISSUE] 871.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 872.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    873.jpg
+[ISSUE] 874.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 875.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    876.jpg
+[ISSUE] 877.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 878.jpg | 漏:6 | 多:0 | 誤:0
+[OK]    879.jpg
+[OK]    880.jpg
+[ISSUE] 881.jpg | 漏:3 | 多:0 | 誤:0
+[OK]    882.jpg
+[OK]    883.jpg
+[OK]    884.jpg
+[OK]    885.jpg
+[ISSUE] 886.jpg | 漏:0 | 多:1 | 誤:2
+[ISSUE] 887.jpg | 漏:5 | 多:0 | 誤:5
+[OK]    888.jpg
+[ISSUE] 889.jpg | 漏:2 | 多:0 | 誤:1
+[OK]    890.jpg
+[OK]    891.jpg
+[OK]    892.jpg
+[ISSUE] 893.jpg | 漏:1 | 多:4 | 誤:0
+[OK]    894.jpg
+[ISSUE] 895.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 896.jpg | 漏:6 | 多:0 | 誤:0
+[ISSUE] 897.jpg | 漏:5 | 多:0 | 誤:0
+[ISSUE] 898.jpg | 漏:2 | 多:1 | 誤:1
+[ISSUE] 899.jpg | 漏:6 | 多:1 | 誤:2
+[ISSUE] 900.jpg | 漏:14 | 多:0 | 誤:1
+[OK]    901.jpg
+[OK]    902.jpg
+[OK]    903.jpg
+[ISSUE] 904.jpg | 漏:3 | 多:0 | 誤:0
+[ISSUE] 905.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    906.jpg
+[OK]    907.jpg
+[OK]    908.jpg
+[OK]    909.jpg
+[OK]    910.jpg
+[OK]    911.jpg
+[ISSUE] 912.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    913.jpg
+[OK]    914.jpg
+[ISSUE] 915.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 916.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    917.jpg
+[ISSUE] 918.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 919.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 920.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 921.jpg | 漏:3 | 多:0 | 誤:0
+[OK]    922.jpg
+[ISSUE] 923.jpg | 漏:1 | 多:0 | 誤:2
+[OK]    924.jpg
+[OK]    925.jpg
+[OK]    926.jpg
+[ISSUE] 927.jpg | 漏:3 | 多:1 | 誤:0
+[OK]    928.jpg
+[ISSUE] 929.jpg | 漏:3 | 多:1 | 誤:0
+[ISSUE] 930.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 931.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    932.jpg
+[ISSUE] 933.jpg | 漏:3 | 多:3 | 誤:0
+[OK]    934.jpg
+[OK]    935.jpg
+[ISSUE] 936.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 937.jpg | 漏:8 | 多:1 | 誤:1
+[OK]    938.jpg
+[ISSUE] 939.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 940.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    941.jpg
+[ISSUE] 942.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 943.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    944.jpg
+[OK]    945.jpg
+[ISSUE] 946.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    947.jpg
+[ISSUE] 948.jpg | 漏:3 | 多:2 | 誤:0
+[OK]    949.jpg
+[ISSUE] 950.jpg | 漏:3 | 多:0 | 誤:1
+[ISSUE] 951.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    952.jpg
+[ISSUE] 953.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    954.jpg
+[OK]    955.jpg
+[ISSUE] 956.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    957.jpg
+[OK]    958.jpg
+[ISSUE] 959.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    960.jpg
+[ISSUE] 961.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 962.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 963.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 964.jpg | 漏:1 | 多:0 | 誤:2
+[ISSUE] 965.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    966.jpg
+[OK]    967.jpg
+[OK]    968.jpg
+[ISSUE] 969.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    970.jpg
+[ISSUE] 971.jpg | 漏:2 | 多:0 | 誤:1
+[ISSUE] 972.jpg | 漏:7 | 多:5 | 誤:2
+[OK]    973.jpg
+[ISSUE] 974.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    975.jpg
+[ISSUE] 976.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 977.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 978.jpg | 漏:3 | 多:1 | 誤:2
+[OK]    979.jpg
+[OK]    980.jpg
+[ISSUE] 981.jpg | 漏:2 | 多:1 | 誤:0
+[ISSUE] 982.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 983.jpg | 漏:1 | 多:0 | 誤:2
+[ISSUE] 984.jpg | 漏:2 | 多:0 | 誤:3
+[ISSUE] 985.jpg | 漏:2 | 多:0 | 誤:1
+[ISSUE] 986.jpg | 漏:2 | 多:0 | 誤:0
+[OK]    987.jpg
+[OK]    988.jpg
+[OK]    989.jpg
+[OK]    990.jpg
+[OK]    991.jpg
+[OK]    992.jpg
+[ISSUE] 993.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 994.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    995.jpg
+[ISSUE] 996.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    997.jpg
+[ISSUE] 998.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 999.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1000.jpg
+[ISSUE] 1001.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 1002.jpg | 漏:7 | 多:3 | 誤:0
+[ISSUE] 1003.jpg | 漏:2 | 多:0 | 誤:1
+[ISSUE] 1004.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 1005.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 1006.jpg | 漏:2 | 多:1 | 誤:0
+[OK]    1007.jpg
+[ISSUE] 1008.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 1009.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    1010.jpg
+[ISSUE] 1011.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 1012.jpg | 漏:3 | 多:1 | 誤:0
+[OK]    1013.jpg
+[OK]    1014.jpg
+[OK]    1015.jpg
+[OK]    1016.jpg
+[OK]    1017.jpg
+[OK]    1018.jpg
+[OK]    1019.jpg
+[OK]    1020.jpg
+[OK]    1021.jpg
+[OK]    1022.jpg
+[OK]    1023.jpg
+[OK]    1024.jpg
+[OK]    1025.jpg
+[OK]    1026.jpg
+[OK]    1027.jpg
+[OK]    1028.jpg
+[OK]    1029.jpg
+[ISSUE] 1030.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1031.jpg
+[OK]    1032.jpg
+[ISSUE] 1033.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 1034.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1035.jpg
+[OK]    1036.jpg
+[OK]    1037.jpg
+[OK]    1038.jpg
+[OK]    1039.jpg
+[ISSUE] 1040.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1041.jpg
+[ISSUE] 1042.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1043.jpg
+[OK]    1044.jpg
+[OK]    1045.jpg
+[OK]    1046.jpg
+[OK]    1047.jpg
+[OK]    1048.jpg
+[ISSUE] 1049.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 1050.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 1051.jpg | 漏:2 | 多:0 | 誤:0
+[OK]    1052.jpg
+[ISSUE] 1053.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 1054.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1055.jpg
+[OK]    1056.jpg
+[OK]    1057.jpg
+[ISSUE] 1058.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1059.jpg
+[OK]    1060.jpg
+[OK]    1061.jpg
+[OK]    1062.jpg
+[OK]    1063.jpg
+[OK]    1064.jpg
+[ISSUE] 1065.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1066.jpg
+[ISSUE] 1067.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 1068.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1069.jpg
+[ISSUE] 1070.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1071.jpg
+[OK]    1072.jpg
+[OK]    1073.jpg
+[ISSUE] 1074.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 1075.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1076.jpg
+[OK]    1077.jpg
+[OK]    1078.jpg
+[OK]    1079.jpg
+[OK]    1080.jpg
+[OK]    1081.jpg
+[OK]    1082.jpg
+[ISSUE] 1083.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1084.jpg
+[OK]    1085.jpg
+[ISSUE] 1086.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    1087.jpg
+[OK]    1088.jpg
+[ISSUE] 1089.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1090.jpg
+[OK]    1091.jpg
+[OK]    1092.jpg
+[OK]    1093.jpg
+[OK]    1094.jpg
+[OK]    1095.jpg
+[OK]    1096.jpg
+[ISSUE] 1097.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1098.jpg
+[ISSUE] 1099.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1100.jpg
+[OK]    1101.jpg
+[OK]    1102.jpg
+[ISSUE] 1103.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1104.jpg
+[OK]    1105.jpg
+[OK]    1106.jpg
+[OK]    1107.jpg
+[ISSUE] 1108.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1109.jpg
+[OK]    1110.jpg
+[ISSUE] 1111.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1112.jpg
+[OK]    1113.jpg
+[OK]    1114.jpg
+[OK]    1115.jpg
+[OK]    1116.jpg
+[OK]    1117.jpg
+[OK]    1118.jpg
+[OK]    1119.jpg
+[ISSUE] 1120.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1121.jpg
+[ISSUE] 1122.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1123.jpg
+[OK]    1124.jpg
+[OK]    1125.jpg
+[ISSUE] 1126.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1127.jpg
+[OK]    1128.jpg
+[ISSUE] 1129.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 1130.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    1131.jpg
+[ISSUE] 1132.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 1133.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1134.jpg
+[OK]    1135.jpg
+[OK]    1136.jpg
+[OK]    1137.jpg
+[ISSUE] 1138.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1139.jpg
+[OK]    1140.jpg
+[OK]    1141.jpg
+[OK]    1142.jpg
+[OK]    1143.jpg
+[OK]    1144.jpg
+[ISSUE] 1145.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    1146.jpg
+[OK]    1147.jpg
+[OK]    1148.jpg
+[OK]    1149.jpg
+[ISSUE] 1150.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 1151.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1152.jpg
+[OK]    1153.jpg
+[OK]    1154.jpg
+[OK]    1155.jpg
+[OK]    1156.jpg
+[OK]    1157.jpg
+[OK]    1158.jpg
+[ISSUE] 1159.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 1160.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1161.jpg
+[OK]    1162.jpg
+[ISSUE] 1163.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 1164.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1165.jpg
+[OK]    1166.jpg
+[ISSUE] 1167.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1168.jpg
+[ISSUE] 1169.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 1170.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1171.jpg
+[OK]    1172.jpg
+[OK]    1173.jpg
+[ISSUE] 1174.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1175.jpg
+[ISSUE] 1176.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1177.jpg
+[ISSUE] 1178.jpg | 漏:2 | 多:0 | 誤:0
+[OK]    1179.jpg
+[OK]    1180.jpg
+[ISSUE] 1181.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1182.jpg
+[ISSUE] 1183.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 1184.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1185.jpg
+[OK]    1186.jpg
+[OK]    1187.jpg
+[ISSUE] 1188.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 1189.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    1190.jpg
+[OK]    1191.jpg
+[OK]    1192.jpg
+[ISSUE] 1193.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1194.jpg
+[OK]    1195.jpg
+[OK]    1196.jpg
+[OK]    1197.jpg
+[OK]    1198.jpg
+[ISSUE] 1199.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1200.jpg

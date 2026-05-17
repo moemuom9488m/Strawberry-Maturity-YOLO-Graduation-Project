@@ -1,0 +1,943 @@
+=== 草莓資料集全量診斷報告 (exp1d_yolo11m_p2cbam) ===
+診斷時間: 2026-05-17 12:49:28
+--------------------------------------------------
+[ISSUE] 1_jpg.rf.076b55afb066c7987149dffb00dd9ae2.jpg | 漏:2 | 多:0 | 誤:2
+[OK]    3_jpg.rf.ba1ef21f57e9ec7e6b97b72a1d9b9e7b.jpg
+[ISSUE] 5_jpg.rf.309b3e3d38db2f1bbd8d036e7f1d8b9a.jpg | 漏:4 | 多:0 | 誤:1
+[ISSUE] 6_jpg.rf.ca013a35b3189fe9719871f9cd6c3b5a.jpg | 漏:3 | 多:0 | 誤:0
+[ISSUE] 8_jpg.rf.2711f34fcb3d652ea8416813f41efd8c.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    9_jpg.rf.b85ae871526dc9e652611ddfb30a1c46.jpg
+[ISSUE] 10_jpg.rf.3011e8e02345c156f8cdf384d1618df0.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    11_jpg.rf.a030ae41ec24e28b0237ff0378f0b4aa.jpg
+[ISSUE] 12_jpg.rf.db7d55604fb390649ebdc696bdfd2cd9.jpg | 漏:0 | 多:2 | 誤:0
+[ISSUE] 13_jpg.rf.b67bc05c5174ae3cb9f7569dd982fcef.jpg | 漏:2 | 多:1 | 誤:0
+[ISSUE] 14_jpg.rf.c39b54ae11aa46ea5c0d0927c08a640b.jpg | 漏:1 | 多:1 | 誤:1
+[OK]    15_jpg.rf.ae8bee091cc9645449e7c2bf24344383.jpg
+[ISSUE] 16_jpg.rf.aba57ca4cdc811a178f09af4839ad5d4.jpg | 漏:4 | 多:0 | 誤:2
+[OK]    17_jpg.rf.85417132de33e3f750cb2c542b7dc91a.jpg
+[OK]    20_jpg.rf.aed5e3f20ca955eb3b83093c547e2e19.jpg
+[ISSUE] 21_jpg.rf.e02007524c96ec4bc8b6b51a9ce45a9d.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 22_jpg.rf.d1dcb50304d35d259cc3d7d79871fd21.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    23_jpg.rf.9c9893411d6b60e2e0c23620ee36489c.jpg
+[OK]    25_jpg.rf.4772bb15cfba0edb7d11fcb03b2af565.jpg
+[OK]    26_jpg.rf.e5f554a38a35c336cb3064879066fe07.jpg
+[OK]    28_jpg.rf.1356df89ecb3c3be635d1070a6ce5b33.jpg
+[ISSUE] 30_jpg.rf.dad8386cba90efd79b0645bf30e9b131.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 31_jpg.rf.eb823baaf0740750c449cdb195da0d1d.jpg | 漏:8 | 多:0 | 誤:1
+[ISSUE] 32_jpg.rf.d76967989d278d86cf74a9af57f20ce7.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    34_jpg.rf.3f8b32713c7b0915d4df054fc8852293.jpg
+[ISSUE] 35_jpg.rf.fee9fd2eab8cee4105d8c4ca9afd4dae.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    37_jpg.rf.297abf96643575d0afd415f2abb78ca0.jpg
+[ISSUE] 38_jpg.rf.a579c69f12759e8ae00d7562492ab07e.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    39_jpg.rf.08b44ed8f679715c819a8c31d1735efa.jpg
+[OK]    40_jpg.rf.e8422c435febda31f27a9c237640fd88.jpg
+[ISSUE] 41_jpg.rf.924527cdb303ac064f301b9cca12edf1.jpg | 漏:1 | 多:0 | 誤:2
+[OK]    42_jpg.rf.9918a13fb6d56b21ce934cd824a34ad9.jpg
+[OK]    43_jpg.rf.99449d65c98a169d69d67bdfc6f68914.jpg
+[ISSUE] 44_jpg.rf.d66d281d95b0ced120c98dbc214fca7b.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 45_jpg.rf.4fc61cc7deaa824f57c8c9353b137b3a.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    46_jpg.rf.8f2533d9259403df81b5bac0d36e4351.jpg
+[ISSUE] 47_jpg.rf.0af88b3ca164356d7f75f903426401a2.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    48_jpg.rf.ad7909d9497c72f3021f4e482c6e8b81.jpg
+[ISSUE] 49_jpg.rf.ba9307f38c1eca334941e0a15531a0b9.jpg | 漏:4 | 多:1 | 誤:0
+[OK]    50_jpg.rf.d56c54c507a03c90bb8134e8ee7bc63a.jpg
+[OK]    53_jpg.rf.9be3a205dbd9d372dacb528476fc9ab1.jpg
+[ISSUE] 54_jpg.rf.72acd7460959411386214d4ca0668f0a.jpg | 漏:1 | 多:0 | 誤:2
+[OK]    55_jpg.rf.044d51a6d5d22c13363892e60829968d.jpg
+[ISSUE] 56_jpg.rf.a44510ed09e60289bed132d8373e431e.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    57_jpg.rf.7d1477df8d0d982a9bdeb3e3ae277c49.jpg
+[OK]    58_jpg.rf.edcb86b8b2ace38b7c8e416aa5977fe7.jpg
+[OK]    59_jpg.rf.8702e8ff18e72fc792a988f7705a4e77.jpg
+[OK]    62_jpg.rf.965f219f8e48732b3c70145ce0b99dd1.jpg
+[ISSUE] 63_jpg.rf.fd856aaea085b065a128c01c6a5258a0.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 64_jpg.rf.3ad3348c002970d7ccd67913777cc1aa.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    66_jpg.rf.94027ec38ec38651e6b09c856b0de4ca.jpg
+[ISSUE] 67_jpg.rf.186dc41284941cf0dc8773de24f17c4f.jpg | 漏:2 | 多:0 | 誤:1
+[OK]    68_jpg.rf.5f66fb6511e7d60a598b418748afdfb7.jpg
+[ISSUE] 70_jpg.rf.36150e116c416e489e0b5a20ef44bfcc.jpg | 漏:30 | 多:2 | 誤:3
+[OK]    72_jpg.rf.c3ab2504e9106e14de825269c8c0832d.jpg
+[OK]    73_jpg.rf.cd7e196863337590b59cb913b76f434c.jpg
+[ISSUE] 74_jpg.rf.70dbc40dcdfa73f4e923ff83e2c5f83a.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    75_jpg.rf.f9c8ff8a3dd3e71d3af02b9f95eb64b4.jpg
+[OK]    76_jpg.rf.9c0463173d5833945d7eeaa908eec44a.jpg
+[OK]    77_jpg.rf.4b1a6aed3fa82e8bc5e121bf38435868.jpg
+[OK]    78_jpg.rf.52fa8c0ff410b54f362053388ec59389.jpg
+[ISSUE] 80_jpg.rf.910f5bea72e5546f5853802f2853c1a1.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    81_jpg.rf.5aedb97a33193bbc5d651527a9ea5827.jpg
+[OK]    83_jpg.rf.ba3b0b2d93cde0ee395e2e836eedc860.jpg
+[OK]    84_jpg.rf.9baaf7e2022876d7eba741ad86e34a32.jpg
+[OK]    87_jpg.rf.8db4efb24684bac2d62d1a7a3d068c1f.jpg
+[OK]    88_jpg.rf.cbd3de823473ef45ccedbcfc75e18c4d.jpg
+[OK]    91_jpg.rf.24265a8967f55f2f869a4c180ccfa70c.jpg
+[OK]    92_jpg.rf.fb7473b07487bc86dfcb066c0397d415.jpg
+[ISSUE] 93_jpg.rf.b40c0776920bae859d7fbfcd1c413557.jpg | 漏:2 | 多:0 | 誤:0
+[OK]    94_jpg.rf.e40999b8d7f3de8d82897fe3c3eae18d.jpg
+[OK]    95_jpg.rf.df05ff7a076c8bb6024e06f674ef106b.jpg
+[ISSUE] 96_jpg.rf.621e25b5a6b63f078eba018e86024ebd.jpg | 漏:1 | 多:1 | 誤:1
+[OK]    97_jpg.rf.36643665f8a425806cba083de47e45be.jpg
+[ISSUE] 99_jpg.rf.dafcaffc62a426b1b0621470c8cae020.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 100_jpg.rf.26a69e04eccb7f906cde52937da2aba0.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    101_jpg.rf.b144969eec8337eb2795419395748711.jpg
+[ISSUE] 102_jpg.rf.7ab00ce711f2d8852b958c062d29fe4e.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    103_jpg.rf.1df943c357faea48742fdf636baab418.jpg
+[OK]    104_jpg.rf.553bd95dcc71934969c6b97d7bc1b60b.jpg
+[ISSUE] 105_jpg.rf.f78f476ee59ce44f05e60885aa693f8d.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    106_jpg.rf.0ce0e83be22143b2a7babf2082e86514.jpg
+[ISSUE] 107_jpg.rf.69f7f4a888e721638fe61ca8c8c7f26b.jpg | 漏:1 | 多:0 | 誤:3
+[OK]    109_jpg.rf.538407b8672fc05935f86896445aebd0.jpg
+[ISSUE] 110_jpg.rf.7e5492271541cd5d1ae49562c10cbaad.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 111_jpg.rf.8df42052d833d74edc997fe5ecca6c73.jpg | 漏:3 | 多:0 | 誤:3
+[ISSUE] 112_jpg.rf.31a5629ad9f12fbde75332ee693c0d47.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    113_jpg.rf.aa35c422731215e14ff9adfe2c5786c7.jpg
+[OK]    115_jpg.rf.182ef513affbf23dd3072caabbc21f8f.jpg
+[OK]    116_jpg.rf.514054f5d603a3a648c52d5c21dca19a.jpg
+[OK]    117_jpg.rf.698156b856b94e9ed999f96a9e727b35.jpg
+[OK]    118_jpg.rf.2e52c52706cc539cd8fc2405e2744d0f.jpg
+[ISSUE] 120_jpg.rf.e6883917c3d852f3afd215bab579292e.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 121_jpg.rf.1bf51a156752fd61f3913484adb3fe0e.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    122_jpg.rf.55fab5a415d9658c48eb00e8362dfb44.jpg
+[OK]    123_jpg.rf.d28eadf0abff679a9383686858de9e20.jpg
+[ISSUE] 124_jpg.rf.d851de4c95f1b98d8152258185ee4a9a.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 126_jpg.rf.1f56e885185aa4939f390c19000bb942.jpg | 漏:7 | 多:0 | 誤:2
+[OK]    127_jpg.rf.78dc89e9b0e36c9b3e968aab4d11261a.jpg
+[OK]    128_jpg.rf.bbdb9484e9c6f35d068471c8faac7868.jpg
+[OK]    129_jpg.rf.78c30da26a94022a82e0601658f586a5.jpg
+[ISSUE] 130_jpg.rf.3ac202e3cc4cf866592df5048526d258.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    133_jpg.rf.108b180490cd90799d16398a102dd300.jpg
+[OK]    134_jpg.rf.3282289b58784ded7f185737edd016ce.jpg
+[ISSUE] 135_jpg.rf.80622fb6f08c115e853eb223e14ff3fe.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    136_jpg.rf.dbb2987059ccb95526c55462a92f6cf3.jpg
+[OK]    137_jpg.rf.87d4d6448d164189fcc1e970b8aa00cb.jpg
+[OK]    141_jpg.rf.316767c7c95d713725b38b6d86ad0478.jpg
+[OK]    142_jpg.rf.cb837b91c2712b4195269ebe756c0382.jpg
+[ISSUE] 143_jpg.rf.af6fa01d17473ee0270fbb96c35e13c5.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    144_jpg.rf.ed2c1c8058d5b3700de1b4350efe6630.jpg
+[ISSUE] 145_jpg.rf.eacec4b9d954db02794d2b45caff8453.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    146_jpg.rf.72f746189585a788b90e289705841401.jpg
+[ISSUE] 147_jpg.rf.c3036edff9f4b10fb23b6a390aad22ba.jpg | 漏:2 | 多:0 | 誤:0
+[OK]    148_jpg.rf.e7057d781495c7fc675191ecef17b9c0.jpg
+[OK]    149_jpg.rf.f6a9cfcb2b397da4912efda61296657c.jpg
+[OK]    150_jpg.rf.dd2861cb39fc1a760acacc141ba7639c.jpg
+[OK]    152_jpg.rf.df83ee7be61276e29e33cb0073acc00d.jpg
+[OK]    153_jpg.rf.39100897f3ca70bee2531b673a374ec1.jpg
+[OK]    154_jpg.rf.1befbeaf68bad5a48036f146edf736a4.jpg
+[OK]    155_jpg.rf.19283c807d825e311f1badd25e128152.jpg
+[OK]    156_jpg.rf.b26dcd34af6011660448d0e50423bc21.jpg
+[OK]    158_jpg.rf.12cc9b3ddb83f13c49f1f6e1298d5db8.jpg
+[OK]    160_jpg.rf.c3a7b1b62544cb7277bbc8d302bc8290.jpg
+[ISSUE] 161_jpg.rf.8c17f18aa824c927f978af3f66af61c0.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    163_jpg.rf.b5ba7230fa18efca54352892689fdc55.jpg
+[OK]    164_jpg.rf.d37f7ebd614283ab37ac928fbdc22b55.jpg
+[ISSUE] 165_jpg.rf.606a8f71a2bc7b2496581f8225e3c222.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    166_jpg.rf.e71907b31910012d67ce5d8cb2cae39f.jpg
+[ISSUE] 167_jpg.rf.382fd9f9b68f8dde2ce5f2f102e30de3.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 168_jpg.rf.9ce0f261c51ba07ce2f267a0fd56ff3d.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    169_jpg.rf.e56da5f6ab4207f603118abc874edb36.jpg
+[OK]    171_jpg.rf.92ffbcdc0bd959c1a4085c6c7360a55e.jpg
+[ISSUE] 172_jpg.rf.4a387ffdbfa9f894da6778cbbb2c4b44.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 173_jpg.rf.0325328ffe4dcba3c59c0b1848529f95.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    174_jpg.rf.474582ee7d9c4414c362cce5169e9758.jpg
+[ISSUE] 175_jpg.rf.a98b72371fc640bb60117c7a1adc3693.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 177_jpg.rf.2206b9a3a62a27ee114a1871b8f4acb5.jpg | 漏:2 | 多:1 | 誤:0
+[OK]    180_jpg.rf.b0e0eaf7409078ea4bff62e5842d311b.jpg
+[OK]    183_jpg.rf.55f8d892454d822c2c00f468f9587797.jpg
+[OK]    185_jpg.rf.07e2daf28313d7e803dbb58f2b58f32f.jpg
+[ISSUE] 186_jpg.rf.5fcfacdbd66442e2f707844e0d0b4815.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    187_jpg.rf.ac16d58e0521980118266072c16a9665.jpg
+[ISSUE] 188_jpg.rf.b63b6eb5a0c014a39b1742cb607120f0.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    189_jpg.rf.47bfe2ee5d81bbbaec01b3752978657b.jpg
+[OK]    190_jpg.rf.50df70d237e5552cbee72d7ce82d399e.jpg
+[OK]    191_jpg.rf.d3a0babf622f9b48e943b637bd6e8fdb.jpg
+[ISSUE] 192_jpg.rf.c454a8078878088b42aab80ae886f532.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 193_jpg.rf.ec11b4defc092ade3f5904a172061d4c.jpg | 漏:11 | 多:4 | 誤:15
+[ISSUE] 194_jpg.rf.75ec4603a32d8edaf89d590fce320475.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 196_jpg.rf.1b723f09403f5bdbbce7ac16908720af.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 197_jpg.rf.213a5c3834dfb78526b700e2edd1bda6.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 198_jpg.rf.56ddd5b4dea49b7c9e62fe7d50104317.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    199_jpg.rf.7ea50227639b5dffcd77a1d119b2a054.jpg
+[ISSUE] 200_jpg.rf.9ddd132d4ec577dcc7000876f14995c6.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 201_jpg.rf.e4ccc771d047bcba04ed4082edc87db1.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    202_jpg.rf.dc6531886f48a729b85f530e8c0e3f7f.jpg
+[OK]    204_jpg.rf.1d84c8d91097636a118e62e04bed8ea0.jpg
+[ISSUE] 205_jpg.rf.9de341d06aa0d6b68d99694dd895e7a0.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 206_jpg.rf.b606d354bc7095900310552a20761059.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 207_jpg.rf.75a80cdb409558cd278902cfbb5ab515.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 209_jpg.rf.7ae55dbac58f5df65138330dbd2a3351.jpg | 漏:2 | 多:0 | 誤:0
+[OK]    210_jpg.rf.aaf716facb7890dcbf780720238de4e0.jpg
+[ISSUE] 211_jpg.rf.b4bb616338afb3cc1c96cf9d281da26a.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    212_jpg.rf.c3d346394d538612ae80e91c23289a53.jpg
+[ISSUE] 213_jpg.rf.3a0451d0c5b85e7d291a1a4f8e1200a1.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 214_jpg.rf.e46259a5d59803dea63e1e59e3ea0985.jpg | 漏:3 | 多:0 | 誤:0
+[ISSUE] 215_jpg.rf.c4c2c6787501ca5049df43a9b4255be9.jpg | 漏:6 | 多:0 | 誤:0
+[ISSUE] 216_jpg.rf.4ca99f2b1665269833367d18906362a7.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 218_jpg.rf.3bdf726d173143a53606aab257acb378.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    220_jpg.rf.83e906f23d193d928a671a517ba96767.jpg
+[ISSUE] 221_jpg.rf.be4909395fcbecc9df9a65c39d08428d.jpg | 漏:3 | 多:0 | 誤:2
+[ISSUE] 222_jpg.rf.56d604b1b347c6d413daef57d9578e8d.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 223_jpg.rf.854dfc175302e9e87357c6eeee209e62.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 224_jpg.rf.9246571cd8a64d746614e73a886247b1.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 225_jpg.rf.f06ca90db765c1287089625aeb1279a0.jpg | 漏:1 | 多:0 | 誤:2
+[ISSUE] 227_jpg.rf.bd49244fa8dfae911258280c0577fe21.jpg | 漏:2 | 多:1 | 誤:5
+[ISSUE] 229_jpg.rf.2f4b916e33a2e90d0eabdf1ae80f3dc2.jpg | 漏:2 | 多:0 | 誤:1
+[ISSUE] 230_jpg.rf.a7cbb8a1362999e44a823b3f1cc320eb.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 231_jpg.rf.4301bf5ab11c04d37a54d0dbf84b2b25.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 232_jpg.rf.16d0cf966a276724e8f3b02f456513d6.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 233_jpg.rf.6f0a1a68ea330f2fabb288224484ea16.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 236_jpg.rf.05b8d7e8812e585de49775c4e3913bf9.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 237_jpg.rf.d5576b2664c9d1df8f55248a7e31955b.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 239_jpg.rf.8fe647089649e0fe6d06f4158198119b.jpg | 漏:4 | 多:0 | 誤:3
+[ISSUE] 240_jpg.rf.43d58c7f12ea330461b25c8ef2907c1d.jpg | 漏:0 | 多:1 | 誤:2
+[ISSUE] 241_jpg.rf.8b172aaa76e005d840a3d790d07bc01e.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 243_jpg.rf.4caf43703ae8adf6ab011a2cd9ccb5e0.jpg | 漏:5 | 多:1 | 誤:3
+[ISSUE] 244_jpg.rf.2cc073aa63e093a0c9968a13db014725.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 247_jpg.rf.b997276d54294a7adf70c1fd9eb5e17a.jpg | 漏:6 | 多:0 | 誤:0
+[OK]    248_jpg.rf.f638d635bade4a09a30b11e039ec50f8.jpg
+[ISSUE] 249_jpg.rf.48564735ea40c74495b57f314a5d2d97.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 251_jpg.rf.a658669fa5590075ec879be54d6ab21d.jpg | 漏:8 | 多:0 | 誤:1
+[ISSUE] 252_jpg.rf.c6475369ddb19d0f99e45e1d5e66e8d7.jpg | 漏:2 | 多:0 | 誤:1
+[ISSUE] 253_jpg.rf.f93f5a1828c8a23392290c0bd371a6ad.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 254_jpg.rf.91987b1519f2374a6f63436bb0d1055f.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 255_jpg.rf.72f2c98efafb92aea031576cb0f91d0c.jpg | 漏:5 | 多:0 | 誤:1
+[ISSUE] 256_jpg.rf.9d5576781a72552aab72c59831be8168.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 257_jpg.rf.715f66e5bc93a42d60d56cf5be7865ae.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    258_jpg.rf.436425659294963c8b20c04ff10b33b4.jpg
+[OK]    259_jpg.rf.289aa55dd423f067ac4471af7e9995b8.jpg
+[ISSUE] 260_jpg.rf.37e5d865675433839d24678bda1bf3c9.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 261_jpg.rf.54667147718d514be0afcf8561e6a8cd.jpg | 漏:1 | 多:2 | 誤:0
+[ISSUE] 262_jpg.rf.7ca724faa062464eec5624cfeaff02c4.jpg | 漏:2 | 多:1 | 誤:1
+[ISSUE] 263_jpg.rf.6bdf540690847a3cc07a9cc0c0ec5090.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 264_jpg.rf.20b0cc47339dedce92e616be60ccdc96.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 265_jpg.rf.2c96e5371da99a7be41ac8f3d7ee8541.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 266_jpg.rf.1d4046018f7296810205480ee1c91850.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 268_jpg.rf.f331264a936ee1c35b7d050c02b03464.jpg | 漏:0 | 多:1 | 誤:1
+[OK]    270_jpg.rf.adfe6e9652189b6b151e98c79a82fea8.jpg
+[ISSUE] 271_jpg.rf.5780249afa51f6af82e9eb5a9bb8a550.jpg | 漏:2 | 多:1 | 誤:0
+[ISSUE] 272_jpg.rf.db5299990e2b4b1262a89f944c423021.jpg | 漏:5 | 多:1 | 誤:0
+[ISSUE] 274_jpg.rf.c3da9e4c795b02358204727f62caa1bb.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    275_jpg.rf.c8c29e204d68b3e7fdfc0ac88f73cbf6.jpg
+[OK]    276_jpg.rf.64f2918527b973e4b8374a67fac16fe1.jpg
+[ISSUE] 278_jpg.rf.81a42e5798fd4e901a98d3eaa3970c26.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    280_jpg.rf.4c19db90147bb8c6d3427926a254eb5d.jpg
+[ISSUE] 282_jpg.rf.f97bfd444a32e701ae54b9ed83c92f1e.jpg | 漏:0 | 多:2 | 誤:0
+[OK]    284_jpg.rf.3cd199ce25cf0ca62fa60f3a8f801984.jpg
+[ISSUE] 285_jpg.rf.a858936fd90a3d9b8ec71bfd66fdc40d.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 286_jpg.rf.2d9c17d9e9c3f33ca91de89ea58de8e4.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 287_jpg.rf.b8447a82c140196f66b1bd4b2c68dfe4.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 289_jpg.rf.f8e620d27a6fa1258f50885815a916b8.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 292_jpg.rf.8d7e948cf334fdb789cb2a2d3033a60d.jpg | 漏:4 | 多:0 | 誤:0
+[ISSUE] 294_jpg.rf.9f50cbfe76cadb93c1fc80fc34102a85.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    297_jpg.rf.ffbaa486b40b6844fa54ab392ea6f563.jpg
+[ISSUE] 298_jpg.rf.13b0767c6c263e28a0d684e11a1d9ecd.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    299_jpg.rf.481da03601cf62f4efec588a1123c6b9.jpg
+[ISSUE] 300_jpg.rf.b02df23c3f2f2b949220f078c299c671.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 301_jpg.rf.b2f707ffdde20adb5f576184aae572db.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    302_jpg.rf.30eebf11b65a2c354aa91d62c9c36604.jpg
+[ISSUE] 303_jpg.rf.0916f76e4899e97de03acf3e4b7c4857.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 304_jpg.rf.f35c84a31e58b49ebe5521778e2692a2.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    305_jpg.rf.1452b4a7ec8fd4ce81918cb1f79ba769.jpg
+[OK]    306_jpg.rf.835f6ae464f88f61ebce6e5f245d817f.jpg
+[ISSUE] 307_jpg.rf.0c3133f0057ac927603bb04477d97aa7.jpg | 漏:0 | 多:3 | 誤:0
+[ISSUE] 308_jpg.rf.580231c102403b0babc0e700921d0483.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    309_jpg.rf.780fc32926b557d3473c4e1d54dc798f.jpg
+[ISSUE] 311_jpg.rf.503821e5cb9df093ef750288708b2557.jpg | 漏:1 | 多:1 | 誤:1
+[OK]    312_jpg.rf.8f5943c9ed364248b43d49adb5b542df.jpg
+[ISSUE] 313_jpg.rf.f091c08c2452a7c3be38754be1e614fa.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    316_jpg.rf.634f852fdb4611f80ed1f0b91361aa2f.jpg
+[ISSUE] 317_jpg.rf.79fbd14ccf817cf4bd166fc233c4172f.jpg | 漏:0 | 多:2 | 誤:1
+[OK]    319_jpg.rf.d4dfdbbe348907bf695fbabe58284ca8.jpg
+[ISSUE] 320_jpg.rf.573d3e8244c42dc096f0b2bf4a73c2a1.jpg | 漏:7 | 多:3 | 誤:0
+[OK]    321_jpg.rf.12658277ac1b2e5669d29608d5e662ba.jpg
+[ISSUE] 322_jpg.rf.02a808c02d85756d56c92de11bd797b2.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 324_jpg.rf.c07a59987dda77531bfeac1f0c11dfc0.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    325_jpg.rf.e3b3ff492eeac6e96a5b55e270c5cb3d.jpg
+[OK]    326_jpg.rf.b50576ecd5d1668c6956cc98d358f556.jpg
+[ISSUE] 327_jpg.rf.90441143bc5e42a543dd2eedf58c4d97.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 328_jpg.rf.30bb3670367ee09411d85c22776da826.jpg | 漏:3 | 多:0 | 誤:1
+[ISSUE] 329_jpg.rf.c99f5b1a0d52e142ca99955f5cec82a7.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 331_jpg.rf.656f49c6769b2c142f2934f95f67b10c.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    333_jpg.rf.82d36080ffe12489aaf8e54322af8350.jpg
+[ISSUE] 335_jpg.rf.7f3c3f0256d76b4cfbf08e0bd8a7b423.jpg | 漏:0 | 多:2 | 誤:0
+[ISSUE] 337_jpg.rf.ed89b271bd0d1a6b4e994b30ee8e15f9.jpg | 漏:3 | 多:0 | 誤:0
+[OK]    338_jpg.rf.fd8d6a94dd26c0603b6a56c6b4ccfacf.jpg
+[OK]    339_jpg.rf.f08dc641b323a4396417c7df169a25af.jpg
+[ISSUE] 340_jpg.rf.790414f533e95ade7fa916e2c4ae3d01.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 344_jpg.rf.8e4d559572212f9f67db96ec3411a8f6.jpg | 漏:2 | 多:2 | 誤:0
+[OK]    345_jpg.rf.74e707e1f2c76b95704c0e035aa56bd4.jpg
+[ISSUE] 346_jpg.rf.434945f087891aa8290363496d91b33c.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 348_jpg.rf.dcd74ae95914e28339b4640cb5818206.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 349_jpg.rf.6b56893526e0ab6d05aa708e6d9a6e25.jpg | 漏:3 | 多:0 | 誤:0
+[OK]    350_jpg.rf.16e2486d8645d8e2e2084d80e6c950bb.jpg
+[ISSUE] 352_jpg.rf.8248fdf9db56950ff3cf59fbe45c4c6e.jpg | 漏:1 | 多:1 | 誤:1
+[OK]    355_jpg.rf.8f934c41ac2253410533492735123d2d.jpg
+[ISSUE] 356_jpg.rf.b4d0fd3643ef0eb138982da3ef1befef.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    357_jpg.rf.d5c8052f18a01b29e4723b0eddd38370.jpg
+[OK]    358_jpg.rf.8497960b1e776bb1d0e85cdf8dcc883f.jpg
+[OK]    359_jpg.rf.279a6829093746f9e98ebfc4937aa548.jpg
+[OK]    360_jpg.rf.8fddbf50fc14a92651976188fccff071.jpg
+[ISSUE] 361_jpg.rf.f354b85c0d6ca9c87dbcb5b5f16c431b.jpg | 漏:0 | 多:3 | 誤:1
+[ISSUE] 362_jpg.rf.4b761b2f85d132e4ff57a24a1c73e51b.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 363_jpg.rf.ab9c367fe01eb8c75cd69c1855498245.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    364_jpg.rf.c704d96aa5c8969970fd8ec024b81b4a.jpg
+[ISSUE] 366_jpg.rf.7a5ecdf060967c42f95d35e21131e78e.jpg | 漏:0 | 多:2 | 誤:0
+[ISSUE] 367_jpg.rf.539a8fe5ef9b4b53a782d99e094ed342.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 368_jpg.rf.6ad1157477e648d3851bb583f925ebb0.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 369_jpg.rf.807b1c20256d95eea51a8b38eee1865f.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    370_jpg.rf.8f7f0181295ab245642558d2567e29c3.jpg
+[OK]    373_jpg.rf.fe098e107544061327f37055c1f1ce1b.jpg
+[ISSUE] 375_jpg.rf.4919bb6fdf0c818a0b01d75d2d31e978.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 376_jpg.rf.c85cdf3cabf33f10a900d16d0618736f.jpg | 漏:4 | 多:0 | 誤:1
+[ISSUE] 377_jpg.rf.9781d00d78537bce0424ab797f25c4ef.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    378_jpg.rf.e8a107a54e1feccff00b1fd4a1be0abf.jpg
+[ISSUE] 380_jpg.rf.3ca680bb6cc53f0a9a73ed6b095bf038.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 382_jpg.rf.a58916a5ed1ad8c742754c1ec6c6da58.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    383_jpg.rf.7b3eb644fe59b076a72a6589f821bb09.jpg
+[ISSUE] 384_jpg.rf.2a07c28cd8c95bc6204a13f375274d96.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    385_jpg.rf.42ac26831910bb1cdf6d08718a3fd94d.jpg
+[ISSUE] 386_jpg.rf.b0030ed22dc6152fbcbdda216dfdb40d.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 387_jpg.rf.aa0c89b14f9fb63f9302aa12fee96df7.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 388_jpg.rf.6ee08bba4c11f01d51ad97d56ae65ef0.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    389_jpg.rf.10abcd99f237fdff2b689664551cc3c1.jpg
+[ISSUE] 390_jpg.rf.d69b49bd19a10edf3fa2ed74104f02d0.jpg | 漏:1 | 多:0 | 誤:2
+[ISSUE] 391_jpg.rf.9a482627afac4b379d14bc62b8ad7b9b.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 393_jpg.rf.9ba1f05e0bef2b1ffac27508c71b9d0b.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 394_jpg.rf.cc1a4dccd9519f80c1abc06af09ae70d.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    395_jpg.rf.9fb85f093d8767db3fae8cd9e2cc8c17.jpg
+[OK]    396_jpg.rf.09e878da4dc97c56d25928c1a2a03ef7.jpg
+[ISSUE] 398_jpg.rf.13852860550c32912906431a004a09a9.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    399_jpg.rf.3ec99ad4500a954dc00589a3af9188c6.jpg
+[OK]    400_jpg.rf.be6b9362ff73c14ef529ee56a36cd49b.jpg
+[OK]    401_jpg.rf.dcb0af89e5ee82ef873fac4a1a01619e.jpg
+[ISSUE] 402_jpg.rf.c54d3804ade736bbf093bf2e249db4f4.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 406_jpg.rf.f8cf50fa724fff2303348482a9eed907.jpg | 漏:2 | 多:0 | 誤:2
+[ISSUE] 407_jpg.rf.8319a85a44e2e39917b1468c36d51a11.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 408_jpg.rf.7c5b1e6498dac40787e146055e7d7ca7.jpg | 漏:3 | 多:0 | 誤:1
+[OK]    409_jpg.rf.bebb5e9c313686ec8de3669e090a41d6.jpg
+[ISSUE] 411_jpg.rf.6a0ee569c86517c9eaf66e94287ca0d8.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 413_jpg.rf.652f58d654de82f629ffee2eb470916f.jpg | 漏:2 | 多:0 | 誤:1
+[OK]    414_jpg.rf.3deeee691bcccefdbe4c652799886b3c.jpg
+[OK]    415_jpg.rf.12d7a1f35fe7adccccaca1ef40b1aca8.jpg
+[ISSUE] 416_jpg.rf.646eafa9c6c39b89ce20a3bf4105cb51.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 417_jpg.rf.72035ec7284d53bb57ada60fdf11c9df.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 418_jpg.rf.091e093e56b71d2d2da99b8e1f8be833.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 419_jpg.rf.1ff7efcac477187d4761daa8b4438920.jpg | 漏:2 | 多:0 | 誤:0
+[OK]    420_jpg.rf.1131a06393d03676541d584461215997.jpg
+[OK]    421_jpg.rf.9c684bb5865292125c277d534da1862b.jpg
+[ISSUE] 422_jpg.rf.4410cd34bdd1f255435317fc2209749e.jpg | 漏:3 | 多:0 | 誤:0
+[ISSUE] 424_jpg.rf.44ddb0e1d99f7fcf68e01e29f7490a20.jpg | 漏:3 | 多:0 | 誤:0
+[ISSUE] 425_jpg.rf.3fcccf4298dab4d033e1f0bc54b08209.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    426_jpg.rf.325b94bb80bbdefe04be6a100ef5e888.jpg
+[OK]    427_jpg.rf.d133809c46274a28e575abb990558646.jpg
+[OK]    428_jpg.rf.18d255fd6326b8a81c8374e2fb05ac2f.jpg
+[ISSUE] 429_jpg.rf.b1997847095dbe53971517a670d01dda.jpg | 漏:5 | 多:3 | 誤:0
+[ISSUE] 431_jpg.rf.c77af97b082b076250d78e44dd6a51bf.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    432_jpg.rf.5a29afd64d38bcc385270cf1456e5a61.jpg
+[ISSUE] 433_jpg.rf.a4690227788ab0a86a333dd7fabff3e9.jpg | 漏:1 | 多:1 | 誤:1
+[ISSUE] 435_jpg.rf.05b75e1cf5f96d5dab87d686708ecee2.jpg | 漏:0 | 多:1 | 誤:2
+[ISSUE] 436_jpg.rf.1a2e4bff3defee9dfc9aa9402b55bd08.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    437_jpg.rf.bb13f879c695e73f602a6f9123615f73.jpg
+[ISSUE] 438_jpg.rf.77129f746c12d4b7d78f892e66c46dbc.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 440_jpg.rf.800aa3efda3d7d9ab7dd455e6b8bbd37.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 442_jpg.rf.4197347cc62e6be52c3a463d4cb36565.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 443_jpg.rf.fe7644796ead718df6942e20865e9fd1.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 444_jpg.rf.901573d35dc8ee1d43cf4ed13df9f038.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 445_jpg.rf.097de54dd180f3cd77a9c93b1b80d5fa.jpg | 漏:2 | 多:1 | 誤:0
+[ISSUE] 446_jpg.rf.b2a6082c797157c0e61d49589cfdd2c4.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 447_jpg.rf.ce926189fccd5e2e9fe65251c1cb3166.jpg | 漏:2 | 多:1 | 誤:0
+[ISSUE] 448_jpg.rf.cea41c8c9ac608557ccbe0ba1cee1aa8.jpg | 漏:0 | 多:1 | 誤:3
+[ISSUE] 449_jpg.rf.9d2a923ca36113b05e14add02ba53e9e.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 450_jpg.rf.d2b019c9a697059a1247b58d42591bb2.jpg | 漏:2 | 多:0 | 誤:1
+[ISSUE] 451_jpg.rf.8d95eea5f9d29361432f226e17c5179a.jpg | 漏:3 | 多:0 | 誤:0
+[OK]    452_jpg.rf.f8de3137b0fcaa52d1679ae147a16bd1.jpg
+[ISSUE] 453_jpg.rf.ed293a6ea01af82b86878e2a9d8604aa.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 454_jpg.rf.bcb9b58017988814ed22c180a946abb7.jpg | 漏:1 | 多:3 | 誤:0
+[OK]    456_jpg.rf.815ab181dc0f31551f668cf23e02eee5.jpg
+[ISSUE] 457_jpg.rf.c05be9c5a8547dd71c3d4170e627008e.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 458_jpg.rf.00e09c83e630836c9734656e2beccdd7.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 459_jpg.rf.7526b8df52316960f5221b63b8cf6aca.jpg | 漏:5 | 多:1 | 誤:0
+[OK]    460_jpg.rf.dc5d3c52ce3f505732a69747a5058828.jpg
+[OK]    461_jpg.rf.5dc78ff7c468825178077d15c4bb330d.jpg
+[ISSUE] 462_jpg.rf.0e33257c6bfae0c92579723f28c0385d.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    467_jpg.rf.cc616df07a789f9a1e4870a169c2cd12.jpg
+[OK]    468_jpg.rf.ba86c5aed7ed852b4ff8377fd29a9a28.jpg
+[OK]    470_jpg.rf.b84861f2fdeb2e4bef2559f1eac67289.jpg
+[OK]    471_jpg.rf.8ef9bd619c9cf59ca0e48b5572048828.jpg
+[ISSUE] 472_jpg.rf.a87c89497d1dbdd252c6dc9d8208f9b7.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 473_jpg.rf.99ddc5edfc0615ea5ac8c4c6b9f5d58b.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    474_jpg.rf.9dcd18470b8ed07955759bd9f1d4d304.jpg
+[ISSUE] 475_jpg.rf.3462fa1b282874a70c2652fd12420ae3.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    476_jpg.rf.2454c0a7f3ed859ff60f26855bd7a985.jpg
+[ISSUE] 477_jpg.rf.5c42808ef43231e6a8c09a1df5a4fbac.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    479_jpg.rf.ae66eb5ed429f6d91fdf5df99ddde23a.jpg
+[OK]    480_jpg.rf.5a731e57d7de8efa5d5af36322a434e3.jpg
+[OK]    481_jpg.rf.62c46c212e9c435cd8d651ec69f5c550.jpg
+[OK]    482_jpg.rf.c3cff14d60c66805f2e35d6b8840b884.jpg
+[ISSUE] 484_jpg.rf.89aa30619fd43d1823ffeb722c2d2444.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 486_jpg.rf.55f9a038a87a4c65a82d82c0cb52855e.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 487_jpg.rf.0d4e10bca2910183a94d4b9c6c96e5fc.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 488_jpg.rf.cd73ab6be5b73a00a8841810eb13eea0.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    489_jpg.rf.85244457439a773cd75272e2fa467a45.jpg
+[ISSUE] 490_jpg.rf.d347293b8014e76aae41b932fafdccfc.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 491_jpg.rf.b50cbd7a1fb9361a9a5a9e7884550d47.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 492_jpg.rf.856e2416f8a26a04150a0d404cbce490.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    493_jpg.rf.adb758eedcfd97c4a50be2f8b630256c.jpg
+[OK]    494_jpg.rf.5a8fb61b51c1a429e943b444121458d1.jpg
+[OK]    495_jpg.rf.dd91a25baf10faf33e3b9d459975acde.jpg
+[ISSUE] 497_jpg.rf.06f3611d644eafa805c12e423603376a.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    498_jpg.rf.75ecbb73c4c7fccd6b0a68be8a8080de.jpg
+[OK]    499_jpg.rf.b2d19dd170715285a0a7a47d0fce26a8.jpg
+[ISSUE] 502_jpg.rf.2ef9f17ae5e76c7699b89683c42de6e8.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    503_jpg.rf.651674f0a35e4b2bc7beea978ca67a12.jpg
+[OK]    504_jpg.rf.ea77efb1ddee625d71ecac4a4ed7147e.jpg
+[OK]    505_jpg.rf.adbe4cd7e388b3c862a236748e29cc72.jpg
+[OK]    506_jpg.rf.41b7648f13fadcef6e23201b82e66e31.jpg
+[ISSUE] 507_jpg.rf.b28b4fd6bbde7723200f82330fc75edb.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 508_jpg.rf.aebb11ef5474abcc3b3fea98d4f94ffc.jpg | 漏:0 | 多:3 | 誤:0
+[ISSUE] 509_jpg.rf.b0d484e63d31e72b1bd36288158506a1.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 510_jpg.rf.a94f979834f3d6f29d7ef4b6c269bbe0.jpg | 漏:1 | 多:3 | 誤:0
+[ISSUE] 511_jpg.rf.870663f4eb3296348d58b102eeac649d.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 513_jpg.rf.5898591d95244416ee0f6533497be071.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    514_jpg.rf.e58bf6e64b7beb39864054fbb2cc411b.jpg
+[ISSUE] 515_jpg.rf.f059ef52fd10c40b2c03f27a5e488aa7.jpg | 漏:2 | 多:3 | 誤:1
+[OK]    516_jpg.rf.61e3d5dcf71742f7ede15558989a9ead.jpg
+[ISSUE] 517_jpg.rf.ce97f8b33aabf08cc1bfdba28ff292d9.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    518_jpg.rf.67d76b79e1b8267112efcaee3cd06a43.jpg
+[ISSUE] 519_jpg.rf.2aa5c81c65be9c063db259df9f62b5d9.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    521_jpg.rf.c5640782f97f0f420479cc9b33fbe684.jpg
+[ISSUE] 522_jpg.rf.e234fedf50814e1ac527d03b8732369d.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 524_jpg.rf.310f831573432d2ed384523ee336bb67.jpg | 漏:3 | 多:0 | 誤:0
+[ISSUE] 525_jpg.rf.6d96869b9c90097cbbb3028a5fe620e5.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    526_jpg.rf.80ca52c7c3e22ae33c6756c5d65abead.jpg
+[ISSUE] 527_jpg.rf.c5ce571cea74dc6ad4ddd6ef06c51fc4.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    529_jpg.rf.f8fc5dc627b1b9ea165539b3e4edc66a.jpg
+[ISSUE] 530_jpg.rf.cc1b4e9fed0a9604a2e150be1a457d96.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 531_jpg.rf.aea1a9f54cba8b8c58db5a7fe8a6dcc0.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    533_jpg.rf.4b44f33b382ccb96985ce533126767e8.jpg
+[ISSUE] 534_jpg.rf.c8202807fca91b09d42a95ece205c8d6.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    535_jpg.rf.3b13d12befa636d2c82f089c68d5e6a5.jpg
+[ISSUE] 536_jpg.rf.28b6650a2524674e4ed33e6a02358de4.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 537_jpg.rf.694fdcfff6fe2fd84c3c9d1f653ac8b0.jpg | 漏:3 | 多:1 | 誤:0
+[ISSUE] 538_jpg.rf.7dac799d4e9a0545e88ce5b64e56b2ae.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 539_jpg.rf.02c4170565eb6e2255d0ee9f65db1a9f.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 540_jpg.rf.2fa7c09872e2a8074e63c005f884b7aa.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 541_jpg.rf.42bcea22cc9e86d10674852be9359ac3.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    542_jpg.rf.04cca150b6ad28f4c102f4b6e14b53ea.jpg
+[ISSUE] 543_jpg.rf.81bff10b720235073d9e4b793cf7bab3.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 544_jpg.rf.241e4244273c11e20464e48117888c37.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 545_jpg.rf.a3e66bc7664ae98c7a64d28dccc1a9c6.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 546_jpg.rf.50e50fe0b1b2894d25fe59c0a07b8c2c.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 547_jpg.rf.7779aa8a7bf180b85bf67493cd8f1c3c.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 548_jpg.rf.937f5d4c7a8dd9fcb181e37ee26d5bfd.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    550_jpg.rf.305eb613e95b34e01d55ead396a08878.jpg
+[OK]    551_jpg.rf.ee65b0ec25bdb8363dbfaf8d88a5296d.jpg
+[OK]    552_jpg.rf.633a1f2220dc3450f970e79f736adad9.jpg
+[ISSUE] 554_jpg.rf.4aba3e94098335479fce5d46861a381e.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    555_jpg.rf.e8c83ec450e323841d0b2e55f3dc2a05.jpg
+[ISSUE] 556_jpg.rf.581faab9584f73cf90d6c363ee05d8df.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 557_jpg.rf.608c5b9067b4aa460bf152a06aeccfe8.jpg | 漏:0 | 多:0 | 誤:3
+[ISSUE] 558_jpg.rf.dd5e8616129ec08d60f670df11472886.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 559_jpg.rf.7376b5ceb6b68952806994c5974808ce.jpg | 漏:2 | 多:0 | 誤:2
+[ISSUE] 560_jpg.rf.1376e2c9111cb7869f2bbdaae20f6fd5.jpg | 漏:3 | 多:0 | 誤:1
+[ISSUE] 561_jpg.rf.a1bc4cf2a48a8f2e3973b244ba074eb9.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 562_jpg.rf.5c2af6ae81a7457fc40abc525db1de06.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 563_jpg.rf.66741ac0cd2ea21b2b6887ffcff62d05.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 564_jpg.rf.09d5ca3b6efe367f93aad621652bc85c.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    565_jpg.rf.1ea93dc468a2d582e8adec9cf73619e4.jpg
+[ISSUE] 566_jpg.rf.48e74400cf724dd264a60a82d6a9fe92.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 568_jpg.rf.4fe68c5073bcfc1e6c8e6f14e3e06f24.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 569_jpg.rf.dac3ed764d62a9baa099f98b47571607.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    570_jpg.rf.00e9c0bac3dcb4d3199c93596bc9bc2e.jpg
+[ISSUE] 571_jpg.rf.af1035a2bb5cda06a2a1887e50056206.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 572_jpg.rf.333deb6735a9068ef786dabb377d9439.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 573_jpg.rf.eafb9114a17681d9e59b076cae32acf7.jpg | 漏:0 | 多:1 | 誤:2
+[ISSUE] 574_jpg.rf.4b6fbc9ac63cfee004ad9f1df07de21e.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    575_jpg.rf.9e172592ddeb513ca6e28ac3c45c1529.jpg
+[OK]    577_jpg.rf.1814bd34f5b50c32c13e105634613e10.jpg
+[OK]    578_jpg.rf.e69057be9cfd632af290e82c1e21be86.jpg
+[ISSUE] 579_jpg.rf.04e077b440e1ee7aba398586736f9311.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 580_jpg.rf.1356bbf7e037bf4ce82400cc4e3285ad.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    581_jpg.rf.f3a4175817ad2086ca9a0c2d4909c37b.jpg
+[OK]    583_jpg.rf.cb3f60d1aa0c6631222e690f7c6833fe.jpg
+[OK]    585_jpg.rf.231888a64ba7d6d1de04e1c7bfc9574b.jpg
+[ISSUE] 586_jpg.rf.2e0866046d68950a3aba0857cbf475eb.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 587_jpg.rf.c6483ee65d3d57052af4015ede4eac0c.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 588_jpg.rf.e4c7d37ef64f6aa1514218019aab0ab4.jpg | 漏:0 | 多:1 | 誤:1
+[OK]    589_jpg.rf.214681b25ad76952a025c552c60e6fb6.jpg
+[OK]    590_jpg.rf.20777a5b7c1aff20b2f142190769a720.jpg
+[OK]    591_jpg.rf.419436676db396fbd1e439451ad49202.jpg
+[ISSUE] 592_jpg.rf.d7b6891f4d1c5dbfd2bc51a4f0e3b441.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 593_jpg.rf.f2f19e847e7e5f502f8b56a02a81c0c5.jpg | 漏:3 | 多:0 | 誤:2
+[OK]    594_jpg.rf.99e2800425f42c1db1fad099a85b503f.jpg
+[OK]    595_jpg.rf.82f107a450cf3115137c7307d55f89ca.jpg
+[ISSUE] 596_jpg.rf.53f31fbd961e01f39bfdd39c3bfdf84e.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    597_jpg.rf.e9c3cf789fc85bcc09b26129a3787923.jpg
+[ISSUE] 598_jpg.rf.f0b395ee797c6a6ec131ee67b5f80ce6.jpg | 漏:2 | 多:0 | 誤:0
+[OK]    599_jpg.rf.161065d9c4fb543689e3a435b4e0c0e1.jpg
+[ISSUE] 601_jpg.rf.ef114a84d81ac9eaa7821602ba0e2054.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    603_jpg.rf.2e822da0eed442582756a7dcd4cd9ce8.jpg
+[OK]    604_jpg.rf.8103b031da29907f6c4fcfb932f5d98b.jpg
+[OK]    605_jpg.rf.058cff82daf6016848cfbbd52fde3ff2.jpg
+[ISSUE] 606_jpg.rf.f5093e5ed2314d3a9333ffe0e86b57c3.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 607_jpg.rf.a28cf855d83b3412dc9be8fa7a5d19d4.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 608_jpg.rf.3b2c180f4568c4648239a1ebf0d757e9.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 609_jpg.rf.9121d07b14e08b33e314deda6dc204f8.jpg | 漏:2 | 多:0 | 誤:1
+[OK]    610_jpg.rf.de4a0c492144363af995e62f99bff906.jpg
+[OK]    612_jpg.rf.0bd17e9de1568b91f092e27957f830c4.jpg
+[ISSUE] 613_jpg.rf.bdec9f34e806ac5d51eb2a37cde677d6.jpg | 漏:4 | 多:3 | 誤:0
+[OK]    614_jpg.rf.6ce0ab761ec9b64f71f58c01f674f1c3.jpg
+[OK]    615_jpg.rf.725204ab726042032f75c9adadabbf98.jpg
+[OK]    616_jpg.rf.c72a46370003c0ebef26ceaf4007ad42.jpg
+[ISSUE] 617_jpg.rf.6091da2a94a38d3d92c681b7fd395aab.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 619_jpg.rf.9af15eb339029f99bf6e8aa8efa3ac13.jpg | 漏:1 | 多:1 | 誤:4
+[ISSUE] 620_jpg.rf.e52929934179b5dbfd033a8c20eb18e8.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 621_jpg.rf.5424a94cbf6c076a29d8adc1fc5c6b7d.jpg | 漏:0 | 多:3 | 誤:1
+[ISSUE] 622_jpg.rf.c09226a377f85d030b277a020c54afbb.jpg | 漏:2 | 多:0 | 誤:1
+[ISSUE] 623_jpg.rf.0ec5a90bc52de8612ef0232ad88d684a.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    625_jpg.rf.0e44de8c8e05ad5303204834529fed58.jpg
+[OK]    627_jpg.rf.9e4f315050c8cff962cf80f4603fcc83.jpg
+[ISSUE] 628_jpg.rf.f8f69614cf0d429ffa93f8400b45bcb8.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    629_jpg.rf.9a890a05527ad6f45891030d10f120e1.jpg
+[OK]    630_jpg.rf.1c70a43a17b6bb8ffc86a806dd2e0210.jpg
+[ISSUE] 632_jpg.rf.d769f24976de1872be11dbe5d464f0e3.jpg | 漏:4 | 多:0 | 誤:0
+[OK]    633_jpg.rf.3016fb403827c6f906173728b2440683.jpg
+[ISSUE] 634_jpg.rf.fca7357badc3db88e23885d649e92ba3.jpg | 漏:5 | 多:0 | 誤:0
+[OK]    635_jpg.rf.d7bbc225727117adb3a9f550e972175a.jpg
+[ISSUE] 638_jpg.rf.b4c73cf81a5226b6f8d773e7d676d7bc.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 639_jpg.rf.9e716b29a2b4623ca933303c3a29d41b.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    640_jpg.rf.d900be25a1040bc834449c402844387b.jpg
+[ISSUE] 641_jpg.rf.93fb9371e05e60a99d2cb23dd85aec0f.jpg | 漏:4 | 多:13 | 誤:0
+[ISSUE] 642_jpg.rf.ef4155a8018a1e55bb43a2e0c3417733.jpg | 漏:1 | 多:5 | 誤:0
+[ISSUE] 643_jpg.rf.39836136ee3a81ef78127f5250ae74cf.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    645_jpg.rf.bba139310a0e4cda79eb7f7bf2d5f867.jpg
+[ISSUE] 646_jpg.rf.29cc8695f9cc456db9bbe1167ca9d341.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 647_jpg.rf.7fd16c93099f96b540260696f4c10904.jpg | 漏:2 | 多:1 | 誤:0
+[OK]    648_jpg.rf.71debbccbf2530b95539a2720dd1b66f.jpg
+[OK]    649_jpg.rf.daee4cc215bc035b7660de0f9d92bf5e.jpg
+[OK]    651_jpg.rf.6664392cfa15f10deaea04c083e3fe17.jpg
+[OK]    654_jpg.rf.700c9401050db82f3a3c110dff7680c1.jpg
+[OK]    656_jpg.rf.7dab5c6f7d7b1cddc5c741d4f0f08491.jpg
+[OK]    657_jpg.rf.9b386c9689d5f6ed67f52a755e98dae4.jpg
+[OK]    658_jpg.rf.83b9c250fcf2642c41877f340dc16797.jpg
+[ISSUE] 659_jpg.rf.54d81515e2cbe38b98a1f669a60cdfb8.jpg | 漏:2 | 多:0 | 誤:2
+[OK]    660_jpg.rf.508d24b1c24c92269b7f6e200d9591e2.jpg
+[ISSUE] 661_jpg.rf.d34db8c40433c59f11a1eeab29479790.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    662_jpg.rf.0fcc7c21b00165d15a68289783ff9b39.jpg
+[OK]    663_jpg.rf.2cf0e181f633531fe6e797e9ea16083b.jpg
+[ISSUE] 664_jpg.rf.c0b8d070e97b35ac9599a32ac63e794b.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 665_jpg.rf.d9c3f85ad6907b911fc1985c45b46b08.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 666_jpg.rf.f38c3281ce0a568acedf573a7e4ca301.jpg | 漏:0 | 多:2 | 誤:0
+[ISSUE] 667_jpg.rf.7072194cfa0496f4e4664efe623173b6.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 668_jpg.rf.72807eec5c1a486b54c736a8e95bbf92.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 669_jpg.rf.d23a8e56d0a0bb809193b5b030cca7c6.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 670_jpg.rf.8992e97748e01fc8b16d9cfcb88562fa.jpg | 漏:0 | 多:3 | 誤:2
+[OK]    671_jpg.rf.288c88857f96cc26b3c8cde6d43949f1.jpg
+[ISSUE] 672_jpg.rf.c5035cf43fd9c25d2b0f4c314c4f967d.jpg | 漏:0 | 多:0 | 誤:3
+[OK]    673_jpg.rf.6250c8c0107a6924fb68f9778f1038c2.jpg
+[ISSUE] 676_jpg.rf.388fd8f82e33d1e46e4a68eae274344f.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    677_jpg.rf.8d3c6a6204228f67228ea3e95e912176.jpg
+[ISSUE] 678_jpg.rf.fcea757e8005ac111c724b60561ad3b9.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    681_jpg.rf.91f43fc699b1a3cb9dd1eac501dfecb9.jpg
+[ISSUE] 682_jpg.rf.097d87ef1aa41f86f0559a5714be9fbf.jpg | 漏:3 | 多:3 | 誤:2
+[ISSUE] 683_jpg.rf.c239e6f83113acd7ab6605b812845abd.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 686_jpg.rf.632a0f06061883c9ea5f985671330d2a.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 687_jpg.rf.00a4144a1a5f4f3f56824095ae9438d0.jpg | 漏:5 | 多:3 | 誤:2
+[ISSUE] 689_jpg.rf.1df806adb451c2a16dd67069d8a7366f.jpg | 漏:3 | 多:0 | 誤:0
+[OK]    691_jpg.rf.fe51528a5dbd053fc710db6614894203.jpg
+[OK]    693_jpg.rf.f3e78326fb7aa88c952e797e51fb6373.jpg
+[OK]    694_jpg.rf.85ed537855a949bdc6cea9930251920c.jpg
+[ISSUE] 695_jpg.rf.40b3ba911ab52e72ba99813bc9ffb294.jpg | 漏:2 | 多:0 | 誤:1
+[OK]    696_jpg.rf.05a397c3e257b0e2da6a22ec3f61326f.jpg
+[OK]    697_jpg.rf.6b1828e8d7ab5283a7905d2d2ba337d6.jpg
+[OK]    698_jpg.rf.c591ab22f2190525429cf9edaaa27be6.jpg
+[ISSUE] 700_jpg.rf.711d8e16372dcf3af7575435152f65d6.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    701_jpg.rf.dfb0f34473ebc20edb9609255e90a35a.jpg
+[OK]    703_jpg.rf.92ac5f5dccfa6d09a0cee651c3be9183.jpg
+[OK]    704_jpg.rf.6c48df2dd42f1702f076eeb1e7574dae.jpg
+[ISSUE] 706_jpg.rf.f5b7927fb3431b6f776306ca02511c2b.jpg | 漏:0 | 多:3 | 誤:0
+[ISSUE] 707_jpg.rf.506aed8991ca9194cb588303e1e59b38.jpg | 漏:5 | 多:0 | 誤:0
+[OK]    709_jpg.rf.10245b4768ad908d858db913b9ffbe95.jpg
+[ISSUE] 710_jpg.rf.5146c9ec1a038221a3d2e3d9d436a391.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    711_jpg.rf.6cdc797a273cf92177bdd06ea1107e6c.jpg
+[OK]    712_jpg.rf.3f65ea0afb43a0eb6ebcdd7355e38ea1.jpg
+[OK]    713_jpg.rf.16accb3057594f64ec1aec46926bac54.jpg
+[OK]    716_jpg.rf.50221703810229edf538490c52e4b320.jpg
+[OK]    717_jpg.rf.fcdb70e843ee7905595a7d0f134525b0.jpg
+[OK]    718_jpg.rf.aa58296e84f465ee30653a703bb637ab.jpg
+[OK]    719_jpg.rf.5a2578aa79ad62f941d07d614e27be71.jpg
+[ISSUE] 720_jpg.rf.bf93b6edbbeb75e7533c83b0951bf798.jpg | 漏:4 | 多:0 | 誤:2
+[ISSUE] 722_jpg.rf.d9a07e20f6a97bbde63091748b1839df.jpg | 漏:2 | 多:0 | 誤:2
+[OK]    723_jpg.rf.ea1c8586c6dc6163d71bf512efd065ea.jpg
+[OK]    725_jpg.rf.d72401efda44f249ca38dd0f2f34e866.jpg
+[ISSUE] 726_jpg.rf.b1e886868f1cc583a2b554d04ce3b82b.jpg | 漏:3 | 多:0 | 誤:1
+[ISSUE] 727_jpg.rf.6bd29b61ff3e935b55ede3d50a362bd9.jpg | 漏:1 | 多:1 | 誤:0
+[ISSUE] 728_jpg.rf.7fa8545a81c907cde477c484bec9c218.jpg | 漏:1 | 多:23 | 誤:0
+[OK]    729_jpg.rf.0398af8b22ff099134201cf9b7d19cf5.jpg
+[OK]    730_jpg.rf.11b310f9bbd222d896aff3d90ea639d9.jpg
+[OK]    731_jpg.rf.a3112f48b9f4567705b20e30924d8d19.jpg
+[ISSUE] 733_jpg.rf.6b27074e2083a0265ab10af7ae6c4a9c.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 734_jpg.rf.7a98382d204faff3ab579af0de287058.jpg | 漏:0 | 多:3 | 誤:0
+[OK]    735_jpg.rf.05a15224e0af639e377fa05ce8f8b76e.jpg
+[ISSUE] 736_jpg.rf.037b168dbedf773b85ef9011767ecc72.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 737_jpg.rf.f19b3abd470d802b2e4441848a6963d2.jpg | 漏:1 | 多:0 | 誤:2
+[ISSUE] 738_jpg.rf.9c30a311c20d4e2955f00f81615fd4d8.jpg | 漏:0 | 多:1 | 誤:2
+[OK]    740_jpg.rf.a0c6be27c36202ea2fc2e9adb0510b08.jpg
+[OK]    741_jpg.rf.68baff39ba6d615c970cf48504060fc0.jpg
+[ISSUE] 742_jpg.rf.65fc5c01be3ef89c1e9e40b309acc311.jpg | 漏:1 | 多:3 | 誤:1
+[ISSUE] 743_jpg.rf.7f97b2c5b33144bb673e80509e005edb.jpg | 漏:0 | 多:4 | 誤:1
+[ISSUE] 745_jpg.rf.84efdfdd5568d6b69da34a5e051e2e33.jpg | 漏:11 | 多:0 | 誤:0
+[OK]    747_jpg.rf.0293a9729a70165dc02a02e745477ebf.jpg
+[OK]    748_jpg.rf.7530249a84cc95bc631689d185d1693d.jpg
+[ISSUE] 752_jpg.rf.9393dff7954b820fc3a1966e757be38d.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 753_jpg.rf.25712fdaf3f7726ae54f043955328159.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 754_jpg.rf.5c7e065b309f6e400dcca958b7a11432.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 755_jpg.rf.49e9550c2ca2a1b533e33295e6d4a74c.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    756_jpg.rf.9a33020c2518affd24b9317e5cdee8c5.jpg
+[ISSUE] 757_jpg.rf.d74a27b5a5a55772e7bf05645372eb98.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 758_jpg.rf.9ea48f60a5acf8d8f4522b055e582825.jpg | 漏:8 | 多:1 | 誤:1
+[OK]    759_jpg.rf.a638a4a30c202b30b511c7256af7b5a6.jpg
+[OK]    760_jpg.rf.45ff8bcd1f3db7da42247c53e8d48407.jpg
+[ISSUE] 761_jpg.rf.5228d1b601d34ea7d03d6a7c72a6e6de.jpg | 漏:1 | 多:0 | 誤:2
+[OK]    762_jpg.rf.3eaf316cd9b5f696077f61e683047299.jpg
+[OK]    763_jpg.rf.4f10ead60f96fb356932f9473ed5887f.jpg
+[ISSUE] 765_jpg.rf.5fb851421df1de69ba317cce73b99591.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    766_jpg.rf.95c5c4da54a74ebfccd4f005d1c7962b.jpg
+[ISSUE] 767_jpg.rf.f31cd055d6a466628854d59ad5cf0d96.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 768_jpg.rf.f3c2acfda87866816f8462473906e70e.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 771_jpg.rf.143e182536f5588178b8e3aab03f436b.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 772_jpg.rf.491441816e67ca6895eed72a5ca37d91.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 773_jpg.rf.71925b5555c1375f64ab6436f3f5ece5.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    774_jpg.rf.ec78e4d39a6f9c28a6e94da5cac04bc5.jpg
+[ISSUE] 776_jpg.rf.272a687dc46229afa7a2b06d2b418e4c.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 777_jpg.rf.edd06cf0c4db25b6cef6b45d109daccf.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 778_jpg.rf.9b68e314b659e37622b47072fbee23aa.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 779_jpg.rf.05b1cbc84048a0d040df5e640d33dba8.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 780_jpg.rf.3eb0965d8e2ca205a9972a29fd740dba.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 781_jpg.rf.ac1847e06eda24747d38a69338e741e7.jpg | 漏:2 | 多:0 | 誤:1
+[ISSUE] 783_jpg.rf.263f17836a893f47f94653ff0ed43f57.jpg | 漏:4 | 多:0 | 誤:0
+[OK]    784_jpg.rf.c6992351962747c7206586898cf0c17e.jpg
+[OK]    786_jpg.rf.a9d6c42a4931812ecd6a4381d4838e97.jpg
+[OK]    789_jpg.rf.5ef68b518b284f9958da789fbf4787bb.jpg
+[OK]    790_jpg.rf.866766738dafe913e3fd6ebd20aa36f6.jpg
+[ISSUE] 792_jpg.rf.162d637d17fdb54e32fbeb0f85082380.jpg | 漏:5 | 多:0 | 誤:1
+[OK]    793_jpg.rf.5367826ce392e03bb3b88d0076ec48b7.jpg
+[ISSUE] 794_jpg.rf.c01d3e1e11b4f374a76e836bcdd12ddc.jpg | 漏:2 | 多:2 | 誤:5
+[OK]    795_jpg.rf.36b98b296a48698658cda2e54269415e.jpg
+[OK]    796_jpg.rf.27dbefdae441aca97b5b3a06a6e42938.jpg
+[OK]    797_jpg.rf.2f1d6eee4d33b6853e69981b662764b4.jpg
+[ISSUE] 798_jpg.rf.7b3e176576653199fc5e539f32086c91.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    799_jpg.rf.5e47686721ecf0e855e7fddb9f3bcc56.jpg
+[OK]    800_jpg.rf.5eac07c4aa6449229fc5d7e548aa8559.jpg
+[OK]    802_jpg.rf.b878f44fb181121004b4895de96cf097.jpg
+[ISSUE] 803_jpg.rf.628f0ffdb1d432d1009aa1a01c458331.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 804_jpg.rf.1d1a8669d8cc0177e429380ddfe5f0ae.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    805_jpg.rf.5e52c6c3b1e315cfbccd168ed8cd4295.jpg
+[ISSUE] 806_jpg.rf.7935694637296d2e1c10e2c321d6e4cc.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 807_jpg.rf.9848824aad825d6adf46df177ac409c3.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 808_jpg.rf.f006ab7028a4816dfd6f7d368fe6590d.jpg | 漏:2 | 多:0 | 誤:1
+[OK]    809_jpg.rf.aa015ec12fdaf36b0fd35a319ec401ff.jpg
+[OK]    810_jpg.rf.5608b31d71e876de15c7b3b8f07ae1c6.jpg
+[OK]    811_jpg.rf.3e6cd964e0039bab80811a0e4e2a29ec.jpg
+[OK]    812_jpg.rf.da7c61b7ebc8588c635044e5ba4a44f5.jpg
+[ISSUE] 814_jpg.rf.383c319c9ea25822f295db6b7e3f9e6b.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    815_jpg.rf.11967eb9a409c9a65900e44b7ef34640.jpg
+[OK]    816_jpg.rf.83dc182f43c530f41b47d944449337ce.jpg
+[ISSUE] 817_jpg.rf.09350bf956ea36e2f58785a3c8aba253.jpg | 漏:1 | 多:0 | 誤:2
+[ISSUE] 818_jpg.rf.2dc251213172101d3dd68b1846c4c76f.jpg | 漏:6 | 多:1 | 誤:0
+[ISSUE] 819_jpg.rf.1dac0022f276ea8426c7596027f16c86.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    820_jpg.rf.f66639392350b7cc29d74db37c20242e.jpg
+[OK]    821_jpg.rf.ae5d71f30145822678812117807d565d.jpg
+[ISSUE] 822_jpg.rf.ed91f0fa07aef27dac0742ce376109b6.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 823_jpg.rf.0a00b691f1e4425a6af60e916c8a731a.jpg | 漏:0 | 多:1 | 誤:2
+[OK]    824_jpg.rf.eeb24cbf2914861f4de5a9ad7f6b2446.jpg
+[ISSUE] 827_jpg.rf.9f613fa9a27c877a7cff7a37a19a878a.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 828_jpg.rf.c0bd5015137e793ab7e5fd5dc7983c02.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    829_jpg.rf.572978268d4725c21777a74bed92d55e.jpg
+[OK]    830_jpg.rf.adf6ceda42ae0041554e7e96a2e2b291.jpg
+[ISSUE] 831_jpg.rf.b1cde12a0df94238976bdda2ddabb1df.jpg | 漏:6 | 多:2 | 誤:0
+[OK]    832_jpg.rf.9b0e9ef7ce55b880617165800b1fffa9.jpg
+[ISSUE] 835_jpg.rf.a2ab1c781726f5332d8910eea49b1115.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    836_jpg.rf.27d7633a9d41451c628abaeb1b2b8423.jpg
+[OK]    837_jpg.rf.bc5c28431327aacf15c0b1cc7a8449b0.jpg
+[ISSUE] 838_jpg.rf.48d469452dc8667baad47e0490687116.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    839_jpg.rf.88a7a26e107d5fc9f1b22f985b44a7c0.jpg
+[ISSUE] 840_jpg.rf.4d5b9a1b462527094250c3d7e20074d8.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 841_jpg.rf.23bc76f4e6f33aa4c3c409c02eb302d0.jpg | 漏:3 | 多:7 | 誤:2
+[OK]    842_jpg.rf.aa2361f9218ca8d97d25a8ae48975427.jpg
+[ISSUE] 843_jpg.rf.ff8bd48f7ea557ba07b5c32c73fc9dfc.jpg | 漏:3 | 多:1 | 誤:2
+[OK]    844_jpg.rf.dfd7f7c661c0fd3a4a4e11b8da0f6890.jpg
+[ISSUE] 845_jpg.rf.a5e5900cb3f78d611f428fe78c1c59d5.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    846_jpg.rf.3b8c9ec2aabab88bea6d10253979e429.jpg
+[ISSUE] 847_jpg.rf.608c07c147b856567760a2b6aab586b3.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    848_jpg.rf.41acec2eaa30cede19840d89d9ccde37.jpg
+[OK]    849_jpg.rf.ade3eee79b172528866155cfeb7bab22.jpg
+[ISSUE] 850_jpg.rf.854ce1cd4b7a9cde1d933ead25678ce8.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    851_jpg.rf.7f44b5631a200c1ef71c9c857a4de4f5.jpg
+[OK]    853_jpg.rf.53b7d1a8da420c6c91c4e7af67c57fc2.jpg
+[ISSUE] 855_jpg.rf.9cbb0fd336d8078758c8ce372707e72d.jpg | 漏:3 | 多:0 | 誤:1
+[OK]    859_jpg.rf.ce84e5a0ad314aaf512c97eae444ec1c.jpg
+[OK]    860_jpg.rf.3ccad69be642972687477561c69c626d.jpg
+[OK]    862_jpg.rf.8855654d80af703515ec984596eae1ee.jpg
+[OK]    864_jpg.rf.ae02f511396428ae943db660fa6996ec.jpg
+[ISSUE] 865_jpg.rf.5cfc36c56131f51d94727b8f4c1c7825.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 866_jpg.rf.deda90457e8128cc1fbc6094a7fc991d.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 867_jpg.rf.06cfedc48fcfabe900825b51e6fc6e85.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 871_jpg.rf.d93c29dd55738936c1be8a324b3cb9bb.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    873_jpg.rf.58c2fcb7b15a182b9e3febed4be8e1ca.jpg
+[ISSUE] 875_jpg.rf.31250ab32788c465fffe14231654348d.jpg | 漏:1 | 多:2 | 誤:0
+[OK]    876_jpg.rf.886a26209beb1f66e2f7a8a0ba1420e8.jpg
+[OK]    877_jpg.rf.f6e578bfe84f1722e6277a7495021955.jpg
+[ISSUE] 878_jpg.rf.ebfa68d906c0030895c537026ad577e1.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    879_jpg.rf.3357f428e6333450d2248b124c39f5ec.jpg
+[OK]    880_jpg.rf.3f51bbedf965cf33f269f62e6bb9d351.jpg
+[OK]    882_jpg.rf.7e0464e4ce4d05e2955153ab5ae5f956.jpg
+[OK]    883_jpg.rf.b82ab2847ea8d462a4f3761ba5ff3a20.jpg
+[ISSUE] 884_jpg.rf.5a44511482cab97ca1c5ccf59cc1e6d7.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 887_jpg.rf.7dc95c45d05020735855ad41c839ffcb.jpg | 漏:4 | 多:1 | 誤:2
+[ISSUE] 888_jpg.rf.fedad41c5223ab73807023f985d89117.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 889_jpg.rf.97fef52f33cb0a40eec350ce7d20beca.jpg | 漏:2 | 多:1 | 誤:4
+[OK]    890_jpg.rf.92bfc5d7551cee22c8fa4d60176b3ce0.jpg
+[OK]    891_jpg.rf.542e05d1ed49c61fe5f15e151f583c66.jpg
+[ISSUE] 893_jpg.rf.d551dcdf98a3e41e05d6cf8f99ad4fbf.jpg | 漏:2 | 多:1 | 誤:0
+[OK]    894_jpg.rf.b5aa8f52f801d47d4f4149150c3fef13.jpg
+[ISSUE] 895_jpg.rf.9fd415d2db4d69ea9b35fc3520d46488.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 898_jpg.rf.d1823d92eb72a04689d90063b5042bb2.jpg | 漏:3 | 多:3 | 誤:1
+[ISSUE] 900_jpg.rf.c2874e4e83f8d34394ad45bd864bb7a0.jpg | 漏:3 | 多:0 | 誤:0
+[OK]    901_jpg.rf.b3e3a22cdb560e2957a57a9ae317c4b3.jpg
+[OK]    903_jpg.rf.50b3817ed85f512c8428732d1ea20df4.jpg
+[ISSUE] 909_jpg.rf.9cfd9416886e564264d9f91b4a9e400a.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    910_jpg.rf.9059a034faa2de254e3dda0fcce597d1.jpg
+[OK]    911_jpg.rf.b2ff45a87b4034bf4939d2d9c99718e6.jpg
+[OK]    913_jpg.rf.d3cd4f02c178ffdf5f39933a35a8505d.jpg
+[ISSUE] 915_jpg.rf.26946bc00ccfc1418a52c33c25b6ad7f.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 916_jpg.rf.7397e88f2705048f1b1c1d603b3783d1.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 917_jpg.rf.7f991b9b7c4bc5fd179fbd265e02d465.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    918_jpg.rf.792ba8e8c771b467f32b0b2fa8ada556.jpg
+[ISSUE] 919_jpg.rf.e81d77ca7e1e058a7777e334ae1c6157.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 920_jpg.rf.fd8cfe1dd5163a426f7cc8538251cf39.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    921_jpg.rf.5ef85881746b242fa3f451686f1257e3.jpg
+[ISSUE] 923_jpg.rf.447283c1d1c730cd9088681986f54910.jpg | 漏:5 | 多:0 | 誤:0
+[OK]    924_jpg.rf.2ccfa1dc81e3c3e60c6d67e07ac95180.jpg
+[OK]    925_jpg.rf.7697679bd39eb44312f1cd0f5aac5855.jpg
+[ISSUE] 926_jpg.rf.f1dce15bfde66459c336ccfd73b6800b.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 927_jpg.rf.31e7c83c05a62b16278d492620c6a203.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 930_jpg.rf.25b7cca72aaba012aa35562a4310c85d.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 932_jpg.rf.e7abdfa335b69ef467fbb7a6dbda7214.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 933_jpg.rf.3f91615dd222c13f34f7fa206d98dbb3.jpg | 漏:4 | 多:6 | 誤:0
+[OK]    934_jpg.rf.f91c801f9848a1643140fdb2d5e7213e.jpg
+[OK]    935_jpg.rf.3ad7a7a2ae7950df2a85ac1508a6c791.jpg
+[ISSUE] 937_jpg.rf.0d312200370ef242098a8dcff534d185.jpg | 漏:3 | 多:0 | 誤:1
+[OK]    938_jpg.rf.34d58a76ee4e0f5091cb7540d84f0734.jpg
+[ISSUE] 942_jpg.rf.548c7786aa3f6d7d7537d851652374ae.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 943_jpg.rf.9d4af5b963cbe13e3db05135bdd9e530.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    944_jpg.rf.e3cd323aa008a271cef5469f6f85a926.jpg
+[ISSUE] 945_jpg.rf.a1dc5bbb6b6a8e02fc416dd7ad710de0.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    947_jpg.rf.07bacb5ac068fc137ef83d0ab9b6bb1e.jpg
+[OK]    949_jpg.rf.d0210fe7c5926fa75c3ca876bd9247a0.jpg
+[ISSUE] 950_jpg.rf.68e17579239c6acac25de9818aa28dee.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 951_jpg.rf.253d0d61dc4ee6d744b426d96505f55a.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 952_jpg.rf.d0bc192de62e652545acb21f4adadb2e.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    953_jpg.rf.eb34385bcbf405b044b37844ddec066f.jpg
+[OK]    954_jpg.rf.1088cf9efb6e0a39d4833273263b1b25.jpg
+[OK]    955_jpg.rf.88533ecb38b9774f6a64fed1f8b63197.jpg
+[ISSUE] 956_jpg.rf.41d268aeee7dc499ed981e3a632c7d73.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 957_jpg.rf.3acba49b3fbcc1ac9d98612c4f163252.jpg | 漏:0 | 多:0 | 誤:2
+[OK]    958_jpg.rf.1762b1441b7740c4c2785673e0f6671d.jpg
+[ISSUE] 959_jpg.rf.5bc33d5bc30a639d5ff3c7a6543a35eb.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    962_jpg.rf.53719ba38cbac0b5a9ff43f637e28dd4.jpg
+[ISSUE] 964_jpg.rf.e8d9eb914e770701c94506d3aefe5e6b.jpg | 漏:1 | 多:0 | 誤:1
+[OK]    965_jpg.rf.caba0f5a44cf42394e151e3dbff78980.jpg
+[ISSUE] 966_jpg.rf.6b58ce2f7329fdaf5a4821e77f22cc83.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 967_jpg.rf.44ac90e36b27980ac5bb2b841c3f91d2.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 968_jpg.rf.022ddf465a73c8fb585516a694b3a4f5.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 969_jpg.rf.84d2625ed4bc00f91020dd116d80b8b5.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 970_jpg.rf.6f7f78e4cd3162a15ef76ff1961f1bc5.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 972_jpg.rf.bb3bad752efc6a700fbde772d34edf9c.jpg | 漏:31 | 多:1 | 誤:1
+[ISSUE] 974_jpg.rf.e39f12e4935f2be1bcb9c6de827d0241.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    975_jpg.rf.2a60610baea63106ed1e9f46175fd315.jpg
+[ISSUE] 977_jpg.rf.1dc0f0ead5298ebaf8be71cc6470b2e1.jpg | 漏:0 | 多:1 | 誤:1
+[ISSUE] 978_jpg.rf.3798ad45296a9ea1c1dce3901ce2e657.jpg | 漏:2 | 多:1 | 誤:0
+[ISSUE] 979_jpg.rf.2626021729770ecaa81605425d436cb6.jpg | 漏:0 | 多:1 | 誤:1
+[OK]    980_jpg.rf.5f8686f8c3173a1cf24fc7afb083e66a.jpg
+[OK]    982_jpg.rf.9342d5b5f7821c379cc5c5f563142603.jpg
+[ISSUE] 983_jpg.rf.0108a9f44f560d4a9d898969f10393c4.jpg | 漏:2 | 多:0 | 誤:2
+[ISSUE] 985_jpg.rf.94375e0b48fc9ac020c6ad3e6b3e834f.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 986_jpg.rf.2aea960b006ebb8a5393c52384735cb4.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    987_jpg.rf.7f1d9eada6b3330bb11a937853ccc3e6.jpg
+[OK]    988_jpg.rf.3d5a0571262d324723932de6d1c11124.jpg
+[OK]    990_jpg.rf.f56045a0bfddddb156e3be097cc8fd78.jpg
+[OK]    991_jpg.rf.90431089888891da2dc99831d62c9cb4.jpg
+[OK]    992_jpg.rf.f5773addf12808e86bfddc27829377e6.jpg
+[OK]    994_jpg.rf.8090f19e05e8a6be4880437773480afb.jpg
+[OK]    995_jpg.rf.7caaf2faf8eedb478025d8c0f625ba64.jpg
+[ISSUE] 996_jpg.rf.22fcb6285a0ceb764d275f54ec82160c.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 997_jpg.rf.918c4a10cc4f0097297cd8886c56a37c.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 998_jpg.rf.5d7f2dd381402f29a0629a2454f19a3a.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 999_jpg.rf.86d2b1a56244b9166f6511aeafd93d50.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1000_jpg.rf.a8965788151492c8bf1337c9afa7d853.jpg
+[ISSUE] 1001_jpg.rf.51461019211a767ad1cc221b86527eea.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 1002_jpg.rf.c4ce08922adf4a8c3a289a5952e5c17f.jpg | 漏:3 | 多:0 | 誤:1
+[ISSUE] 1003_jpg.rf.7bc7eddb0f256717396308124234faed.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 1004_jpg.rf.28d18ff8853556ae5d3e7c48c7c490bd.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    1005_jpg.rf.db0899a4d76b620a42a21170a7819391.jpg
+[ISSUE] 1006_jpg.rf.e9291cc8352e5be33f546572c6e08aa3.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 1007_jpg.rf.d106980dbd19150c61c5a7c5e955cb3b.jpg | 漏:0 | 多:1 | 誤:0
+[ISSUE] 1009_jpg.rf.93fcdfa8b6e00a06bbe1239fcb60d24f.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1010_jpg.rf.daec6263bc4f28a323e365ec129527a9.jpg
+[OK]    1011_jpg.rf.88c7b8ae395761d7ce773d811a6cc5e0.jpg
+[ISSUE] 1012_jpg.rf.dc66d644583ef9805f79e6f9fd2711cb.jpg | 漏:3 | 多:1 | 誤:0
+[OK]    1013_jpg.rf.d56275905c17b7831c2248db64890d96.jpg
+[OK]    1014_jpg.rf.668c8bef9ae48c291112fc13213d9e4a.jpg
+[OK]    1015_jpg.rf.f50ad5cf154ab7705b736156610d59e4.jpg
+[OK]    1016_jpg.rf.86b2bf7e8676bc591929d86394b2a1dd.jpg
+[OK]    1017_jpg.rf.15fd0cfba9831cd7ab4997d1c3716a58.jpg
+[OK]    1018_jpg.rf.36eb7263841f11abba095dbd2eb77f65.jpg
+[OK]    1019_jpg.rf.39ffb0d074a3d12fb041d97d3d7dfe6e.jpg
+[OK]    1020_jpg.rf.6af3d45f9f5bc208f72af18360581f74.jpg
+[OK]    1021_jpg.rf.36031ff3b13af1fee0839697a86afb2e.jpg
+[OK]    1022_jpg.rf.2cb879f3537cf11af892c9d1dce164a3.jpg
+[OK]    1023_jpg.rf.9a617e6175d26ef1fef946744ecddece.jpg
+[OK]    1024_jpg.rf.9a4e3ed2f65af1c9544a8b0b8f4f47aa.jpg
+[OK]    1026_jpg.rf.6f1f770e5bd30fc6a39401047941d901.jpg
+[OK]    1027_jpg.rf.480393bc5e443d203c351f860bef9aa9.jpg
+[OK]    1028_jpg.rf.3635626ad4e05d67f90f1a30002b6ab8.jpg
+[OK]    1029_jpg.rf.a6ee5d14f4f2e0481b394065a61b6d3f.jpg
+[ISSUE] 1030_jpg.rf.87041c805cd2fb7e3ea6af78ac8f722d.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1032_jpg.rf.56d407e64bb6fdfb34e6436652acf8dd.jpg
+[ISSUE] 1033_jpg.rf.882ee125a0304ea21267be6f9a385081.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1035_jpg.rf.177dc3510ceeefb63e51d90bf6c74392.jpg
+[OK]    1036_jpg.rf.c918edd2e058ac083ff81b29bd04c031.jpg
+[OK]    1037_jpg.rf.0b7a017d0b8b3994d7218655282c35a7.jpg
+[OK]    1038_jpg.rf.6774971b3f98a47773aa6e051176622a.jpg
+[OK]    1039_jpg.rf.c38ffa501897c4a43f911b377818a374.jpg
+[ISSUE] 1040_jpg.rf.931f35533b86c096f41c57d00ca03b14.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1041_jpg.rf.677614332c6116602bd8a519448aa7d2.jpg
+[ISSUE] 1042_jpg.rf.70d125b0cad938d1b0aeb20aefaa2055.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1045_jpg.rf.f0e9758546f44b847f7e2029b68f0e47.jpg
+[OK]    1046_jpg.rf.ef0d22d199cda6697bde50d7b2db7b9d.jpg
+[OK]    1047_jpg.rf.27046d066959892335d53088e334b782.jpg
+[ISSUE] 1049_jpg.rf.b8b1d987d0d8399ba3c86ea471a50374.jpg | 漏:2 | 多:0 | 誤:0
+[ISSUE] 1050_jpg.rf.8801482e4109ff195f49e52295e034e2.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 1051_jpg.rf.68bfe3606ee187b4ed92ae00fb9d7279.jpg | 漏:2 | 多:0 | 誤:0
+[OK]    1052_jpg.rf.e4296038d6e0d18166821605f2c6ae72.jpg
+[ISSUE] 1054_jpg.rf.77ec0589c44d0772674ec785a64cc256.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1055_jpg.rf.5d2247e54a657bbe32d5398c53cf43d6.jpg
+[OK]    1056_jpg.rf.1aa7e4c02550cedc833d09729b985dfa.jpg
+[OK]    1057_jpg.rf.88b2bd75e0e452b68b2693b0e28c9808.jpg
+[ISSUE] 1058_jpg.rf.e7e3fd87cbf616991b00d63958fc3071.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1059_jpg.rf.0eeae8bed67954a7efe3d3e364edc4a3.jpg
+[OK]    1060_jpg.rf.86316f69962302ef248ee4357c309134.jpg
+[OK]    1063_jpg.rf.76a2216792fdcbcd14493f581fecb5f7.jpg
+[OK]    1064_jpg.rf.acc52fed2ee8e61d666a50ba815114f5.jpg
+[ISSUE] 1065_jpg.rf.933db61d8056b99f3330c174833cf711.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1066_jpg.rf.18b8d3cb78560a4286ba11ca88b7e7f3.jpg
+[ISSUE] 1067_jpg.rf.ba7554015bb02fe52ccd3e982b7dc165.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 1068_jpg.rf.d5009038228dcd82ecdf673703bf8d75.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 1069_jpg.rf.eb1ea3f64b00cd3ef2f54fd617646a96.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 1070_jpg.rf.c1b2726d8e653f6be38d7785b15e2dca.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1071_jpg.rf.b4fe5691ea77bda04c0c87a5c35760b2.jpg
+[OK]    1073_jpg.rf.0e109b7b69328045571dde08e8d78f61.jpg
+[ISSUE] 1074_jpg.rf.d1b17c980a5ce7c9fab18185f8df69f6.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 1075_jpg.rf.a94c6fd4a681e548b66450094cdab460.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1076_jpg.rf.c3da3917c0f1289940447af4e6dac498.jpg
+[OK]    1077_jpg.rf.da5a42b9f7d3ab9e33ad3d2d3b361c38.jpg
+[OK]    1078_jpg.rf.e007d7c8a5cded29cea1438df8d253a2.jpg
+[OK]    1079_jpg.rf.37936995a438cbb377b7fc77a2f77ded.jpg
+[OK]    1080_jpg.rf.91f51cec8e1b2352cdac6654fbc980f4.jpg
+[OK]    1082_jpg.rf.1f16cfc35e64a1e43e4358a67810a92b.jpg
+[ISSUE] 1083_jpg.rf.51a89e4e187fbd4afd51599842b33d05.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1084_jpg.rf.b5dc458bbe656631531cdbd1dda78b2e.jpg
+[OK]    1085_jpg.rf.b2ac8616d389d89de53ac375cd90ab35.jpg
+[ISSUE] 1086_jpg.rf.0b2701514497cb9b776bde2b56931e6d.jpg | 漏:0 | 多:0 | 誤:2
+[ISSUE] 1087_jpg.rf.0f9b6b684486dc333abc7a72cd0a6b5f.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1088_jpg.rf.851ef88c7d7a68366932a2f977f94ec7.jpg
+[ISSUE] 1089_jpg.rf.900d8cd1293e8bca44db575722497705.jpg | 漏:1 | 多:1 | 誤:0
+[OK]    1090_jpg.rf.af3de4b342f3d082618743a2e6a9a2b7.jpg
+[OK]    1091_jpg.rf.2b81b2dfafe24f9f4f0b3f5dbc3869bb.jpg
+[OK]    1094_jpg.rf.c75727ccfa805c1eb10b5de4f5c34fcf.jpg
+[OK]    1095_jpg.rf.dfb9c876800fbe76f7bcb3842f76c20b.jpg
+[OK]    1098_jpg.rf.ed9d874878bbee9248d9ebd9b2b91dfa.jpg
+[ISSUE] 1099_jpg.rf.3f5d531377c0c7db015f9dfcfa762e19.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1100_jpg.rf.68e34ab44cb4db5aa2355b7ff129f4a2.jpg
+[OK]    1101_jpg.rf.c2f1292ab73b744ccbb7f4b668502812.jpg
+[OK]    1102_jpg.rf.fa463431cecd7c76d05bb01eb5fc2a4f.jpg
+[OK]    1103_jpg.rf.fcc23539b76f22e66f0e59dea27f4717.jpg
+[OK]    1104_jpg.rf.e470be318bd2721b72153fa24dbcb4f6.jpg
+[OK]    1106_jpg.rf.454d6354b64188a76ae1cd14d8e2ec8e.jpg
+[ISSUE] 1108_jpg.rf.d81c2be7551692c3e770e6c1923781a7.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1109_jpg.rf.8aaa25ec43f08694b22515fd29b6901b.jpg
+[OK]    1110_jpg.rf.d55b2fe5eb2d8c2fcc4947919507fe50.jpg
+[OK]    1111_jpg.rf.8e4b91b5f182869900f465857d1586a4.jpg
+[OK]    1112_jpg.rf.2b075c7c653aa54380f60e5d0d956cc6.jpg
+[OK]    1113_jpg.rf.22bdffeb0172a4775216f6ec0aae851b.jpg
+[OK]    1115_jpg.rf.49470117567905d8b8a17f18aa2e4fec.jpg
+[OK]    1116_jpg.rf.29ae03c7d2c4ae2a74c12f344a9a95d6.jpg
+[OK]    1118_jpg.rf.436671c565a97d5d4730a152905da4f6.jpg
+[OK]    1119_jpg.rf.e3895d2a0e90b9f7e5e51cb871ddc08e.jpg
+[OK]    1121_jpg.rf.c33f7d24bebe47821a63c0d8e76d95c7.jpg
+[OK]    1123_jpg.rf.6d86ec2dcf7bd130f9b26e91ceff22f6.jpg
+[ISSUE] 1124_jpg.rf.c50bd62e0eb6260cf31e310f7292165d.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    1125_jpg.rf.dca4e253c61217ac5d8019a75a598c69.jpg
+[ISSUE] 1126_jpg.rf.78f7a746b5fae125b820d16db9a6c173.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1127_jpg.rf.a9188110ca1990a606bb1d8f6534d03f.jpg
+[OK]    1128_jpg.rf.266786d06519a62514340e2f0d99e7f4.jpg
+[OK]    1130_jpg.rf.65379fd04bc116d34cf1a889df942236.jpg
+[OK]    1131_jpg.rf.39b200daae027c51df009e3772a2d800.jpg
+[ISSUE] 1132_jpg.rf.17df2ea27f0f8f8204fbd98d32df0b66.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1134_jpg.rf.ffb33861a44918da646ffc0f8112b243.jpg
+[OK]    1135_jpg.rf.e85c92bbc7fcb8232ad49c8cb9e117b7.jpg
+[OK]    1136_jpg.rf.88197aa4138eb1cf90dac8ef31725b8c.jpg
+[OK]    1137_jpg.rf.6240b3743e4a21b0cae739e63ee779c4.jpg
+[ISSUE] 1138_jpg.rf.de2db27178c18914c768722c1849cf56.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1139_jpg.rf.a410725789ba724d393629d8bf7c90ce.jpg
+[OK]    1140_jpg.rf.2ed3de043b17903feb224aaf59231a00.jpg
+[ISSUE] 1142_jpg.rf.64348de070ea8d15907404738c97d682.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1144_jpg.rf.196c98da25f392760a4222e93485b201.jpg
+[OK]    1145_jpg.rf.b605060a3d1e9cbb07a7c4a05adcf4b0.jpg
+[OK]    1146_jpg.rf.d173c62f19c0ff989bfc6778ce77691d.jpg
+[ISSUE] 1147_jpg.rf.610e5c929de2c0e25dbfac71577496b0.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    1148_jpg.rf.18fab15927af0005ed12265be034ca6c.jpg
+[OK]    1149_jpg.rf.24f137ede9710406fb81987765c7d1f0.jpg
+[ISSUE] 1150_jpg.rf.2f157a9fcea644a7e337970029e5d294.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 1151_jpg.rf.5e0b40d8e69491355eb1bc6e376065ea.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1152_jpg.rf.163b02d36f16426de0e6cd887171ebbe.jpg
+[OK]    1153_jpg.rf.596f9c9a47aa05c38344c44ea59d7935.jpg
+[OK]    1154_jpg.rf.b6387bb8f8f50af27606ee9d2b59198e.jpg
+[OK]    1155_jpg.rf.8df3e7336807ce0540489a7605d33075.jpg
+[OK]    1156_jpg.rf.2138dda461130aa6d5863e439580dedc.jpg
+[ISSUE] 1157_jpg.rf.48651a11db80178bfc502b684f01b57b.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1158_jpg.rf.24a6ce1c22db4d268277689370d02751.jpg
+[OK]    1159_jpg.rf.e428fbab63f982c4a17620e8eec96d87.jpg
+[ISSUE] 1160_jpg.rf.277c1738e1dbac146871aa23eb4c5250.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1162_jpg.rf.ee302a29d86fb24b6051c41ea289f9a9.jpg
+[ISSUE] 1163_jpg.rf.6dd3815f778d312f5b994b6254fb1a22.jpg | 漏:1 | 多:0 | 誤:1
+[ISSUE] 1164_jpg.rf.67eb131b0392a63b3bfd4edfde673890.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1165_jpg.rf.300e61b3e48730f1bdfbf42b0f27010b.jpg
+[OK]    1166_jpg.rf.0e88964b3793243c83ad51b5209ba955.jpg
+[OK]    1168_jpg.rf.da4dfa6f08e81d4ce8903bc28d4e7c04.jpg
+[ISSUE] 1169_jpg.rf.ceffd0dae80ee8860e380db1aac967c7.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1170_jpg.rf.59b71bb3e6b4388b0c3e677326f535c1.jpg
+[OK]    1171_jpg.rf.36e2b4d6a61a6429bdb1149e40efa647.jpg
+[ISSUE] 1174_jpg.rf.eb3062a625a48de400c168c27e990466.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1175_jpg.rf.96012889795d32582390d2b6fcfa7c0c.jpg
+[OK]    1177_jpg.rf.2b90cad9268fa27b7210534209bc95ea.jpg
+[OK]    1179_jpg.rf.469f357c63da094452d40605e15f0f52.jpg
+[OK]    1180_jpg.rf.aa7acec5cfae1c7a9ecf23e0e0f1bef6.jpg
+[OK]    1181_jpg.rf.54e785262f4430424136a93ed32db0f1.jpg
+[ISSUE] 1182_jpg.rf.9480bf901ee73bedb6e6ef506b9d6324.jpg | 漏:1 | 多:0 | 誤:0
+[ISSUE] 1184_jpg.rf.fcf280f2724599285cf944f87043ecb3.jpg | 漏:1 | 多:0 | 誤:0
+[OK]    1185_jpg.rf.7b7d5a63e679ab5233e9737247eb94a3.jpg
+[ISSUE] 1188_jpg.rf.eba731aaf18699c7661cc6816df450c9.jpg | 漏:0 | 多:0 | 誤:1
+[ISSUE] 1189_jpg.rf.1d0cd0434ce8487ca2036fe190dd09f8.jpg | 漏:0 | 多:1 | 誤:0
+[OK]    1190_jpg.rf.3cd8f90086ccd9117fb47a6db16a5df8.jpg
+[OK]    1191_jpg.rf.4efc924022c93715bb26b009ebd11e4d.jpg
+[OK]    1192_jpg.rf.d8eb55920d3303c89f2ae96c58a07f0b.jpg
+[ISSUE] 1193_jpg.rf.e48e68cd42531702f8ea77e6cf3050e6.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1194_jpg.rf.1b3a04dcc01cc70824541f042a5721db.jpg
+[OK]    1195_jpg.rf.ac1bbd0746705206a1aef59b7836efc9.jpg
+[OK]    1196_jpg.rf.b1d5f0fb630f51d6a1de9648b21921dc.jpg
+[OK]    1197_jpg.rf.0ce5f3642b0d2ad6bd6bf5ebdffe4f74.jpg
+[OK]    1198_jpg.rf.be94b8d27fd572ba7eebf1e5e481c528.jpg
+[ISSUE] 1199_jpg.rf.2b7c1eb455209f6b65ba94489211cdcc.jpg | 漏:0 | 多:0 | 誤:1
+[OK]    1200_jpg.rf.1e33a830bc8b67e9f9cceb540f4dfa04.jpg
+--------------------------------------------------
+總張數: 937 | 完美張數: 458 | 錯誤張數: 479
+漏抓總數: 605 | 多抓總數: 246 | 類別錯誤: 328
