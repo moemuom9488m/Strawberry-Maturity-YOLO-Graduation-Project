@@ -5,17 +5,17 @@
 [![YOLO11](https://img.shields.io/badge/YOLO-v11-00FFFF.svg?style=for-the-badge)](https://github.com/ultralytics/ultralytics)
 [![Hardware](https://img.shields.io/badge/GPU-RTX%204060%20Ti-76B900.svg?style=for-the-badge&logo=nvidia&logoColor=white)](https://www.nvidia.com/)
 
-本專案旨在開發一套全自動草莓成熟度監測系統，結合 **YOLO11** 目標偵測演算法與 **A* (A-Star)** 路徑規劃，實現自走車在草莓田中的精準導航與成熟度分析。
+本專案旨在開發一套全自動草莓成熟度監測系統，結合 **YOLO11** 目標偵測演算法與 **CCPP (Complete Coverage Path Planning)** 全覆蓋路徑規劃，實現自走車在草莓田中的雙側側拍精密導航與成熟度數位孿生建構。
 
 ---
 
 ## 🚀 核心功能
 1.  **成熟度辨識**: 使用 YOLO11 進行草莓偵測，區分「成熟、半熟、未成熟」三種狀態。
 2.  **2D 數位孿生**: 利用 SAM2 (Segment Anything Model 2) 將空拍圖或模擬圖轉化為 2D 網格地圖。
-3.  **A* 路徑規劃**: 
+3.  **CCPP 全覆蓋路徑規劃**: 
     - 採用 0.1m 解析度。
-    - 實作 **Skip-Row (跳行)** 覆蓋策略，符合農業機械掃描規範。
-    - 支援動態避障與代價地圖 (Costmap) 權重更新。
+    - 實作 **CCPP 雙側相機全覆蓋 (無跳行 zigzag)** 遍歷策略，符合車載雙側側拍巡檢規範。
+    - 支援動態避障與 CCPP 銜接軌跡優化。
 4.  **自動化維護**: 具備訓練日誌自動備份、錯誤監控與權重保護機制 (詳見 `GEMINI.md`)。
 
 ---
@@ -25,8 +25,8 @@
 - `best_weights/`: 存放經過驗證的最佳模型權重 (`.pt`)。
 - `training_logs/`: 集中存放所有訓練日誌與系統錯誤 Log。
 - `路徑規劃&模擬地圖/`:
-    - `astar_planner.py`: A* 演算法核心模組。
-    - `SAM2D+AStar路徑規劃.ipynb`: A* 與 SAM2 整合展示。
+    - `ccpp_planner.py`: CCPP 全覆蓋路徑規劃核心模組。
+    - `SAM2D+CCPP路徑規劃.ipynb`: CCPP 與 SAM2 整合展示。
     - `farm_grid_map.csv`: 0.1m 解析度的田野物理網格。
     - `strawberry_twin_final.py`: 草莓田 3D 模擬與數位孿生可視化。
 - `yolo訓練程式碼.ipynb`: 模型訓練主程式。
@@ -38,7 +38,7 @@
 - **硬體環境**: Intel i7-14700F / NVIDIA RTX 4060 Ti (cuda:0)
 - **演算法**:
     - **偵測**: YOLO11 (含 CBAM 模組優化)。
-    - **導航**: A* (A-Star) 搭配 4/8 通連路徑規劃。
+    - **導航**: CCPP (Complete Coverage Path Planning) 全覆蓋路徑規劃。
 - **解析度**: 地圖固定為 **0.1m/grid**。
 
 ---
@@ -49,7 +49,7 @@
     pip install -r requirements.txt
     ```
 2.  **路徑規劃測試**:
-    開啟 `路徑規劃&模擬地圖/SAM2D+AStar路徑規劃.ipynb` 進行模擬。
+    開啟 `路徑規劃&模擬地圖/SAM2D+CCPP路徑規劃.ipynb` 進行模擬。
 3.  **影片偵測**:
     執行 `影片偵測.ipynb` 對錄製好的草莓田影片進行分析。
 

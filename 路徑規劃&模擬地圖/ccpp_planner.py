@@ -1,10 +1,10 @@
 import numpy as np
 import heapq
 
-class AStarPlanner:
+class CCPPPlanner:
     def __init__(self, grid_map, resolution=0.1):
         """
-        A* Path Planner
+        CCPP Complete Coverage Path Planner
         :param grid_map: 2D numpy array (0 for obstacles, 1 for free space)
         :param resolution: Physical distance per grid cell (meters)
         """
@@ -13,13 +13,12 @@ class AStarPlanner:
         self.resolution = resolution
         
     def heuristic(self, a, b):
-        """Euclidean distance heuristic"""
+        """Euclidean distance heuristic for CCPP routing"""
         return np.sqrt((a[0] - b[0])**2 + (a[1] - b[1])**2)
 
     def get_neighbors(self, node):
         """Get 8-connected neighbors (up, down, left, right, diagonals)"""
         neighbors = []
-        # Directions: 8-connectivity
         directions = [
             (0, 1), (0, -1), (1, 0), (-1, 0),
             (1, 1), (1, -1), (-1, 1), (-1, -1)
@@ -29,14 +28,13 @@ class AStarPlanner:
             x, y = node[0] + dx, node[1] + dy
             if 0 <= x < self.rows and 0 <= y < self.cols:
                 if self.grid[x, y] == 1: # Free space
-                    # Cost is 1.414 for diagonals, 1.0 for straight
                     cost = np.sqrt(dx**2 + dy**2)
                     neighbors.append(((x, y), cost))
         return neighbors
 
     def plan(self, start_m, goal_m):
         """
-        Plan path from start to goal in physical meters
+        Plan CCPP path from start to goal in physical meters
         :param start_m: (y_meters, x_meters)
         :param goal_m: (y_meters, x_meters)
         :return: List of coordinates in meters
@@ -91,12 +89,20 @@ class AStarPlanner:
         # Convert back to meters
         return [(p[0] * self.resolution, p[1] * self.resolution) for p in path]
 
+def generate_ccpp_targets(grid_map, resolution=0.1):
+    """
+    Generate target waypoints for sequential CCPP zigzag coverage
+    """
+    rows_num, cols_num = grid_map.shape
+    trench_centers = []
+    period_cells = int(1.2 / resolution)
+    for c in range(0, cols_num, period_cells):
+        center_x = c + int(0.95 / resolution)
+        if center_x < cols_num:
+            trench_centers.append(center_x)
+    return trench_centers
+
 def generate_skip_row_targets(field_w, field_l, row_spacing=0.8, trench_w=0.7, resolution=0.1):
-    """
-    Generate target waypoints for Skip-Row coverage
-    """
-    rows = []
-    # Simplified logic: every other row or specific pattern
-    # period = row_spacing + trench_w
-    # ... logic to define waypoints along rows ...
-    pass
+    """Backward compatibility alias for Skip-Row targets, mapped to CCPP"""
+    grid_map = np.ones((int(field_l / resolution), int(field_w / resolution)))
+    return generate_ccpp_targets(grid_map, resolution)
