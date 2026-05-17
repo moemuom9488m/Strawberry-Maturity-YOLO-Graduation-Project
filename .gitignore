@@ -58,3 +58,7 @@ tea_debug.log
 venv/
 env/
 training_logs/*.log
+
+# 7. YouTube API 認證憑證與金鑰 (安全防護不進 Git)
+agent_tools/credentials.json
+agent_tools/token.pickle
