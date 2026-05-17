@@ -188,6 +188,132 @@ def parse_title_from_filename(video_path):
         return f"{date_str} 成果影片"
     return name_without_ext
 
+def query_training_metrics(video_path):
+    """
+    從影片檔案名稱自動推斷並查詢對應的 YOLO 訓練實驗 (runs/detect/ 下的目錄)
+    並提取其訓練參數 (模型、優化器、Batch、總回合) 與最佳指標 (mAP50-95, mAP50, Precision, Recall)
+    """
+    basename = os.path.basename(video_path)
+    runs_dir = "runs/detect"
+    if not os.path.exists(runs_dir):
+        return None
+    
+    import glob
+    folders = glob.glob(os.path.join(runs_dir, "*"))
+    
+    # 依資料夾名稱長度降序排序，確保最長且最精確的名稱優先比對
+    folders = sorted(folders, key=lambda x: len(os.path.basename(x)), reverse=True)
+    matched_folder = None
+    
+    # 1. 精確/子字串比對
+    for folder in folders:
+        if not os.path.isdir(folder):
+            continue
+        folder_name = os.path.basename(folder)
+        if folder_name.lower() in basename.lower():
+            matched_folder = folder
+            break
+            
+    if not matched_folder:
+        return None
+        
+    csv_path = os.path.join(matched_folder, 'results.csv')
+    args_path = os.path.join(matched_folder, 'args.yaml')
+    
+    metrics = {
+        'run_name': os.path.basename(matched_folder),
+        'model': 'N/A',
+        'total_epochs': 'N/A',
+        'actual_epochs': 'N/A',
+        'optimizer': 'N/A',
+        'batch': 'N/A',
+        'mAP50-95': 'N/A',
+        'mAP50': 'N/A',
+        'precision': 'N/A',
+        'recall': 'N/A'
+    }
+    
+    import yaml
+    import pandas as pd
+    
+    # 解析訓練設定參數
+    if os.path.exists(args_path):
+        try:
+            with open(args_path, 'r', encoding='utf-8') as f:
+                args_data = yaml.safe_load(f)
+                metrics['model'] = os.path.basename(args_data.get('model', 'Unknown'))
+                metrics['total_epochs'] = args_data.get('epochs', 0)
+                metrics['optimizer'] = args_data.get('optimizer', 'auto')
+                metrics['batch'] = args_data.get('batch', 0)
+        except Exception:
+            pass
+            
+    # 解析訓練指標數值
+    if os.path.exists(csv_path):
+        try:
+            df = pd.read_csv(csv_path)
+            df.columns = [c.strip() for c in df.columns]
+            metrics['actual_epochs'] = len(df)
+            
+            map_cols = [c for c in df.columns if 'mAP50-95' in c]
+            target_col = map_cols[0] if map_cols else None
+            
+            if target_col and not df[target_col].isnull().all():
+                best_idx = df[target_col].idxmax()
+                best_row = df.iloc[best_idx]
+                
+                metrics['mAP50-95'] = float(best_row[target_col])
+                
+                map50_col = [c for c in df.columns if 'mAP50(B)' in c or 'mAP50' in c]
+                if map50_col:
+                    metrics['mAP50'] = float(best_row[map50_col[0]])
+                    
+                prec_col = [c for c in df.columns if 'precision(B)' in c or 'precision' in c]
+                if prec_col:
+                    metrics['precision'] = float(best_row[prec_col[0]])
+                    
+                rec_col = [c for c in df.columns if 'recall(B)' in c or 'recall' in c]
+                if rec_col:
+                    metrics['recall'] = float(best_row[rec_col[0]])
+        except Exception:
+            pass
+            
+    return metrics
+
+def generate_rich_description(video_path, base_description=""):
+    """
+    自動生成包含 YOLO 權重、訓練參數、效能指標之 YouTube 影片說明欄描述。
+    """
+    metrics = query_training_metrics(video_path)
+    if not metrics:
+        return base_description
+        
+    rich_desc = (
+        f"{base_description}\n\n"
+        f"📊 ─── 🤖 草莓成熟度監測 YOLO 權重與訓練指標 ───\n"
+        f"🔹 實驗名稱 (Run Name) : {metrics['run_name']}\n"
+        f"🔹 基礎模型 (Base Model) : {metrics['model']}\n"
+        f"🔹 訓練優化器 (Optimizer) : {metrics['optimizer']}\n"
+        f"🔹 批次大小 (Batch Size)  : {metrics['batch']}\n"
+        f"🔹 訓練回合 (Epochs)    : {metrics['actual_epochs']} / {metrics['total_epochs']}\n"
+        f"📈 ─── 🏆 核心效能指標 (Best Metrics) ───\n"
+    )
+    
+    if metrics['mAP50-95'] != 'N/A':
+        rich_desc += f"🔸 mAP50-95 : {metrics['mAP50-95']:.4f}\n"
+    if metrics['mAP50'] != 'N/A':
+        rich_desc += f"🔸 mAP50    : {metrics['mAP50']:.4f}\n"
+    if metrics['precision'] != 'N/A':
+        rich_desc += f"🔸 精準率 (Precision) : {metrics['precision']:.4f}\n"
+    if metrics['recall'] != 'N/A':
+        rich_desc += f"🔸 召回率 (Recall)    : {metrics['recall']:.4f}\n"
+        
+    rich_desc += (
+        f"───────────────────────────────────\n"
+        f"💡 本影片由草莓監測機器人自動化偵測並上傳備份。"
+    )
+    return rich_desc
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="YouTube API 自動影片上傳工具")
     parser.add_argument('--video', type=str, required=True, help="影片檔案路徑")
@@ -201,6 +327,9 @@ if __name__ == '__main__':
     final_title = args.title
     if final_title is None:
         final_title = parse_title_from_filename(args.video)
+        
+    # 自動查詢指標並生成豐富的說明欄描述
+    final_desc = generate_rich_description(args.video, args.desc)
     
     try:
         youtube_service = get_authenticated_service()
@@ -208,7 +337,7 @@ if __name__ == '__main__':
             youtube=youtube_service,
             video_path=args.video,
             title=final_title,
-            description=args.desc,
+            description=final_desc,
             privacy_status=args.privacy
         )
     except Exception as e:

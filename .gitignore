@@ -34,6 +34,10 @@ yolo_data/
 大湖草莓園/
 *資料集/
 strawberry-maturity-*/
+# 僅放行此特定資料集，其餘忽略
+!strawberry-maturity-yolo-graduate-1/
+!strawberry-maturity-yolo-graduate-1/**
+草莓田實拍roboflow資料集(AI生成影像用)/
 
 # 4. 影片檔案 (預設忽略大型影片，但保留 偵測結果影片 資料夾及其影片)
 *.mp4
@@ -58,7 +62,13 @@ tea_debug.log
 venv/
 env/
 training_logs/*.log
+*.pptx
+cell_output.txt
 
 # 7. YouTube API 認證憑證與金鑰 (安全防護不進 Git)
 agent_tools/credentials.json
 agent_tools/token.pickle
+
+# 8. Agent 臨時測試與診斷目錄
+scratch/
+
