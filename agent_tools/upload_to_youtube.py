@@ -107,7 +107,59 @@ def upload_video(youtube, video_path, title, description, category_id="28", priv
     video_url = f"https://www.youtube.com/watch?v={video_id}"
     print("\n✅ 影片上傳成功！")
     print(f"🔗 YouTube 連結: {video_url}")
+    
+    # 自動將連結寫入 偵測結果影片/README.md 紀錄檔中
+    try:
+        update_markdown_record(video_path, video_url, title, privacy_status)
+    except Exception as e:
+        print(f"⚠️ 無法更新 Markdown 紀錄檔: {e}")
+        
     return video_url
+
+def update_markdown_record(video_path, video_url, title, privacy_status):
+    """
+    自動將上傳成功的 YouTube 播放連結寫入 偵測結果影片/README.md。
+    """
+    markdown_path = '偵測結果影片/README.md'
+    os.makedirs(os.path.dirname(markdown_path), exist_ok=True)
+    
+    headers = [
+        "# 🎬 YouTube 成果影片上傳紀錄",
+        "",
+        "本目錄下的辨識成果影片已自動同步備份至 YouTube，點選下方連結即可直接在線上檢視影片：",
+        "",
+        "| 上傳時間 | 影片名稱 / 日期編號 | YouTube 播放連結 | 隱私狀態 |",
+        "| :--- | :--- | :--- | :--- |"
+    ]
+    
+    existing_lines = []
+    if os.path.exists(markdown_path):
+        with open(markdown_path, 'r', encoding='utf-8') as f:
+            existing_lines = f.readlines()
+            
+    # 如果檔案不存在或格式不合，使用預設標頭
+    if not existing_lines or not any("| YouTube 播放連結 |" in line for line in existing_lines):
+        lines = [h + "\n" for h in headers]
+    else:
+        lines = [line for line in existing_lines if line.strip() or line == "\n"]
+        
+    # 取得台北時間
+    upload_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    
+    privacy_zh = {
+        "public": "🟢 公開 (Public)",
+        "unlisted": "🟡 不公開 (Unlisted)",
+        "private": "🔴 私人 (Private)"
+    }.get(privacy_status, privacy_status)
+    
+    # 新增一列紀錄
+    new_row = f"| {upload_time} | **{title}** | [點此線上觀看 📺]({video_url}) | {privacy_zh} |\n"
+    lines.append(new_row)
+    
+    with open(markdown_path, 'w', encoding='utf-8') as f:
+        f.writelines(lines)
+        
+    print(f"📝 已成功將 YouTube 播放連結記錄至 {markdown_path}！")
 
 import re
 
