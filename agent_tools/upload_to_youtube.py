@@ -109,21 +109,53 @@ def upload_video(youtube, video_path, title, description, category_id="28", priv
     print(f"🔗 YouTube 連結: {video_url}")
     return video_url
 
+import re
+
+def parse_title_from_filename(video_path):
+    """
+    依照檔名上面的日期及編號自動解析生成 YouTube 影片標題。
+    例如：
+      - best_20260505_模擬_2.mp4 ➡️ 20260505 模擬 2
+      - 模擬_1_20260505_output.mp4 ➡️ 20260505 模擬 1
+    """
+    basename = os.path.basename(video_path)
+    name_without_ext = os.path.splitext(basename)[0]
+    
+    # 尋找 8 位數日期 (如 20260505)
+    date_match = re.search(r'\d{8}', name_without_ext)
+    date_str = date_match.group(0) if date_match else ""
+    
+    # 尋找編號 (排除已找到的日期數字)
+    temp_name = name_without_ext.replace(date_str, "") if date_str else name_without_ext
+    num_match = re.search(r'\d+', temp_name)
+    num_str = num_match.group(0) if num_match else ""
+    
+    if date_str and num_str:
+        return f"{date_str} 模擬 {num_str}"
+    elif date_str:
+        return f"{date_str} 成果影片"
+    return name_without_ext
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="YouTube API 自動影片上傳工具")
     parser.add_argument('--video', type=str, required=True, help="影片檔案路徑")
-    parser.add_argument('--title', type=str, default="草莓成熟度監測機器人 - 成果展示", help="影片標題")
+    parser.add_argument('--title', type=str, default=None, help="影片標題 (預設會自動從檔名解析日期與編號)")
     parser.add_argument('--desc', type=str, default="畢業專案：結合 YOLOv11 與雙側相機 CCPP 之草莓成熟度監測系統實車成果。", help="影片說明描述")
     parser.add_argument('--privacy', type=str, default="unlisted", choices=['public', 'private', 'unlisted'], help="隱私狀態")
     
     args = parser.parse_args()
+    
+    # 如果使用者沒有指定標題，自動從檔案名稱解析日期與編號
+    final_title = args.title
+    if final_title is None:
+        final_title = parse_title_from_filename(args.video)
     
     try:
         youtube_service = get_authenticated_service()
         upload_video(
             youtube=youtube_service,
             video_path=args.video,
-            title=args.title,
+            title=final_title,
             description=args.desc,
             privacy_status=args.privacy
         )
