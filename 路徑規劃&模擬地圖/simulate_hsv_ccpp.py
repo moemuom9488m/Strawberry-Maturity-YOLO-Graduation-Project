@@ -138,69 +138,12 @@ def generate_simulation():
     # 視覺化
     plt.figure(figsize=(9, 12), dpi=150)
     
-    def apply_visual_offset(path_pts, is_scan=False, downward=True, index=0):
-        if len(path_pts) == 0:
-            return [], []
-        offset_y = []
-        offset_x = []
-        
-        if is_scan:
-            shift_x = -1.2 if downward else 1.2
-            for p in path_pts:
-                offset_y.append(p[0]/resolution)
-                offset_x.append(p[1]/resolution + shift_x)
-            return offset_x, offset_y
-            
-        n = len(path_pts)
-        for i in range(n):
-            y_val = path_pts[i][0] / resolution
-            x_val = path_pts[i][1] / resolution
-            
-            if i < n - 1:
-                ny = path_pts[i+1][0] / resolution
-                nx = path_pts[i+1][1] / resolution
-            else:
-                if n > 1:
-                    y_prev = path_pts[i-1][0] / resolution
-                    x_prev = path_pts[i-1][1] / resolution
-                    dy = y_val - y_prev
-                    dx = x_val - x_prev
-                    if abs(dx) > abs(dy):
-                        shift_y = (-1.5 - (index % 3) * 0.8) if y_val < 75 else (1.5 + (index % 3) * 0.8)
-                        shift_x = 0
-                    else:
-                        shift_x = -1.2 if dy > 0 else 1.2 # 與 Scan 對齊
-                        shift_y = 0
-                    offset_y.append(y_val + shift_y)
-                    offset_x.append(x_val + shift_x)
-                    continue
-                else:
-                    offset_y.append(y_val)
-                    offset_x.append(x_val)
-                    continue
-            
-            dy = ny - y_val
-            dx = nx - x_val
-            shift_x, shift_y = 0, 0
-            if abs(dx) > abs(dy):
-                shift_y = (-1.5 - (index % 3) * 0.8) if y_val < 75 else (1.5 + (index % 3) * 0.8)
-            else:
-                shift_x = -1.2 if dy >= 0 else 1.2 # 與 Scan 對齊
-                
-            offset_y.append(y_val + shift_y)
-            offset_x.append(x_val + shift_x)
-            
-        return offset_x, offset_y
-
     plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), alpha=0.9)
     
-    plotted_scans_offsets = []
-    plotted_transitions_offsets = []
-
+    # 繪製掃描路徑 (實線，綠色/青色系列代表作業中)
     for i, scan in enumerate(scans):
-        downward = (scan[0][0] < scan[-1][0])
-        sx, sy = apply_visual_offset(scan, is_scan=True, downward=downward)
-        plotted_scans_offsets.append((sx, sy))
+        sy = [p[0]/resolution for p in scan]
+        sx = [p[1]/resolution for p in scan]
         
         label = 'Trench Scan Path' if i == 0 else ""
         plt.plot(sx, sy, color='#2A9D8F', linewidth=3.5, label=label, zorder=3)
@@ -214,11 +157,12 @@ def generate_simulation():
                 plt.arrow(sx[mid], sy[mid], (dx/norm)*2, (dy/norm)*2, 
                           shape='full', color='#264653', lw=0, length_includes_head=True, head_width=2.5, zorder=4)
                 
+    # 繪製過彎與換行軌跡 (橘色虛線代表過渡/換行)
     for i, trans in enumerate(transitions):
-        tx, ty = apply_visual_offset(trans, is_scan=False, index=i)
-        plotted_transitions_offsets.append((tx, ty))
+        ty = [p[0]/resolution for p in trans]
+        tx = [p[1]/resolution for p in trans]
         
-        label = 'A* Bypass Highway' if i == 0 else ""
+        label = 'A* Transition / Highway' if i == 0 else ""
         plt.plot(tx, ty, color='#E76F51', linewidth=2.5, linestyle='--', label=label, zorder=3)
         
         if len(tx) > 15:
@@ -230,19 +174,11 @@ def generate_simulation():
                 plt.arrow(tx[mid], ty[mid], (dx/norm)*1.5, (dy/norm)*1.5, 
                           shape='full', color='#E76F51', lw=0, length_includes_head=True, head_width=2.0, zorder=4)
 
-    if plotted_transitions_offsets:
-        start_x_visual = plotted_transitions_offsets[0][0][0]
-        start_y_visual = plotted_transitions_offsets[0][1][0]
-    else:
-        start_x_visual = start_pos[1]/resolution
-        start_y_visual = start_pos[0]/resolution
-        
-    if plotted_scans_offsets:
-        end_x_visual = plotted_scans_offsets[-1][0][-1]
-        end_y_visual = plotted_scans_offsets[-1][1][-1]
-    else:
-        end_x_visual = full_path[-1][1]/resolution
-        end_y_visual = full_path[-1][0]/resolution
+    # 獲取起點與終點坐標
+    start_x_visual = start_pos[1]/resolution
+    start_y_visual = start_pos[0]/resolution
+    end_x_visual = full_path[-1][1]/resolution
+    end_y_visual = full_path[-1][0]/resolution
 
     # 起點與終點，加入 edgecolors 讓它更有高級感
     plt.scatter([start_x_visual], [start_y_visual], c='#1D3557', s=250, marker='o', edgecolors='white', linewidths=2.5, label='Start Node', zorder=10)
