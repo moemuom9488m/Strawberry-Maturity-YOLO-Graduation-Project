@@ -181,15 +181,9 @@ def generate_simulation():
                 plt.arrow(tx[mid], ty[mid], (dx/norm)*1.5, (dy/norm)*1.5, 
                           shape='full', color='#E76F51', lw=0, length_includes_head=True, head_width=2.0, zorder=4)
 
-    # 繪製起點與終點 (置頂)
-    plt.scatter([start_pos[1]/resolution], [start_pos[0]/resolution], c='#1D3557', s=350, marker='*', label='Start (Middle)', zorder=10)
-    plt.scatter([full_path[-1][1]/resolution], [full_path[-1][0]/resolution], c='#E63946', s=250, marker='X', label='End (Goal)', zorder=10)
-    
-    # 標記文字框
-    plt.text(start_pos[1]/resolution, start_pos[0]/resolution - 5, "START", color='#1D3557', fontsize=11, fontweight='bold', 
-             ha='center', va='bottom', bbox=dict(facecolor='white', alpha=0.9, edgecolor='#1D3557', boxstyle='round,pad=0.2'), zorder=11)
-    plt.text(full_path[-1][1]/resolution, full_path[-1][0]/resolution - 5, "END", color='#E63946', fontsize=11, fontweight='bold', 
-             ha='center', va='bottom', bbox=dict(facecolor='white', alpha=0.9, edgecolor='#E63946', boxstyle='round,pad=0.2'), zorder=11)
+    # 繪製起點與終點 (以不同顏色的圓點標註，不加文字標籤，zorder=10 確保置頂)
+    plt.scatter([start_pos[1]/resolution], [start_pos[0]/resolution], c='#1D3557', s=200, marker='o', label='Start (Middle)', zorder=10)
+    plt.scatter([full_path[-1][1]/resolution], [full_path[-1][0]/resolution], c='#E63946', s=200, marker='o', label='End (Goal)', zorder=10)
         
     plt.title("Strawberry Robot CCPP Path Planning (Poster Edition)", fontsize=16, fontweight='bold', pad=15)
     plt.xlabel("X (0.1m/grid)", fontsize=12)
