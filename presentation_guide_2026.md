@@ -212,7 +212,7 @@
 ### Slide 11: Dataset Setup & Labeling
 **投影片英文內容 (Slide Content - English):**
 * **Total Image Dataset:** 591 custom high-resolution field photos.
-  * Whitelisted Dataset: `strawberry-maturity-yolo-graduate-1/`
+  * Roboflow Link: [ariess-workspace-rc756/strawberry-maturity-yolo-graduate](https://universe.roboflow.com/ariess-workspace-rc756/strawberry-maturity-yolo-graduate)
   * Images with Labeled Objects: 519 images.
   * Negative Samples (Background): 72 images (used to suppress false positives).
 * **Total Labeled Crop Instances:** 2,385 annotated strawberry objects.
@@ -222,7 +222,7 @@
   * **Level 3 (Fully Ripe):** Fully red (Target harvest class).
 
 **中文口頭報告講稿 (Oral Script - Traditional Chinese):**
-> 在資料集方面，我們使用專屬於本專案、已在 GitHub 白名單中完整託管的實拍高解析度資料集。總共包含 591 張草莓田實拍照片，其中包含 519 張有標註目標的影像，以及 72 張無目標的背景負樣本，這能有效抑制系統將葉片或紅土誤判為草莓的機率。我們總共手動標註了 2,385 顆草莓個體，並將成熟度定義為三個等級：Level 1 為全綠的未熟果、Level 2 為半紅的過渡果、Level 3 則為全紅的可採收目標。
+> 在資料集方面，我們使用專屬於本專案、託管於 Roboflow Universe 平台上的實拍高解析度公開資料集。總共包含 591 張草莓田實拍照片，其中包含 519 張有標註目標的影像，以及 72 張無目標的背景負樣本，這能有效抑制系統將葉片或紅土誤判為草莓的機率。我們總共手動標註了 2,385 顆草莓個體，並將成熟度定義為三個等級：Level 1 為全綠的未熟果、Level 2 為半紅的過渡果、Level 3 則為全紅的可採收目標。
 
 **關鍵英文詞彙 (Key Vocabulary):**
 * Negative Samples / Background Images (負樣本 / 背景影像)
