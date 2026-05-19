@@ -149,13 +149,72 @@ def generate_simulation():
             
     # 6. 視覺化
     plt.figure(figsize=(9, 12), dpi=150) # 提升解析度適合列印與海報
+    
+    # 輔助函式：計算路徑的視覺偏移，防止重疊軌跡
+    def apply_visual_offset(path_pts, is_scan=False, downward=True):
+        if len(path_pts) == 0:
+            return [], []
+        offset_y = []
+        offset_x = []
+        
+        # 1. 如果是縱向作業掃描線 (固定向左或向右微調)
+        if is_scan:
+            shift_x = -1.2 if downward else 1.2
+            for p in path_pts:
+                offset_y.append(p[0]/resolution)
+                offset_x.append(p[1]/resolution + shift_x)
+            return offset_x, offset_y
+            
+        # 2. 如果是過渡/繞行路徑 (依方向動態調整，產生平行軌跡)
+        n = len(path_pts)
+        for i in range(n):
+            y_val = path_pts[i][0] / resolution
+            x_val = path_pts[i][1] / resolution
+            
+            if i < n - 1:
+                ny = path_pts[i+1][0] / resolution
+                nx = path_pts[i+1][1] / resolution
+            else:
+                if n > 1:
+                    y_prev = path_pts[i-1][0] / resolution
+                    x_prev = path_pts[i-1][1] / resolution
+                    dy = y_val - y_prev
+                    dx = x_val - x_prev
+                    if abs(dx) > abs(dy): # 橫向
+                        shift_y = -1.5 if y_val < 75 else 1.5
+                        shift_x = 0
+                    else: # 縱向
+                        shift_x = -1.5 if dy > 0 else 1.5
+                        shift_y = 0
+                    offset_y.append(y_val + shift_y)
+                    offset_x.append(x_val + shift_x)
+                    continue
+                else:
+                    offset_y.append(y_val)
+                    offset_x.append(x_val)
+                    continue
+            
+            dy = ny - y_val
+            dx = nx - x_val
+            shift_x, shift_y = 0, 0
+            if abs(dx) > abs(dy): # 橫向移動 (往左或往右)
+                # 上半部往上偏，下半部往下偏，避開中間與邊界
+                shift_y = -1.5 if y_val < 75 else 1.5
+            else: # 縱向移動 (往下或往上)
+                shift_x = -1.5 if dy >= 0 else 1.5
+                
+            offset_y.append(y_val + shift_y)
+            offset_x.append(x_val + shift_x)
+            
+        return offset_x, offset_y
+
     # 使用帶有透明度的地圖底圖，讓路徑更鮮明
     plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), alpha=0.85)
     
     # 繪製掃描路徑 (實線，綠色/青色系列代表作業中)
     for i, scan in enumerate(scans):
-        sy = [p[0]/resolution for p in scan]
-        sx = [p[1]/resolution for p in scan]
+        downward = (scan[0][0] < scan[-1][0])
+        sx, sy = apply_visual_offset(scan, is_scan=True, downward=downward)
         # 只在第一條線段加 label 避免 legend 重複
         label = 'Trench Scan Path' if i == 0 else ""
         plt.plot(sx, sy, color='#2A9D8F', linewidth=3.5, label=label, zorder=3)
@@ -172,8 +231,7 @@ def generate_simulation():
                 
     # 繪製過彎與 A* 避障繞道軌跡 (橘色虛線代表過渡/換行)
     for i, trans in enumerate(transitions):
-        ty = [p[0]/resolution for p in trans]
-        tx = [p[1]/resolution for p in trans]
+        tx, ty = apply_visual_offset(trans, is_scan=False)
         label = 'A* Transition / Bypass' if i == 0 else ""
         plt.plot(tx, ty, color='#E76F51', linewidth=2.5, linestyle='--', label=label, zorder=3)
         
