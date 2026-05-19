@@ -150,15 +150,23 @@ def generate_simulation():
                 plt.arrow(px[idx], py[idx], (dx/norm)*2, (dy/norm)*2, 
                           shape='full', color='blue', lw=0, length_includes_head=True, head_width=2.0)
             
-        plt.scatter([start_pos[1]/resolution], [start_pos[0]/resolution], c='blue', s=150, marker='*', label='Start (Middle)')
-        plt.scatter([px[-1]], [py[-1]], c='gold', s=150, marker='X', label='End')
+        # 繪製起點與終點 (放大 marker 並設定最高 zorder 置頂)
+        plt.scatter([start_pos[1]/resolution], [start_pos[0]/resolution], c='blue', s=350, marker='*', label='Start (Middle)', zorder=10)
+        plt.scatter([px[-1]], [py[-1]], c='gold', s=250, marker='X', label='End', zorder=10)
+        
+        # 加入文字標籤以提高可讀性 (搭配白底圓角框)
+        plt.text(start_pos[1]/resolution, start_pos[0]/resolution - 5, "START", color='blue', fontsize=11, fontweight='bold', 
+                 ha='center', va='bottom', bbox=dict(facecolor='white', alpha=0.9, edgecolor='blue', boxstyle='round,pad=0.2'), zorder=11)
+        plt.text(px[-1], py[-1] - 5, "END", color='darkorange', fontsize=11, fontweight='bold', 
+                 ha='center', va='bottom', bbox=dict(facecolor='white', alpha=0.9, edgecolor='gold', boxstyle='round,pad=0.2'), zorder=11)
     else:
         print("❌ 無法規劃覆蓋路徑。")
         
     plt.title("Minecraft-Style Map & CCPP Path Planning Demonstration", fontsize=16)
     plt.xlabel("X (0.1m/grid)")
     plt.ylabel("Y (0.1m/grid)")
-    plt.legend(loc='upper right')
+    # 將 Legend 移出圖表，避免遮擋右上角的終點與路徑
+    plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
     
     save_path = os.path.join(os.path.dirname(__file__), "hsv_simulation_result.png")
     plt.savefig(save_path, bbox_inches='tight')
