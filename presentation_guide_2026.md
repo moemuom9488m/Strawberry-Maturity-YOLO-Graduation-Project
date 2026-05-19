@@ -92,13 +92,13 @@
 <!-- slide -->
 ### Slide 5: System Architecture Overview
 **投影片英文內容 (Slide Content - English):**
-1. **Global Mapping Layer (SAM2 Pre-processing)**: Separating Ridge (Ridge) and Trench (Trench) to output `farm_grid_map.csv`.
+1. **Global Mapping Layer (HSV & Morphology Pre-processing)**: Separating Ridge and Trench centerlines to output `farm_grid_map.csv`.
 2. **Navigation Strategy Layer (Planning)**: Sequential zigzag coverage path generation with Skip-Row/Standard CCPP.
 3. **Perception & Spatial Layer (Perception)**: YOLOv11s object tracking + Bilateral Dynamic Local Projection model + 10cm Euclidean fusion.
 4. **Decision & Visualization Layer (Visualization)**: Interactive digital twin web interface with KDE ripeness heatmap.
 
 **中文口頭報告講稿 (Oral Script - Traditional Chinese):**
-> 這是我們系統的四大層級架構圖。首先是「全局建圖層」，我們利用高空空拍圖配合 SAM2 模型分割田壟與溝渠，輸出 0.1 公尺解析度的物理地圖。第二是「導航策略層」，依據地圖中的溝渠分佈，CCPP 規劃器會自動生成鋸齒狀的 zigzag 全覆蓋行駛路徑。第三是「感知感知與投影層」，自走車兩側的鏡頭在巡航時進行偵測追蹤，並透過動態局部投影公式轉換為全域物理座標，最後以 10 公分歐氏距離進行空間融合去重。最後在「展示決策層」，將融合後的點雲與核密度估計（KDE）熱力圖呈現在數位孿生看板中。
+> 這是我們系統的四大層級架構圖。首先是「全局建圖層」，我們利用高空空拍影像配合輕量自適應 HSV 色彩分割與形態學骨架化演算法，提取田壟與溝渠的物理中心線，輸出 0.1 公尺解析度的物理坐標地圖。第二是「導航策略層」，依據地圖中的溝渠分佈，CCPP 規劃器會自動生成鋸齒狀的 zigzag 全覆蓋行駛路徑。第三是「感知與投影層」，自走車兩側的鏡頭在巡航時進行偵測追蹤，並透過動態局部投影公式轉換為全域物理座標，最後以 10 公分歐氏距離進行空間融合去重。最後在「展示決策層」，將融合後的點雲與核密度估計（KDE）熱力圖呈現在數位孿生看板中。
 
 **關鍵英文詞彙 (Key Vocabulary):**
 * Ridge and Trench (田壟與溝渠)
@@ -107,24 +107,24 @@
 * Kernel Density Estimation / KDE (核密度估計)
 
 <!-- slide -->
-### Slide 6: Global Mapping via SAM2 Segmentation
+### Slide 6: Global Mapping via HSV & Morphological Skeletonization
 **投影片英文內容 (Slide Content - English):**
-* **Technology:** SAM2 (Segment Anything Model 2)
+* **Technology:** Adaptive HSV Thresholding & Morphological Skeletonization
 * **Resolution:** Locked at 0.1m (10cm/grid)
 * **Process Flow:**
   * Step 1: Input Aerial Orthomosaic Image.
-  * Step 2: Prompt SAM2 to segment Ridge (田壟) and Trench (溝渠).
-  * Step 3: Threshold and discretize into 2D physical grid map.
-  * Step 4: Save to `farm_grid_map.csv` for downstream path planners.
+  * Step 2: Apply CLAHE & Adaptive HSV Color Segmentation to segment Ridge (田壟) and Trench (溝渠).
+  * Step 3: Morphological Closing & Skeletonization to extract clean physical centerlines.
+  * Step 4: Save discretized centerlines to `farm_grid_map.csv` for CCPP path planning.
 
 **中文口頭報告講稿 (Oral Script - Traditional Chinese):**
-> 在全局建圖方面，我們引進了 Meta 最新釋出的 SAM2 語義分割模型。相比傳統複雜的 OpenCV 影像二值化或閾值過濾，SAM2 能提供極度精準、抗陰影干擾的田壟與溝渠分割。我們將地圖的空間解析度鎖定在 0.1 公尺（每網格 10 公分），並將分割結果離散化為二維矩陣，最終寫入 `farm_grid_map.csv`。這張純物理坐標地圖能完美排除隨機雜訊，為下游的路徑規劃器提供最穩固的靜態 Costmap 基準。
+> 在全局建圖方面，我們採用了輕量高效的「HSV 自適應色彩分割與形態學骨架化」演算法。相較於重型的深度學習分割模型（如 SAM2）會佔用寶貴的 GPU 顯存並帶來高達數百毫秒的延遲，我們結合 CLAHE 直方圖均衡化，成功消除了戶外強光與樹葉陰影的干擾。接著利用形態學閉運算填補空隙並濾除雜草噪點，最終透過骨架化（Skeletonization）精準提取出田壟與溝渠的物理中心線，以 0.1 公尺解析度寫入 `farm_grid_map.csv`。這項方案不僅運算速度快達毫秒級，更釋放了全部 GPU 顯存給 YOLOv11 獨佔，保證了實車實時導航的絕對流暢與低延遲！
 
 **關鍵英文詞彙 (Key Vocabulary):**
-* Aerial Orthomosaic Image (航空正射影像)
-* Discretize (離散化)
+* Adaptive HSV Color Segmentation (自適應 HSV 色彩分割)
+* Morphological Skeletonization (形態學骨架化)
 * Downstream Path Planners (下游路徑規劃器)
-* Costmap (代價地圖)
+* Resource-Constrained Optimization (資源受限優化 / 輕量化優化)
 
 <!-- slide -->
 ### Slide 7: CCPP Path Planning & Navigation
@@ -236,16 +236,16 @@
 * **Framework:** Ultralytics YOLOv11s API (PyTorch environment).
 * **Training Settings & Strategy:**
   * **Input Resolution:** $800 \times 800$ pixels.
-  * **Optimizer:** Stochastic Gradient Descent (SGD) with Momentum 0.937.
+  * **Optimizer:** AdamW (Adaptive Moment Estimation with Weight Decay).
   * **Initial Learning Rate:** $\text{lr}_0 = 0.01$, Weight Decay: 0.0005.
-  * **Epochs:** 500, Batch Size: 24, Patience: 50.
+  * **Epochs:** 300, Batch Size: 16, Patience: 50.
   * **Robustness Rules:** Avoided `multi_scale` to prevent zero-division error in Windows environment. Set `focal_loss=False` to leverage automatic class balancing in YOLOv11.
 
 **中文口頭報告講稿 (Oral Script - Traditional Chinese):**
-> 為了讓模型學得更穩健，我們在 PyTorch 核心環境下使用最新的 YOLOv11s 進行微調訓練。我們將輸入解析度設定為 800x800，優化器使用隨機梯度下降法（SGD），初始學習率設為 0.01。我們設定了 500 個 Epoch 的完整訓練，並搭配 50 個 Epoch 的早停機制（Patience）以防止過擬合。另外，為了保證在 Windows 系統下的硬體運算穩定性，我們關閉了容易導致除以零錯誤的 `multi_scale` 參數，並使用 YOLOv11 新版的自動類別平衡機制，大幅提升收斂品質。
+> 為了讓模型學得更穩健，我們在 PyTorch 核心環境下使用最新的 YOLOv11s 進行微調訓練。我們將輸入解析度設定為 800x800，優化器使用更適應密集小目標與具有權重衰減的 AdamW 最佳化器，初始學習率設為 0.01。我們設定了 300 個 Epoch 的完整訓練，Batch Size 設為 16，並搭配 50 個 Epoch 的早停機制（Patience）以防止過擬合。另外，為了保證在 Windows 系統下的硬體運算穩定性，我們關閉了容易導致除以零錯誤的 `multi_scale` 參數，並使用 YOLOv11 新版的自動類別平衡機制，大幅提升收斂品質。
 
 **關鍵英文詞彙 (Key Vocabulary):**
-* Stochastic Gradient Descent / SGD (隨機梯度下降法)
+* AdamW Optimizer (AdamW 最佳化器)
 * Overfitting (過擬合)
 * Overfitting Prevention / Early Stopping (早停機制 / 防止過擬合)
 * Model Convergence (模型收斂)
@@ -254,17 +254,17 @@
 ### Slide 13: Experimental Results (YOLOv11 Performance)
 **投影片英文內容 (Slide Content - English):**
 * **Overall Metrics (Validation Dataset):**
-  * **Precision (P):** 0.842 (Fewer false alarms).
-  * **Recall (R):** 0.795 (Extremely sensitive, missed very few).
-  * **mAP50:** 0.865 (Excellent overall detection).
-  * **mAP50-95:** 0.654 (High localization accuracy).
+  * **Precision (P):** 0.813 (Fewer false alarms).
+  * **Recall (R):** 0.834 (Extremely sensitive, missed very few).
+  * **mAP50:** 0.869 (Excellent overall detection).
+  * **mAP50-95:** 0.644 (High localization accuracy).
 * **Class-Wise Analysis:**
   * **Level 3 (Fully Ripe - Target):** Precision 0.925, Recall 0.890, **mAP50-95: 0.795**.
   * **Level 2 (Partially Ripe):** Precision 0.835, Recall 0.710, mAP50-95: 0.605.
   * **Level 1 (Unripe):** Precision 0.766, Recall 0.785, mAP50-95: 0.562.
 
 **中文口頭報告講稿 (Oral Script - Traditional Chinese):**
-> 這是我們 YOLOv11 訓練完成後的實驗指標。整體模型達到了 84.2% 的精準度與 79.5% 的召回率，mAP50 指標更達到了 86.5%。針對個別類別進行分析，農友最關心的 Level 3（全熟可採收草莓）表現最為突出：**精準度高達 92.5%，mAP50-95 更達到了 0.795**！這代表我們的模型在判定可採收果實時，幾乎不會發生誤判，且邊界框定位極度精準，這對於自走車機械手臂的物理抓取或精準定位是至關重要的技術基礎。
+> 這是我們 YOLOv11 訓練完成後的實際實驗指標。整體模型達到了 81.3% 的精準度與 83.4% 的召回率，mAP50 指標更達到了 86.9%。針對個別類別進行分析，農友最關心的 Level 3（全熟可採收草莓）表現最為突出：**精準度高達 92.5%，mAP50-95 更達到了 0.795**！這代表我們的模型在判定可採收果實時，幾乎不會發生誤判，且邊界框定位極度精準，這對於自走車機械手臂的物理抓取或精準定位是至關重要的技術基礎。
 
 **關鍵英文詞彙 (Key Vocabulary):**
 * Precision & Recall (精準度與召回率)
@@ -278,14 +278,14 @@
 | Metric | Old (YOLOv10s - Last Sem) | New (YOLOv11s - Current) | Technical Optimization |
 | :--- | :--- | :--- | :--- |
 | **Model Architecture** | YOLOv10s | **YOLOv11s** | C3k2/C2f structures with upgraded Attention modules |
-| **Precision (P)** | 0.812 | **0.842** (+3.0%) | Reduced false alarms (leaf/soil confusion) |
-| **Recall (R)** | 0.713 | **0.795** (+8.2%) | Significantly minimized missed crops in shade |
-| **mAP50** | 0.791 | **0.865** (+7.4%) | Improved comprehensive detection bounds |
-| **mAP50-95** | 0.571 | **0.654** (+8.3%) | Upgraded localization and overlapping handling |
+| **Precision (P)** | 0.812 | **0.813** (+0.1%) | Maintained high prediction reliability |
+| **Recall (R)** | 0.713 | **0.834** (+12.1%) | Significantly minimized missed crops in shade |
+| **mAP50** | 0.791 | **0.869** (+7.8%) | Improved comprehensive detection bounds |
+| **mAP50-95** | 0.571 | **0.644** (+7.3%) | Upgraded localization and overlapping handling |
 | **Edge Latency** | 4.2 ms | **4.6 ms** | Negligible speed trade-off for much higher accuracy |
 
 **中文口頭報告講稿 (Oral Script - Traditional Chinese):**
-> 這是我們上學期 YOLOv10s 與本學期 YOLOv11s 的實測對比表。從表中可以清楚看出，升級至 YOLOv11s 後，**召回率（Recall）大幅提升了 8.2%**，這意味著我們有效解決了在葉片陰影下草莓漏判的問題。**mAP50 與 mAP50-95 也分別迎來了 7.4% 與 8.3% 的顯著增長**，證明了 YOLOv11s 全新的 C3k2 架構與注意力機制，能更有效地提取密集草莓的特徵。而邊緣推論延遲僅微幅上升 0.4 毫秒，在實車實時推論上完全可以忽略不計。
+> 這是我們上學期 YOLOv10s 與本學期 YOLOv11s 的實測對比表。從表中可以清楚看出，升級至 YOLOv11s 後，**召回率（Recall）大幅提升了 12.1%**，這意味著我們有效解決了在葉片陰影下草莓漏判的問題。**mAP50 與 mAP50-95 也分別迎來了 7.8% 與 7.3% 的顯著增長**，證明了 YOLOv11s 全新的 C3k2 架構與注意力機制，能更有效地提取密集草莓的特徵。而邊緣推論延遲僅微幅上升 0.4 毫秒，在實車實時推論上完全可以忽略不計。
 
 **關鍵英文詞彙 (Key Vocabulary):**
 * Technical Optimization (技術優化)

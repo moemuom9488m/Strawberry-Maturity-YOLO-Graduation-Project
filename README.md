@@ -11,7 +11,7 @@
 
 ## 🚀 核心功能
 1.  **成熟度辨識**: 使用 YOLO11 進行草莓偵測，區分「成熟、半熟、未成熟」三種狀態。
-2.  **2D 數位孿生**: 利用 SAM2 (Segment Anything Model 2) 將空拍圖或模擬圖轉化為 2D 網格地圖。
+2.  **2D 數位孿生**: 利用輕量自適應 HSV 色彩分割與形態學骨架化演算法，將空拍圖或模擬影像轉化為 2D 物理網格地圖，高效率提取田壟與溝渠中心線。
 3.  **CCPP 全覆蓋路徑規劃**: 
     - 採用 0.1m 解析度。
     - 實作 **CCPP 雙側相機全覆蓋 (無跳行 zigzag)** 遍歷策略，符合車載雙側側拍巡檢規範。
@@ -26,7 +26,8 @@
 - `training_logs/`: 集中存放所有訓練日誌與系統錯誤 Log。
 - `路徑規劃&模擬地圖/`:
     - `ccpp_planner.py`: CCPP 全覆蓋路徑規劃核心模組。
-    - `SAM2D+CCPP路徑規劃.ipynb`: CCPP 與 SAM2 整合展示。
+    - `ccpp_test.ipynb`: CCPP 模擬與中心線路徑測試（包含輕量化 HSV+骨架化提取實行）。
+    - `SAM2D+CCPP路徑規劃.ipynb`: CCPP 與 SAM2 整合比較展示。
     - `farm_grid_map.csv`: 0.1m 解析度的田野物理網格。
     - `strawberry_twin_final.py`: 草莓田 3D 模擬與數位孿生可視化。
 - `yolo訓練程式碼.ipynb`: 模型訓練主程式。
