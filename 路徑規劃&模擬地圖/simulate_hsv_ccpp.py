@@ -85,6 +85,8 @@ def generate_simulation():
     start_pos = (4.0, 4.6) 
     
     full_path = []
+    transitions = []  # 儲存 A* 換行/繞道軌跡
+    scans = []        # 儲存垂直掃描軌跡
     current_pos = start_pos
     downwards = True
     
@@ -103,13 +105,17 @@ def generate_simulation():
                 transition = planner.plan(current_pos, p_start)
                 if transition:
                     full_path.extend(transition)
+                    transitions.append(transition)
                 
                 # 直線掃描該區間 (實體覆蓋)
                 scan_steps = int((r_end - r_start) + 1)
+                scan_seq = []
                 for r in np.linspace(r_start, r_end, scan_steps):
                     pt = (r * resolution, c * resolution)
+                    scan_seq.append(pt)
                     if not full_path or full_path[-1] != pt:
                         full_path.append(pt)
+                scans.append(scan_seq)
                 current_pos = (r_end * resolution, c * resolution)
             downwards = False
         else:
@@ -121,52 +127,76 @@ def generate_simulation():
                 transition = planner.plan(current_pos, p_start)
                 if transition:
                     full_path.extend(transition)
+                    transitions.append(transition)
                 
                 # 直線掃描該區間 (向上掃描)
                 scan_steps = int((r_end - r_start) + 1)
+                scan_seq = []
                 for r in np.linspace(r_end, r_start, scan_steps):
                     pt = (r * resolution, c * resolution)
+                    scan_seq.append(pt)
                     if not full_path or full_path[-1] != pt:
                         full_path.append(pt)
+                scans.append(scan_seq)
                 current_pos = (r_start * resolution, c * resolution)
             downwards = True
             
     # 6. 視覺化
-    plt.figure(figsize=(10, 12))
-    plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+    plt.figure(figsize=(9, 12), dpi=150) # 提升解析度適合列印與海報
+    # 使用帶有透明度的地圖底圖，讓路徑更鮮明
+    plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), alpha=0.85)
     
-    if full_path:
-        print(f"✅ 成功規劃完整 CCPP 覆蓋路徑！總節點數: {len(full_path)}")
-        py = [p[0]/resolution for p in full_path]
-        px = [p[1]/resolution for p in full_path]
-        plt.plot(px, py, color='red', linewidth=2.5, label='CCPP Route')
+    # 繪製掃描路徑 (實線，綠色/青色系列代表作業中)
+    for i, scan in enumerate(scans):
+        sy = [p[0]/resolution for p in scan]
+        sx = [p[1]/resolution for p in scan]
+        # 只在第一條線段加 label 避免 legend 重複
+        label = 'Trench Scan Path' if i == 0 else ""
+        plt.plot(sx, sy, color='#2A9D8F', linewidth=3.5, label=label, zorder=3)
         
-        # 繪製路徑方向箭頭 (每隔 30 步畫一個箭頭)
-        for idx in range(15, len(px) - 15, 30):
-            dx = px[idx+1] - px[idx]
-            dy = py[idx+1] - py[idx]
+        # 在每條走道正中間繪製一個方向箭頭，乾淨俐落
+        if len(sx) > 10:
+            mid = len(sx) // 2
+            dx = sx[mid+1] - sx[mid]
+            dy = sy[mid+1] - sy[mid]
             norm = np.sqrt(dx**2 + dy**2)
             if norm > 0:
-                plt.arrow(px[idx], py[idx], (dx/norm)*2, (dy/norm)*2, 
-                          shape='full', color='blue', lw=0, length_includes_head=True, head_width=2.0)
-            
-        # 繪製起點與終點 (放大 marker 並設定最高 zorder 置頂)
-        plt.scatter([start_pos[1]/resolution], [start_pos[0]/resolution], c='blue', s=350, marker='*', label='Start (Middle)', zorder=10)
-        plt.scatter([px[-1]], [py[-1]], c='gold', s=250, marker='X', label='End', zorder=10)
+                plt.arrow(sx[mid], sy[mid], (dx/norm)*2, (dy/norm)*2, 
+                          shape='full', color='#264653', lw=0, length_includes_head=True, head_width=2.5, zorder=4)
+                
+    # 繪製過彎與 A* 避障繞道軌跡 (橘色虛線代表過渡/換行)
+    for i, trans in enumerate(transitions):
+        ty = [p[0]/resolution for p in trans]
+        tx = [p[1]/resolution for p in trans]
+        label = 'A* Transition / Bypass' if i == 0 else ""
+        plt.plot(tx, ty, color='#E76F51', linewidth=2.5, linestyle='--', label=label, zorder=3)
         
-        # 加入文字標籤以提高可讀性 (搭配白底圓角框)
-        plt.text(start_pos[1]/resolution, start_pos[0]/resolution - 5, "START", color='blue', fontsize=11, fontweight='bold', 
-                 ha='center', va='bottom', bbox=dict(facecolor='white', alpha=0.9, edgecolor='blue', boxstyle='round,pad=0.2'), zorder=11)
-        plt.text(px[-1], py[-1] - 5, "END", color='darkorange', fontsize=11, fontweight='bold', 
-                 ha='center', va='bottom', bbox=dict(facecolor='white', alpha=0.9, edgecolor='gold', boxstyle='round,pad=0.2'), zorder=11)
-    else:
-        print("❌ 無法規劃覆蓋路徑。")
+        # 只在換行轉折點繪製少量方向箭頭
+        if len(tx) > 15:
+            mid = len(tx) // 2
+            dx = tx[mid+1] - tx[mid]
+            dy = ty[mid+1] - ty[mid]
+            norm = np.sqrt(dx**2 + dy**2)
+            if norm > 0:
+                plt.arrow(tx[mid], ty[mid], (dx/norm)*1.5, (dy/norm)*1.5, 
+                          shape='full', color='#E76F51', lw=0, length_includes_head=True, head_width=2.0, zorder=4)
+
+    # 繪製起點與終點 (置頂)
+    plt.scatter([start_pos[1]/resolution], [start_pos[0]/resolution], c='#1D3557', s=350, marker='*', label='Start (Middle)', zorder=10)
+    plt.scatter([full_path[-1][1]/resolution], [full_path[-1][0]/resolution], c='#E63946', s=250, marker='X', label='End (Goal)', zorder=10)
+    
+    # 標記文字框
+    plt.text(start_pos[1]/resolution, start_pos[0]/resolution - 5, "START", color='#1D3557', fontsize=11, fontweight='bold', 
+             ha='center', va='bottom', bbox=dict(facecolor='white', alpha=0.9, edgecolor='#1D3557', boxstyle='round,pad=0.2'), zorder=11)
+    plt.text(full_path[-1][1]/resolution, full_path[-1][0]/resolution - 5, "END", color='#E63946', fontsize=11, fontweight='bold', 
+             ha='center', va='bottom', bbox=dict(facecolor='white', alpha=0.9, edgecolor='#E63946', boxstyle='round,pad=0.2'), zorder=11)
         
-    plt.title("Minecraft-Style Map & CCPP Path Planning Demonstration", fontsize=16)
-    plt.xlabel("X (0.1m/grid)")
-    plt.ylabel("Y (0.1m/grid)")
-    # 將 Legend 移出圖表，避免遮擋右上角的終點與路徑
-    plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
+    plt.title("Strawberry Robot CCPP Path Planning (Poster Edition)", fontsize=16, fontweight='bold', pad=15)
+    plt.xlabel("X (0.1m/grid)", fontsize=12)
+    plt.ylabel("Y (0.1m/grid)", fontsize=12)
+    
+    # 漂亮的 Legend 配置
+    plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0, fontsize=11, frameon=True, shadow=True)
     
     save_path = os.path.join(os.path.dirname(__file__), "hsv_simulation_result.png")
     plt.savefig(save_path, bbox_inches='tight')
