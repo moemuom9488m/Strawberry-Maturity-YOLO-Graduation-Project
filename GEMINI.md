@@ -39,7 +39,7 @@
 
 ### 4. 開發環境規範
 * **核心環境**: 強制鎖定 Anaconda `pytorch` 環境。
-* **執行路徑**: `D:\Program\anaconda3\envs\pytorch\python.exe`。
+* **執行方式**: 執行環境強制使用 `conda activate pytorch` 啟用。執行 Python 腳本時，直接在啟用後的環境下使用 `python` 命令執行，不需硬性尋找特定的實體路徑。
 * **硬體依賴**: 嚴禁使用舊版 `pynvml` 套件。必須使用 `nvidia-ml-py` 作為 GPU 監控與 NVML 初始化之唯一依賴，以避免 `FutureWarning` 與版本衝突。
 * **鎖定原則**: 除非使用者明確要求切換，否則所有腳本執行、訓練與診斷均必須在此環境下進行。
 
