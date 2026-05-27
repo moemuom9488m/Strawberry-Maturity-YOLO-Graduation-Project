@@ -49,12 +49,39 @@
     ```bash
     pip install -r requirements.txt
     ```
-2.  **路徑規劃測試**:
+2.  **實驗數據對比**:
+    執行比較工具，自動提取 runs/detect 下的結果並繪製對比圖：
+    ```bash
+    python agent_tools/yolo_comparator.py
+    ```
+3.  **路徑規劃測試**:
     開啟 `路徑規劃&模擬地圖/SAM2D+CCPP路徑規劃.ipynb` 進行模擬。
-3.  **影片偵測**:
+4.  **影片偵測**:
     執行 `影片偵測.ipynb` 對錄製好的草莓田影片進行分析。
+
+---
+
+## 📊 實驗評估與決策對照 (Experimental Results)
+
+為確保巡檢自走車在戶外自然環境下具備最優的草莓成熟度偵測精準度與運算效率，我們針對 YOLOv11 進行了多維度對照實驗。以下為我們為簡報與實車部署精選的 4 組核心模型數據對比：
+
+| 評估模型名稱 (YOLO Model) | 輸入影像尺寸 (Resolution) | 最佳精度 Best mAP@0.5 | 綜合精度 Best mAP@0.5:0.95 | 訓練耗時 (Time Cost) |
+| :--- | :---: | :---: | :---: | :---: |
+| 🏆 **exp2b_1d_img800** (P2-CBAM) | 800 x 800 px | **0.8749** | 0.6258 | 86.8 hr |
+| 🥈 **exp1a_yolo11s_baseline** (S基準) | 640 x 640 px | **0.8699** | 0.6284 | 63.9 hr |
+| 🥉 **exp2b_1a_img800** (S基準) | 800 x 800 px | **0.8692** | **0.6438** | 65.6 hr |
+| ❌ **exp1b_yolo11m_baseline** (M基準) | 640 x 640 px | **0.8648** | 0.4389 | 89.8 hr |
+
+* 完整對照實驗報告及 Loss 收斂折線圖詳見：[yolo_experiments_comparison.md](file:///d:/銘澄專區/畢業專題工作區/evaluation_results/yolo_experiments_comparison.md)
+
+### 📈 雙 Y 軸 Tradeoff 決策分析圖
+我們針對上述核心模型，繪製了精度 (mAP@0.5) 與計算耗時 (Hours) 的雙 Y 軸對照圖，做為自走車實車部署（選定 **YOLO11s P2-CBAM 800px**）的科學依據：
+*   **決策圖實體路徑**：[evaluation_results/ppt_model_selection_comparison.png](file:///d:/銘澄專區/畢業專題工作區/evaluation_results/ppt_model_selection_comparison.png)
+
+![簡報專用模型選擇與 Tradeoff 對比圖](file:///d:/銘澄專區/畢業專題工作區/evaluation_results/ppt_model_selection_comparison.png)
 
 ---
 
 ## 📜 維護協定
 本專案遵循 `GEMINI.md` 中定義的技術標準，所有座標計算必須統一使用 **物理座標 (Meters)**，嚴禁直接操作像素座標以避免映射誤差。
+

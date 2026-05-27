@@ -341,11 +341,11 @@
 * **The Dynamic Field Challenge:** Random obstacles (farmers, tools, dynamic mud changes).
 * **Dynamic Costmap Strategy:**
   * Real-time LiDAR depth scanning integrated with static `farm_grid_map.csv`.
-  * **100ms Re-planning Loop:** If path is obstructed, the A* (A-Star) path planner triggers and re-routes inside the physical coordinate space in under 100 milliseconds.
+  * **100ms Re-planning Loop:** If path is obstructed, the CCPP path planner triggers and re-routes inside the physical coordinate space in under 100 milliseconds.
 * **Action:** Ensures continuous robot navigation without colliding with base ridges or human operators.
 
 **中文口頭報告講稿 (Oral Script - Traditional Chinese):**
-> 實地巡檢時，農田中會出現隨機障礙物（如採收工具、突然走過的農友或突發的泥濘堵塞）。為了應對此一挑戰，我們在 CCPP 全局路徑的基礎上，結合了光達（LiDAR）進行「動態 Costmap 局部避障」。當光達探測到前方路徑受阻時，系統會在 100 毫秒內啟動 A* 重新規劃路徑。自走車能智慧繞過障礙物，並在繞行後迅速切回原本的 CCPP 溝渠中心線，確保導航安全且絕不碰撞珍貴的基肥壟。
+> 實地巡檢時，農田中會出現隨機障礙物（如採收工具、突然走過的農友或突發的泥濘堵塞）。為了應對此一挑戰，我們在 CCPP 全局路徑的基礎上，結合了光達（LiDAR）進行「動態 Costmap 局部避障」。當光達探測到前方路徑受阻時，系統會在 100 毫秒內啟動 CCPP 局部避障重新規劃路徑。自走車能智慧繞過障礙物，並在繞行後迅速切回原本的 CCPP 溝渠中心線，確保導航安全且絕不碰撞珍貴的基肥壟。
 
 **關鍵英文詞彙 (Key Vocabulary):**
 * Dynamic Costmap (動態代價地圖)

@@ -162,7 +162,7 @@ def generate_simulation():
         ty = [p[0]/resolution for p in trans]
         tx = [p[1]/resolution for p in trans]
         
-        label = 'A* Transition / Highway' if i == 0 else ""
+        label = 'CCPP Transition / Highway' if i == 0 else ""
         plt.plot(tx, ty, color='#E76F51', linewidth=2.5, linestyle='--', label=label, zorder=3)
         
         if len(tx) > 15:
@@ -184,7 +184,7 @@ def generate_simulation():
     plt.scatter([start_x_visual], [start_y_visual], c='#1D3557', s=250, marker='o', edgecolors='white', linewidths=2.5, label='Start Node', zorder=10)
     plt.scatter([end_x_visual], [end_y_visual], c='#E63946', s=250, marker='o', edgecolors='white', linewidths=2.5, label='End Node', zorder=10)
         
-    plt.title("Intelligent CCPP & A* Hybrid Path Planning", fontsize=18, fontweight='bold', pad=15)
+    plt.title("Intelligent CCPP Path Planning", fontsize=18, fontweight='bold', pad=15)
     plt.xlabel("X (0.1m/grid)", fontsize=12)
     plt.ylabel("Y (0.1m/grid)", fontsize=12)
     

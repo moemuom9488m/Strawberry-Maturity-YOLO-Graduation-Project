@@ -35,8 +35,8 @@ yolo_data/
 *資料集/
 strawberry-maturity-*/
 # 僅放行此特定資料集，其餘忽略
-!strawberry-maturity-yolo-graduate-1/
-!strawberry-maturity-yolo-graduate-1/**
+strawberry-maturity-yolo-graduate-*/
+strawberry-maturity-yolo-graduate-*/**
 草莓田實拍roboflow資料集(AI生成影像用)/
 
 # 4. 影片檔案 (預設忽略大型影片，但保留 偵測結果影片 資料夾及其影片)
@@ -72,3 +72,10 @@ agent_tools/token.pickle
 # 8. Agent 臨時測試與診斷目錄
 scratch/
 
+
+.gemini/
+gha-creds-*.json
+
+# 9. Gradio 展示系統相關檔案 (依要求不進 Git)
+agent_tools/gradio_yolo_app.py
+agent_tools/gradio_deployment/
