@@ -72,13 +72,13 @@
 | 🥉 **exp2b_1a_img800** (S基準) | 800 x 800 px | **0.8692** | **0.6438** | 65.6 hr |
 | ❌ **exp1b_yolo11m_baseline** (M基準) | 640 x 640 px | **0.8648** | 0.4389 | 89.8 hr |
 
-* 完整對照實驗報告及 Loss 收斂折線圖詳見：[yolo_experiments_comparison.md](file:///d:/銘澄專區/畢業專題工作區/evaluation_results/yolo_experiments_comparison.md)
+* 完整對照實驗報告及 Loss 收斂折線圖詳見：[yolo_experiments_comparison.md](evaluation_results/yolo_experiments_comparison.md)
 
 ### 📈 雙 Y 軸 Tradeoff 決策分析圖
 我們針對上述核心模型，繪製了精度 (mAP@0.5) 與計算耗時 (Hours) 的雙 Y 軸對照圖，做為自走車實車部署（選定 **YOLO11s P2-CBAM 800px**）的科學依據：
-*   **決策圖實體路徑**：[evaluation_results/ppt_model_selection_comparison.png](file:///d:/銘澄專區/畢業專題工作區/evaluation_results/ppt_model_selection_comparison.png)
+*   **決策圖實體路徑**：[evaluation_results/ppt_model_selection_comparison.png](evaluation_results/ppt_model_selection_comparison.png)
 
-![簡報專用模型選擇與 Tradeoff 對比圖](file:///d:/銘澄專區/畢業專題工作區/evaluation_results/ppt_model_selection_comparison.png)
+![簡報專用模型選擇與 Tradeoff 對比圖](evaluation_results/ppt_model_selection_comparison.png)
 
 ---
 

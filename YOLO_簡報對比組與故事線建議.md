@@ -8,9 +8,9 @@
 ## 🖼️ 簡報專用雙Y軸決策對比圖 (PPT Ready)
 
 我們已為您預先生成好一張**雙Y軸（偵測精度 vs 訓練耗時）的高品質簡報對照圖**。您可直接將其貼入投影片中展示，讓評審教授一目了然：
-*   **實體圖檔路徑**：[evaluation_results/ppt_model_selection_comparison.png](file:///d:/銘澄專區/畢業專題工作區/evaluation_results/ppt_model_selection_comparison.png)
+*   **實體圖檔路徑**：[evaluation_results/ppt_model_selection_comparison.png](evaluation_results/ppt_model_selection_comparison.png)
 
-![簡報專用模型選擇與 Tradeoff 對比圖](file:///d:/銘澄專區/畢業專題工作區/evaluation_results/ppt_model_selection_comparison.png)
+![簡報專用模型選擇與 Tradeoff 對比圖](evaluation_results/ppt_model_selection_comparison.png)
 
 ---
 
