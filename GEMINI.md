@@ -31,7 +31,8 @@
 
 ### 3. 專案目錄與檔案管理
 *   **腳本收納**: 所有由 Agent 撰寫或維護的輔助腳本 (如 `error_logger.py`, `yolo_utils.py`) 必須統一放置於 `agent_tools/` 資料夾，維持根目錄整潔。Jupyter Notebook 必須透過 `from agent_tools import ...` 來呼叫這些工具。
-*   **筆記本維護規範**: 針對 `.ipynb` 檔案的任何一次性修改或修復，Agent 必須統一使用 `agent_tools/fix_notebook.py` 作為執行媒介，嚴禁產生如 `update_xxx.py` 等冗餘的一次性腳本。
+*   **筆記本維護規範**: 針對 `.ipynb` 檔案的任何一次性修改或修復，Agent 必須統一使用 `agent_tools/fix_notebook.py` 作為執行媒介，嚴禁產生如 `update_xxx.py` 等冗餘的一次性腳本。**且在每次讀取、修改或執行筆記本前，必須主動優先預防性調用 `fix_notebook.py` 進行代碼結構標準化與防衝突處理，防範編碼錯誤或 Kernel 假死。**
+*   **預防性編碼與環境校正**: 在 Windows 系統下執行任何終端機指令（如 `git`）、Python 腳本或筆記本前，必須預先於終端機宣告環境變數（如 `$env:PYTHONIOENCODING="utf-8"` 與 `[Console]::OutputEncoding = [System.Text.Encoding]::UTF8`）。所有由 Agent 撰寫或維護的 `.py` 檔案最頂端必須強制包含 `# -*- coding: utf-8 -*-` 宣告，以徹底消滅 Windows CP950 系統解碼衝突。
 *   **日誌集中**: 所有的維護日誌 (`.md`) 與全域報錯日誌 (`detection_errors.log`) 必須統一存放於 `training_logs/`。
 *   **權重保護**: 實車部署用的最佳權重，必須從 `runs/` 中抽出並集中存放在 `best_weights/` 以防覆蓋。
 *   **自動清理與提醒協定**: 所有執行過程中在專案工作區（如 `scratch/`）產生的臨時測試 `.py` 腳本或過渡圖片，在對話結束前必須自動執行清理刪除。若基於使用者需求保留任何實質性產出（如 `.txt` 提取結果或 `.md` 報告），必須在最後回覆中明確提醒使用者其存在位置與用途，維持整個 Repository 的絕對整潔。

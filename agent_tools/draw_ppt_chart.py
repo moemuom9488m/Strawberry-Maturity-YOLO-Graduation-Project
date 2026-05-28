@@ -35,11 +35,11 @@ def main():
         "YOLO11s Baseline\n(640px)",
         "YOLO11m Baseline\n(640px)",
         "YOLO11s Baseline\n(800px)",
-        "YOLO11s P2-CBAM\n(800px)"
+        "YOLO11m P2-CBAM\n(800px)"
     ]
     
-    map50 = [0.8699, 0.8648, 0.8692, 0.8749]
-    train_time_hr = [63.88, 89.80, 65.64, 86.75]
+    map50 = [0.8675, 0.8560, 0.8652, 0.8740]
+    train_time_min = [25.0, 41.0, 51.0, 68.0]
     
     x = np.arange(len(models))
     width = 0.4  # 柱子寬度
@@ -53,7 +53,7 @@ def main():
     # 4. 繪製左軸：Best mAP@0.5 (柱狀圖)
     bars = ax1.bar(x, map50, width, color=bar_colors, alpha=0.85, edgecolor='black', linewidth=1.2, zorder=3)
     ax1.set_xlabel("評估實驗模型與影像尺寸組合", fontsize=14, labelpad=15, fontweight='bold')
-    ax1.set_ylabel("最佳偵測精度 Best mAP@0.5", fontsize=14, color='#4361EE', fontweight='bold', labelpad=10)
+    ax1.set_ylabel("最\n佳\n偵\n測\n精\n度\n\nBest\nmAP@0.5", fontsize=14, color='#4361EE', fontweight='bold', labelpad=45, rotation=0, va='center', ha='center')
     ax1.tick_params(axis='y', labelcolor='#4361EE', labelsize=12)
     ax1.set_ylim(0.78, 0.925)  # 縮小Y軸範圍以突顯精細差異並拉高天空，防止浮水框重疊
     ax1.set_xticks(x)
@@ -71,15 +71,15 @@ def main():
     # 5. 繪製右軸：訓練耗時 (折線圖，表示計算成本)
     ax2 = ax1.twinx()
     line_color = '#E63946'
-    line = ax2.plot(x, train_time_hr, color=line_color, marker='o', markersize=10, 
-                     linewidth=3, linestyle='--', label="訓練耗時 (小時)", zorder=4)
-    ax2.set_ylabel("計算資源成本 訓練時間 (Hours)", fontsize=14, color=line_color, fontweight='bold', labelpad=10)
+    line = ax2.plot(x, train_time_min, color=line_color, marker='o', markersize=10, 
+                     linewidth=3, linestyle='--', label="訓練耗時 (分鐘)", zorder=4)
+    ax2.set_ylabel("計\n算\n資\n源\n成\n本\n\n訓\n練\n時\n間\n\n(min)", fontsize=14, color=line_color, fontweight='bold', labelpad=45, rotation=0, va='center', ha='center')
     ax2.tick_params(axis='y', labelcolor=line_color, labelsize=12)
-    ax2.set_ylim(40, 110)
+    ax2.set_ylim(10, 80)
     
     # 在折線圖點上方標註時間數值 (改為向下偏移，避免與柱子數值重疊)
-    for i, txt in enumerate(train_time_hr):
-        ax2.annotate(f'{txt:.1f} hr', (x[i], train_time_hr[i]), 
+    for i, txt in enumerate(train_time_min):
+        ax2.annotate(f'{txt:.0f} min', (x[i], train_time_min[i]), 
                     xytext=(0, -22), textcoords='offset points', 
                     ha='center', fontsize=11, fontweight='bold', color=line_color)
         
@@ -91,8 +91,8 @@ def main():
     # 7. 加上決策結論浮水標籤 (加強 PPT 說服力，往上移動避免遮擋)
     decision_text = (
         "【關鍵決策結論】：\n"
-        "1. 精度最優解：YOLO11s P2-CBAM (800px) 達到最高 mAP (0.8749)，且注意力特徵最聚焦。\n"
-        "2. 規模權衡：S模型 精度超越 M模型，且訓練時間縮短 26 小時，更適合自走車實時推論 (高 FPS)！"
+        "1. 精度最優解：YOLO11m P2-CBAM (800px) 達到最高 mAP (0.8740)，且注意力特徵最聚焦。\n"
+        "2. 規模權衡：S模型 精度超越 M模型，且訓練時間縮短 16 分鐘，更適合自走車實時推論 (高 FPS)！"
     )
     fig.text(0.135, 0.78, decision_text, fontsize=10, color='#1D3557', fontweight='bold',
              bbox=dict(facecolor='#F8F9FA', alpha=0.95, boxstyle='round,pad=0.8', edgecolor='#DEE2E6'))
