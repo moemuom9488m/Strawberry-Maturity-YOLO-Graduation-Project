@@ -86,14 +86,7 @@ def main():
     # 6. 圖表美化設計 (無邊框、精緻格線)
     ax1.grid(True, linestyle=':', alpha=0.6, zorder=0)
     
-    # 7. 加上決策結論浮水標籤 (加強 PPT 說服力，往上移動避免遮擋)
-    decision_text = (
-        "【關鍵決策結論】：\n"
-        "1. 精度最優解：YOLO11m P2-CBAM (800px) 達到最高 mAP (0.8740)，且注意力特徵最聚焦。\n"
-        "2. 規模權衡：S模型 精度超越 M模型，且訓練時間縮短 16 分鐘，更適合自走車實時推論 (高 FPS)！"
-    )
-    fig.text(0.14, 0.76, decision_text, fontsize=9, color='#1D3557', fontweight='bold',
-             bbox=dict(facecolor='#F8F9FA', alpha=0.95, boxstyle='round,pad=0.8', edgecolor='#DEE2E6'))
+
     
     # 8. 儲存圖片 (精準 1920*1080 像素，無裁切)
     output_dir = "evaluation_results"
