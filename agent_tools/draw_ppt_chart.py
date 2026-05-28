@@ -44,8 +44,8 @@ def main():
     x = np.arange(len(models))
     width = 0.4  # 柱子寬度
     
-    # 3. 創建畫布 (高解析度，比例適合 PPT 16:9 投影片)
-    fig, ax1 = plt.subplots(figsize=(12, 6.8), dpi=200)
+    # 3. 創建畫布 (高解析度 1920*1080)
+    fig, ax1 = plt.subplots(figsize=(9.6, 5.4), dpi=200)
     
     # 質感 HSL 漸層配色
     bar_colors = ['#4CC9F0', '#4361EE', '#FF9F1C', '#F72585']  # s_640, m_640, s_800, s_P2CBAM_800
@@ -53,7 +53,7 @@ def main():
     # 4. 繪製左軸：Best mAP@0.5 (柱狀圖)
     bars = ax1.bar(x, map50, width, color=bar_colors, alpha=0.85, edgecolor='black', linewidth=1.2, zorder=3)
     ax1.set_xlabel("評估實驗模型與影像尺寸組合", fontsize=14, labelpad=15, fontweight='bold')
-    ax1.set_ylabel("最\n佳\n偵\n測\n精\n度\n\nBest\nmAP@0.5", fontsize=14, color='#4361EE', fontweight='bold', labelpad=45, rotation=0, va='center', ha='center')
+    ax1.set_ylabel("Best\nmAP@0.5", fontsize=14, color='#4361EE', fontweight='bold', labelpad=30, rotation=0, va='center', ha='center')
     ax1.tick_params(axis='y', labelcolor='#4361EE', labelsize=12)
     ax1.set_ylim(0.78, 0.925)  # 縮小Y軸範圍以突顯精細差異並拉高天空，防止浮水框重疊
     ax1.set_xticks(x)
@@ -73,7 +73,7 @@ def main():
     line_color = '#E63946'
     line = ax2.plot(x, train_time_min, color=line_color, marker='o', markersize=10, 
                      linewidth=3, linestyle='--', label="訓練耗時 (分鐘)", zorder=4)
-    ax2.set_ylabel("計\n算\n資\n源\n成\n本\n\n訓\n練\n時\n間\n\n(min)", fontsize=14, color=line_color, fontweight='bold', labelpad=45, rotation=0, va='center', ha='center')
+    ax2.set_ylabel("訓\n練\n時\n間\n\n(min)", fontsize=14, color=line_color, fontweight='bold', labelpad=30, rotation=0, va='center', ha='center')
     ax2.tick_params(axis='y', labelcolor=line_color, labelsize=12)
     ax2.set_ylim(10, 80)
     
@@ -92,14 +92,15 @@ def main():
         "1. 精度最優解：YOLO11m P2-CBAM (800px) 達到最高 mAP (0.8740)，且注意力特徵最聚焦。\n"
         "2. 規模權衡：S模型 精度超越 M模型，且訓練時間縮短 16 分鐘，更適合自走車實時推論 (高 FPS)！"
     )
-    fig.text(0.135, 0.78, decision_text, fontsize=10, color='#1D3557', fontweight='bold',
+    fig.text(0.14, 0.76, decision_text, fontsize=9, color='#1D3557', fontweight='bold',
              bbox=dict(facecolor='#F8F9FA', alpha=0.95, boxstyle='round,pad=0.8', edgecolor='#DEE2E6'))
     
-    # 8. 儲存圖片
+    # 8. 儲存圖片 (精準 1920*1080 像素，無裁切)
     output_dir = "evaluation_results"
     os.makedirs(output_dir, exist_ok=True)
     img_path = os.path.join(output_dir, "ppt_model_selection_comparison.png")
-    plt.savefig(img_path, dpi=300, bbox_inches='tight')
+    plt.tight_layout()
+    plt.savefig(img_path, dpi=200)
     plt.close()
     print(f"[SUCCESS] 簡報專用決策圖已成功生成: {img_path}")
 
