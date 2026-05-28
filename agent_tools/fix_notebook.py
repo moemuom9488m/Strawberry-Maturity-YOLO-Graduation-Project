@@ -986,8 +986,6 @@ def fix_eval_notebook():
         "                ha='center', fontsize=11, fontweight='bold', color=line_color)\n",
         "    \n",
         "# 5. 圖表美化設計 (無邊框、精緻格線)\n",
-        "plt.title('畢業專題：草莓成熟度偵測模型抉擇與 Tradeoff 分析 (簡報與論文專用)', \n",
-        "          fontsize=18, fontweight='bold', pad=25, color='#1D3557')\n",
         "ax1.grid(True, linestyle=':', alpha=0.6, zorder=0)\n",
         "\n",
         "# 6. 加上決策結論浮水標籤 (加強 PPT 說服力，往上移動避免遮擋)\n",

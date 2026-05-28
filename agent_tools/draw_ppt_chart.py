@@ -84,8 +84,6 @@ def main():
                     ha='center', fontsize=11, fontweight='bold', color=line_color)
         
     # 6. 圖表美化設計 (無邊框、精緻格線)
-    plt.title("畢業專題：草莓成熟度偵測模型抉擇與 Tradeoff 分析 (PPT 簡報專用)", 
-              fontsize=18, fontweight='bold', pad=25, color='#1D3557')
     ax1.grid(True, linestyle=':', alpha=0.6, zorder=0)
     
     # 7. 加上決策結論浮水標籤 (加強 PPT 說服力，往上移動避免遮擋)
