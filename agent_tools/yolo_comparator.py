@@ -60,8 +60,11 @@ def smooth_curve(points, factor=0.6):
     對折線圖進行指數移動平均 (EMA) 平滑處理，以利清晰觀察指標變化趨勢。
     factor: 平滑係數，介於 0 到 1 之間。數值越高越平滑。
     """
+    # 將序列中的 inf / -inf 替換為 nan，並使用 ffill/bfill 將缺失或異常的 epoch 進行數值填補，確保曲線連續不中斷
+    points_filled = pd.Series(points).replace([np.inf, -np.inf], np.nan).ffill().bfill()
+    
     smoothed = []
-    for point in points:
+    for point in points_filled:
         if np.isnan(point):
             smoothed.append(point)
             continue
@@ -88,8 +91,8 @@ def scan_yolo_experiments(runs_dir, selected_only=True):
     target_models = [
         "exp1a_yolo11s_baseline",
         "exp1b_yolo11m_baseline",
-        "exp2b_1a_img800",
-        "exp2b_1d_img800"
+        "exp1c_yolo11s_p2cbam",
+        "exp1d_yolo11m_p2cbam"
     ]
     
     if selected_only:
@@ -209,9 +212,9 @@ def plot_comparison_graphs(experiments, output_dir, smooth_factor=0.6):
     ]
     
     # --------------------------------------------------------------------------
-    # 圖表 1：mAP50 與 mAP50-95 學習曲線對比
+    # 圖表 1：mAP50 與 mAP50-95 學習曲線對比 (合併為單一圖表)
     # --------------------------------------------------------------------------
-    fig, axes = plt.subplots(1, 2, figsize=(18, 7))
+    fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
     
     for idx, (exp_name, info) in enumerate(experiments.items()):
         df = info['data']
@@ -225,29 +228,25 @@ def plot_comparison_graphs(experiments, output_dir, smooth_factor=0.6):
         map50_smooth = smooth_curve(map50, smooth_factor)
         map50_95_smooth = smooth_curve(map50_95, smooth_factor)
         
-        # 子圖 1: mAP50
-        axes[0].plot(epochs, map50_smooth, label=exp_name, color=color, linewidth=2.0)
-        # 標出最大值位置
+        # 繪製 mAP@0.5 實線
+        ax.plot(epochs, map50_smooth, label=f"{exp_name} (mAP@0.5)", color=color, linewidth=2.0)
+        # 標出 mAP@0.5 最大值位置 (圓形點)
         best_idx = map50.idxmax()
-        axes[0].scatter(epochs[best_idx], map50[best_idx], color=color, s=80, edgecolors='black', zorder=5)
+        ax.scatter(epochs[best_idx], map50[best_idx], color=color, s=80, marker='o', edgecolors='black', zorder=5)
         
-        # 子圖 2: mAP50-95
-        axes[1].plot(epochs, map50_95_smooth, label=exp_name, color=color, linewidth=2.0)
+        # 繪製 mAP@0.5:0.95 同色虛線
+        ax.plot(epochs, map50_95_smooth, label=f"{exp_name} (mAP@0.5:0.95)", color=color, linewidth=1.8, linestyle='--')
+        # 標出 mAP@0.5:0.95 最大值位置 (方形點)
         best_idx_95 = map50_95.idxmax()
-        axes[1].scatter(epochs[best_idx_95], map50_95[best_idx_95], color=color, s=80, edgecolors='black', zorder=5)
+        ax.scatter(epochs[best_idx_95], map50_95[best_idx_95], color=color, s=60, marker='s', edgecolors='black', zorder=5)
         
-    axes[0].set_title("mAP@0.5 Learning Curves (Smooth Factor: {})".format(smooth_factor))
-    axes[0].set_xlabel("Epochs")
-    axes[0].set_ylabel("mAP50")
-    axes[0].set_ylim(0, 1.02)
-    # 使用 ncol=2 與較小字型，避免遮擋數據曲線，背景設置半透明
-    axes[0].legend(loc="lower right", frameon=True, facecolor='white', edgecolor='none', ncol=2, fontsize=8.5, framealpha=0.8)
+    ax.set_title("mAP Learning Curves (Smooth Factor: {})".format(smooth_factor), fontsize=14, fontweight='bold', pad=15)
+    ax.set_xlabel("Epochs", fontsize=12, labelpad=10)
+    ax.set_ylabel("mAP Score", fontsize=12, labelpad=10)
+    ax.set_ylim(0, 1.02)
     
-    axes[1].set_title("mAP@0.5:0.95 Learning Curves (Smooth Factor: {})".format(smooth_factor))
-    axes[1].set_xlabel("Epochs")
-    axes[1].set_ylabel("mAP50-95")
-    axes[1].set_ylim(0, 1.02)
-    axes[1].legend(loc="lower right", frameon=True, facecolor='white', edgecolor='none', ncol=2, fontsize=8.5, framealpha=0.8)
+    # 圖例移到右方外面
+    ax.legend(loc="upper left", bbox_to_anchor=(1.02, 1.0), frameon=True, facecolor='#F8F9FA', fontsize=9.5)
     
     plt.tight_layout()
     metrics_img_path = os.path.join(output_dir, 'yolo_metrics_comparison.png')
@@ -271,12 +270,12 @@ def plot_comparison_graphs(experiments, output_dir, smooth_factor=0.6):
         cls_loss_col = 'val/cls_loss' if 'val/cls_loss' in df.columns else 'train/cls_loss'
         
         if box_loss_col in df.columns:
-            box_loss_smooth = smooth_curve(df[box_loss_col].dropna(), smooth_factor)
-            axes[0].plot(epochs[:len(box_loss_smooth)], box_loss_smooth, label=exp_name, color=color, linewidth=2.0)
+            box_loss_smooth = smooth_curve(df[box_loss_col], smooth_factor)
+            axes[0].plot(epochs, box_loss_smooth, label=exp_name, color=color, linewidth=2.0)
             
         if cls_loss_col in df.columns:
-            cls_loss_smooth = smooth_curve(df[cls_loss_col].dropna(), smooth_factor)
-            axes[1].plot(epochs[:len(cls_loss_smooth)], cls_loss_smooth, label=exp_name, color=color, linewidth=2.0)
+            cls_loss_smooth = smooth_curve(df[cls_loss_col], smooth_factor)
+            axes[1].plot(epochs, cls_loss_smooth, label=exp_name, color=color, linewidth=2.0)
             
     axes[0].set_title("Bounding Box Loss Convergence ({})".format("Val" if "val" in box_loss_col else "Train"))
     axes[0].set_xlabel("Epochs")
