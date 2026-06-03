@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="sys_arch" name="System Pipeline">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="84K49Se-IS51xBXO_Yt4-17" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="200" width="780" x="-640" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="2" parent="84K49Se-IS51xBXO_Yt4-17" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffeeee;strokeColor=#aaaaaa;verticalAlign=top;align=left;spacingTop=10;spacingLeft=10;fontStyle=1;fontSize=14;fontColor=#333333;dashed=0;" value="STAGE 1: Global Mapping Layer (Mapping &amp; Pre-processing)" vertex="1">
+          <mxGeometry height="200" width="780" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="84K49Se-IS51xBXO_Yt4-17" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#000000;verticalAlign=top;spacingTop=10;" value="&lt;div style=&quot;text-align: center; font-weight: bold; margin-bottom: 8px;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;1A. Aerial Survey &amp;amp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center; font-weight: bold; margin-bottom: 8px;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Image Capture&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left; font-size: 12px; color: rgb(68, 68, 68); margin-left: 10px;&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="252.78" x="28.89" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="84K49Se-IS51xBXO_Yt4-17" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc99;strokeColor=#000000;verticalAlign=top;spacingTop=10;" value="&lt;div style=&quot;text-align: center; font-weight: bold; margin-bottom: 8px;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;1B. HSV Color Segmentation &amp;amp; Skeleton Extraction&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left; font-size: 12px; color: rgb(68, 68, 68); margin-left: 10px;&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="303.33" x="440.56" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="84K49Se-IS51xBXO_Yt4-17" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=3;fontStyle=1;fontSize=16;fontColor=#00008b;labelBackgroundColor=none;" target="4" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Global RGB Image&lt;/font&gt;">
+          <mxGeometry relative="1" y="-20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="84K49Se-IS51xBXO_Yt4-20" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="205" width="1160" x="-420" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="84K49Se-IS51xBXO_Yt4-20" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeffee;strokeColor=#aaaaaa;verticalAlign=top;align=left;spacingTop=10;spacingLeft=10;fontStyle=1;fontSize=14;fontColor=#333333;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;STAGE 3: Perception &amp;amp; Actuation Layer&lt;/font&gt;" vertex="1">
+          <mxGeometry height="205" width="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="84K49Se-IS51xBXO_Yt4-20" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccffcc;strokeColor=#000000;verticalAlign=top;spacingTop=10;" value="&lt;div style=&quot;text-align: center; font-weight: bold; font-size: 14px; margin-bottom: 8px;&quot;&gt;3A. AGV Dual-Camera Dynamic Side-view Capture&lt;/div&gt;&lt;div style=&quot;text-align: left; font-size: 12px; color: rgb(68, 68, 68); margin-left: 10px;&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="220" x="40" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="84K49Se-IS51xBXO_Yt4-20" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccffcc;strokeColor=#ff0000;strokeWidth=2;verticalAlign=top;spacingTop=10;" value="&lt;div style=&quot;text-align: center; font-weight: bold; font-size: 14px; margin-bottom: 8px;&quot;&gt;3B. YOLOv11s Perception &amp;amp; Tracking&lt;/div&gt;&lt;div style=&quot;text-align: left; font-size: 12px; color: rgb(68, 68, 68); margin-left: 10px;&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75" width="240" x="450" y="92.5" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="84K49Se-IS51xBXO_Yt4-20" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccffcc;strokeColor=#000000;verticalAlign=top;spacingTop=10;" value="&lt;div style=&quot;text-align: center; font-weight: bold; font-size: 14px; margin-bottom: 8px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;3C. Spatial Deduplication &amp;amp; Fusion&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75" width="220" x="930" y="92.5" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="84K49Se-IS51xBXO_Yt4-20" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=3;fontStyle=1;fontSize=14;fontColor=#00008b;labelBackgroundColor=none;" target="9" value="Real-time Video Stream">
+          <mxGeometry relative="1" x="-0.0526" y="20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7zpH3cNIlZOU8IQBS0Bm-18" edge="1" parent="84K49Se-IS51xBXO_Yt4-20" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" edge="1" parent="84K49Se-IS51xBXO_Yt4-20" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=3;fontStyle=1;fontSize=15;fontColor=#00008b;labelBackgroundColor=none;" target="10" value="&lt;font&gt;Maturity Feature Points&lt;/font&gt;">
+          <mxGeometry relative="1" y="20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="84K49Se-IS51xBXO_Yt4-21" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="160" width="560" x="180" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="84K49Se-IS51xBXO_Yt4-21" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffeee;strokeColor=#aaaaaa;verticalAlign=top;align=left;spacingTop=10;spacingLeft=10;fontStyle=1;fontSize=14;fontColor=#333333;" value="STAGE 4: Visualization &amp; Decision Layer" vertex="1">
+          <mxGeometry height="160" width="560" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="84K49Se-IS51xBXO_Yt4-21" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffcc;strokeColor=#b8860b;strokeWidth=2;verticalAlign=top;spacingTop=10;fontSize=15;" value="&lt;div style=&quot;text-align: center; font-weight: bold; margin-bottom: 8px;&quot;&gt;4. Interactive Digital Twin Dashboard&lt;/div&gt;&lt;div style=&quot;text-align: left; color: rgb(68, 68, 68); margin-left: 10px;&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="45" width="370" x="95" y="57.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7zpH3cNIlZOU8IQBS0Bm-27" edge="1" parent="1" source="10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=0;strokeWidth=3;" target="11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7zpH3cNIlZOU8IQBS0Bm-28" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=0;strokeWidth=3;fontSize=12;" target="5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-48" y="310" />
+              <mxPoint x="-225" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="84K49Se-IS51xBXO_Yt4-28" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="140" width="433.4615384615384" x="-473.46" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="84K49Se-IS51xBXO_Yt4-28" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eedeec;strokeColor=#aaaaaa;verticalAlign=top;align=left;spacingTop=10;spacingLeft=10;fontStyle=1;fontSize=14;fontColor=#333333;" value="STAGE 2: Navigation Strategy Layer (Planning)" vertex="1">
+          <mxGeometry height="140" width="433.4615384615384" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="84K49Se-IS51xBXO_Yt4-28" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6ccff;strokeColor=#8b008b;strokeWidth=2;verticalAlign=top;spacingTop=10;align=center;" value="&lt;div style=&quot;font-weight: bold; margin-bottom: 8px;&quot;&gt;&lt;span style=&quot;font-size: 18px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;2. CCPP Full Coverage Path Planning&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="66" width="336.8880769230769" x="48.29115384615386" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="84K49Se-IS51xBXO_Yt4-31" parent="1" style="text;whiteSpace=wrap;fontSize=18;" value="Inspection Waypoints (coverage_path)" vertex="1">
+          <mxGeometry height="40" width="180" x="-674" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="84K49Se-IS51xBXO_Yt4-32" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=-0.002;exitY=0.397;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;curved=0;exitPerimeter=0;" target="8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-500" y="430" />
+              <mxPoint x="-500" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="Grid Map (farm_grid_map.csv)" link="Grid Map (farm_grid_map.csv)" id="84K49Se-IS51xBXO_Yt4-30">
+          <mxCell parent="1" style="text;whiteSpace=wrap;fontSize=17;" vertex="1">
+            <mxGeometry height="40" width="250" x="-170" y="320" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="84K49Se-IS51xBXO_Yt4-35" parent="1" style="text;whiteSpace=wrap;fontSize=18;" value="Strawberry Count &amp; Location" vertex="1">
+          <mxGeometry height="40" width="241" x="470" y="394" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
