@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{geometry}
+\usepackage{tabularx} 
+\geometry{a4paper, margin=1in, landscape}
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+\caption{Hyperparameter settings for YOLOv11 Phase 1 and Phase 2 training models.}
+\label{tab:yolo_hyperparameters}
+\begin{threeparttable}
+\small 
+
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{llcccccc}
+\toprule
+\textbf{Model Variant} & \textbf{Config (.yaml)} & \textbf{Weights Source} & \textbf{Batch Size} & \textbf{Image Size} & \textbf{Epochs} & \textbf{Freeze} & \textbf{lr0} \\
+\midrule
+YOLO11s Baseline (Ph1) & Default & yolo11s.pt & 32 & 640 & 300 & 0 & 0.01 \\
+YOLO11m Baseline (Ph1) & Default & yolo11m.pt & 16 & 640 & 300 & 0 & 0.01 \\
+YOLO11s P2-CBAM (Ph1)  & yolo11-strawberry-p2-cbam-s.yaml & yolo11s.pt & 16 & 640 & 300 & 0 & 0.01 \\
+YOLO11m P2-CBAM (Ph1)  & yolo11-strawberry-p2-cbam-m.yaml & yolo11m.pt & 12 & 640 & 300 & 0 & 0.01 \\
+\midrule
+YOLO11s Baseline (Ph2) & Default & Ph1 Best & 96 & 640 & 150 & 10 & 0.005 \\
+YOLO11s Baseline (Ph2) & Default & Ph1 Best & 72 & 800 & 150 & 10 & 0.005 \\
+YOLO11s Baseline (Ph2) & Default & Ph1 Best & 32 & 1024 & 150 & 10 & 0.005 \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+\small
+\item \textit{Note:} All models were trained using the AdamW optimizer (seed = 42, patience = 100). Default loss weights (box = 7.5, cls = 0.5, dfl = 1.5) and standard YOLOv11 data augmentation settings were applied.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\end{document}

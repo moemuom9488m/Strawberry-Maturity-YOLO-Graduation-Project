@@ -62,6 +62,8 @@ tea_debug.log
 venv/
 env/
 training_logs/*.log
+*.aux
+*.log
 *.pptx
 cell_output.txt
 

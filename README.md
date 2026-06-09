@@ -58,6 +58,11 @@
     開啟 `路徑規劃&模擬地圖/SAM2D+CCPP路徑規劃.ipynb` 進行模擬。
 4.  **影片偵測**:
     執行 `影片偵測.ipynb` 對錄製好的草莓田影片進行分析。
+5.  **學術超參數表格編譯 (LaTeX)**:
+    使用 `pdflatex` 指令將 LaTeX 表格原始碼編譯生成學術排版 PDF：
+    ```bash
+    pdflatex yolo_hyperparameters_table.tex
+    ```
 
 ---
 
