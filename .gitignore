@@ -81,3 +81,6 @@ gha-creds-*.json
 # 9. Gradio 展示系統相關檔案 (依要求不進 Git)
 agent_tools/gradio_yolo_app.py
 agent_tools/gradio_deployment/
+
+# 10. 口試意見與機密文件 (機密防護不進 Git)
+口試意見書_*.png

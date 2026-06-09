@@ -272,8 +272,192 @@ def fix_tradeoff_cell():
         json.dump(nb, f, indent=1, ensure_ascii=False)
     print(f"✅ 已成功將 模型評估與特徵視覺化.ipynb 索引 {target_idx} 的 cell 更新為四個 exp1 比較對照圖！")
 
+def merge_stage1_cells():
+    notebook_path = r"d:\銘澄專區\畢業專題工作區\yolo訓練程式碼.ipynb"
+    if not os.path.exists(notebook_path):
+        print(f"❌ 找不到目標檔案: {notebook_path}")
+        return
+
+    with open(notebook_path, 'r', encoding='utf-8') as f:
+        nb = json.load(f)
+
+    # 尋找包含 一階段 訓練特徵的 cells
+    cells = nb.get('cells', [])
+    stage1_cell_indices = []
+    for idx, cell in enumerate(cells):
+        if cell.get('cell_type') == 'code':
+            source_text = "".join(cell.get('source', []))
+            if "yolo訓練程式碼 (一階段)" in source_text or "yolo訓練程式碼 (一階段：基礎訓練)" in source_text:
+                stage1_cell_indices.append(idx)
+
+    print(f"🔍 找到一階段訓練 Cell 索引: {stage1_cell_indices}")
+    if len(stage1_cell_indices) == 0:
+        print("❌ 未在筆記本中找到任何一階段訓練 Cell")
+        return
+
+    # 我們要把第一個一階段的 cell 替換成合併後的代碼
+    first_idx = stage1_cell_indices[0]
+    
+    merged_source = [
+        "# yolo訓練程式碼 (一階段：基礎訓練)\n",
+        "import os, torch, gc, sys, logging, warnings\n",
+        "from ultralytics import YOLO\n",
+        "from ultralytics.utils import DEFAULT_CFG_DICT\n",
+        "from agent_tools import error_logger, yolo_utils\n",
+        "\n",
+        "# --- 🌟 初始化：環境優化與自定義模組 ---\n",
+        "yolo_utils.register_yolo_modules()\n",
+        "warnings.filterwarnings(\"ignore\", message=\".*deterministic.*\")\n",
+        "warnings.filterwarnings(\"ignore\", category=UserWarning)\n",
+        "try:\n",
+        "    torch.use_deterministic_algorithms(False)\n",
+        "except Exception:\n",
+        "    pass\n",
+        "\n",
+        "# --- 🛡️ 強制恢復日誌顯示 ---\n",
+        "logging.getLogger(\"ultralytics\").setLevel(logging.INFO)\n",
+        "os.environ[\"YOLO_VERBOSE\"] = \"True\"\n",
+        "\n",
+        "# --- 🛡️ 環境隔離 ---\n",
+        "sys.argv = [sys.argv[0]]\n",
+        "\n",
+        "\n",
+        "def validate_train_kwargs(train_kwargs, stage_name):\n",
+        "    unsupported = [name for name in train_kwargs if name not in DEFAULT_CFG_DICT]\n",
+        "    if unsupported:\n",
+        "        raise ValueError(f\"{stage_name} 發現不支援的 YOLO 參數: {unsupported}\")\n",
+        "    print(f\"✅ {stage_name} 參數名稱全部符合目前 ultralytics 版本\")\n",
+        "\n",
+        "\n",
+        "def count_cbam_modules(model):\n",
+        "    return sum(1 for module in model.model.modules() if module.__class__.__name__ == 'CBAM')\n",
+        "\n",
+        "\n",
+        "if __name__ == '__main__':\n",
+        "    # 1. 顯存與變數清理\n",
+        "    model = None\n",
+        "    if 'model' in globals() and model is not None:\n",
+        "        del model\n",
+        "    gc.collect()\n",
+        "    if torch.cuda.is_available():\n",
+        "        torch.cuda.empty_cache()\n",
+        "        DEVICE_ID = 0\n",
+        "        print(f\"🔥 使用 GPU: {torch.cuda.get_device_name(0)}\")\n",
+        "    else:\n",
+        "        DEVICE_ID = 'cpu'\n",
+        "\n",
+        "    # =========================================================================\n",
+        "    # ⚙️ 訓練設定：請選擇模型等級 ('s' 或 'm')\n",
+        "    # =========================================================================\n",
+        "    MODEL_SCALE = 'm'  # ⭐ 預設使用 M 版本模型 (根據實驗結果精度較優)\n",
+        "    DATA_YAML_PATH = \"yolo_data/data.yaml\"\n",
+        "\n",
+        "    # 1️⃣ 共用基礎參數 (兩者大部份引數相同)\n",
+        "    train_kwargs = {\n",
+        "        'data': DATA_YAML_PATH,\n",
+        "        'epochs': 300,\n",
+        "        'imgsz': 640,\n",
+        "        'device': DEVICE_ID,\n",
+        "        'workers': 4,\n",
+        "        'optimizer': 'AdamW',\n",
+        "        'lr0': 0.001,\n",
+        "        'weight_decay': 0.001,\n",
+        "        'cos_lr': True,\n",
+        "        'cls': 0.8,\n",
+        "        'multi_scale': False,\n",
+        "        'plots': True,\n",
+        "        'verbose': True,\n",
+        "        'mosaic': 1.0,\n",
+        "        'hsv_v': 0.4,\n",
+        "        'warmup_epochs': 3.0,\n",
+        "        'close_mosaic': 30,\n",
+        "    }\n",
+        "\n",
+        "    # 2️⃣ S 與 M 模型的差異化設定對照表\n",
+        "    MODEL_SETTINGS = {\n",
+        "        's': {\n",
+        "            'cfg': \"yolo11-strawberry-p2-cbam-s.yaml\",\n",
+        "            'weights': \"yolo11s.pt\",\n",
+        "            'batch': 32,\n",
+        "            'patience': 30,\n",
+        "            'box': 15.0,\n",
+        "            'mixup': 0.2,\n",
+        "            'copy_paste': 0.02,\n",
+        "            'scale': 0.5,\n",
+        "            'degrees': 10.0,\n",
+        "            'fliplr': 0.5,\n",
+        "            'hsv_h': 0.015,\n",
+        "            'hsv_s': 0.7,\n",
+        "            'name': 'exp1c_yolo11s_p2cbam'\n",
+        "        },\n",
+        "        'm': {\n",
+        "            'cfg': \"yolo11-strawberry-p2-cbam-m.yaml\",\n",
+        "            'weights': \"yolo11m.pt\",\n",
+        "            'batch': 16,\n",
+        "            'patience': 100,\n",
+        "            'box': 7.5,\n",
+        "            'mixup': 0.1,\n",
+        "            'copy_paste': 0.0,\n",
+        "            'scale': 0.5,\n",
+        "            'degrees': 0.0,\n",
+        "            'fliplr': 0.5,\n",
+        "            'hsv_h': 0.015,\n",
+        "            'hsv_s': 0.5,\n",
+        "            'name': 'exp1d_yolo11m_p2cbam'\n",
+        "        }\n",
+        "    }\n",
+        "\n",
+        "    scale_key = MODEL_SCALE.lower()\n",
+        "    if scale_key not in MODEL_SETTINGS:\n",
+        "        raise ValueError(f\"不支援的模型等級: {MODEL_SCALE}，僅支援 's' 或 'm'\")\n",
+        "\n",
+        "    # 3️⃣ 套用對應模型的專屬參數\n",
+        "    settings = MODEL_SETTINGS[scale_key]\n",
+        "    MODEL_CFG = settings['cfg']\n",
+        "    PRETRAINED_WEIGHTS = settings['weights']\n",
+        "\n",
+        "    train_kwargs.update({\n",
+        "        'batch': settings['batch'],\n",
+        "        'patience': settings['patience'],\n",
+        "        'box': settings['box'],\n",
+        "        'mixup': settings['mixup'],\n",
+        "        'copy_paste': settings['copy_paste'],\n",
+        "        'scale': settings['scale'],\n",
+        "        'degrees': settings['degrees'],\n",
+        "        'fliplr': settings['fliplr'],\n",
+        "        'hsv_h': settings['hsv_h'],\n",
+        "        'hsv_s': settings['hsv_s'],\n",
+        "        'name': settings['name'],\n",
+        "    })\n",
+        "\n",
+        "    try:\n",
+        "        validate_train_kwargs(train_kwargs, f'Stage 1 ({MODEL_SCALE.upper()})')\n",
+        "\n",
+        "        # 3. 建立模型：明確指定自訂架構 YAML\n",
+        "        model = YOLO(MODEL_CFG).load(PRETRAINED_WEIGHTS)\n",
+        "        print(f\"\\n🚀 啟動一階段基礎訓練：{MODEL_CFG} (等級: {MODEL_SCALE.upper()})\")\n",
+        "        print(f\"📐 Stage 1 採用的模型來源: {MODEL_CFG} + {PRETRAINED_WEIGHTS}\")\n",
+        "        print(f\"📐 Stage 1 目前 CBAM 模組數量: {count_cbam_modules(model)}\")\n",
+        "\n",
+        "        # 4. 啟動訓練\n",
+        "        model.train(**train_kwargs)\n",
+        "        print(\"\\n✨ 一階段基礎訓練順利結束！\")\n",
+        "    except Exception as e:\n",
+        "        error_logger.log_error(e, context=f\"YOLO 一階段基礎訓練 ({MODEL_SCALE.upper()})\")\n",
+        "        raise"
+    ]
+
+    # 更新第一個 cell，並刪除第二個 cell
+    nb['cells'][first_idx]['source'] = merged_source
+    for second_idx in reversed(stage1_cell_indices[1:]):
+        nb['cells'].pop(second_idx)
+        
+    with open(notebook_path, 'w', encoding='utf-8') as f:
+        json.dump(nb, f, indent=1, ensure_ascii=False)
+    print("✅ 已成功合併 YOLO訓練程式碼.ipynb 中的兩個一階段訓練 Cell！")
+
 if __name__ == '__main__':
-    fix_tradeoff_cell()
+    merge_stage1_cells()
 
 
 
