@@ -7,7 +7,7 @@ from agent_tools import yolo_utils
 # ── 1. 全域常數設定 ──
 RUNS_DIR = "runs/detect"
 BEST_WEIGHTS_DIR = "best_weights"
-LOG_DIR = "training_logs"
+LOG_DIR = "logs"
 PROJECT_NAME = "Strawberry_YOLOv11_4060ti"
 
 # WandB 設定

@@ -1,9 +1,10 @@
+# -*- coding: utf-8 -*-
 """
 error_logger.py
 ===============
 全局錯誤日誌記錄工具，供整個專案（包含訓練、影片偵測等）使用。
 每次呼叫 log_error() 時會：
-  1. 將完整 traceback 寫入 training_logs/detection_errors.log
+  1. 將完整 traceback 寫入 logs/detection_errors.log
   2. 在 console 印出簡短提示
 """
 
@@ -11,8 +12,8 @@ import os
 import traceback
 import datetime
 
-# 日誌存放資料夾（退回上一層專案根目錄，存入 training_logs）
-LOG_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "training_logs")
+# 日誌存放資料夾（退回上一層專案根目錄，存入 logs）
+LOG_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "logs")
 LOG_FILE = os.path.join(LOG_DIR, "detection_errors.log")
 
 

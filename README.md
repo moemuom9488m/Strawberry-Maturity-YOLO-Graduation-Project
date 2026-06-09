@@ -23,7 +23,7 @@
 ## 📂 資料夾結構
 - `agent_tools/`: 存放 AI 代理撰寫的輔助腳本與演算法工具。
 - `best_weights/`: 存放經過驗證的最佳模型權重 (`.pt`)。
-- `training_logs/`: 集中存放所有訓練日誌與系統錯誤 Log。
+- `logs/`: 集中存放所有訓練日誌與系統錯誤 Log。
 - `路徑規劃&模擬地圖/`:
     - `ccpp_planner.py`: CCPP 全覆蓋路徑規劃核心模組。
     - `ccpp_test.ipynb`: CCPP 模擬與中心線路徑測試（包含輕量化 HSV+骨架化提取實行）。

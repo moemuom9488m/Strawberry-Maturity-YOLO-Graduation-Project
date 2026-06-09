@@ -61,7 +61,7 @@ tea_debug.log
 .env
 venv/
 env/
-training_logs/*.log
+logs/*.log
 *.aux
 *.log
 *.pptx
