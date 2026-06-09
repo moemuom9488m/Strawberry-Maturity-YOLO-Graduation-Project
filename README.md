@@ -66,24 +66,30 @@
 
 ---
 
-## 📊 實驗評估與決策對照 (Experimental Results)
+## 📊 實驗評估與模型排行榜 (Experimental Results & Leaderboard)
 
-為確保巡檢自走車在戶外自然環境下具備最優的草莓成熟度偵測精準度與運算效率，我們針對 YOLOv11 進行了多維度對照實驗。以下為我們為簡報與實車部署精選的 4 組核心模型數據對比：
+本專案所有 YOLO 訓練實驗數據均遵循單一事實來源，以 [實驗結果.md](實驗結果.md) 的排行榜為準。以下是精選的核心模型精度表現與排行榜：
 
-| 評估模型名稱 (YOLO Model) | 輸入影像尺寸 (Resolution) | 最佳精度 Best mAP@0.5 | 綜合精度 Best mAP@0.5:0.95 | 訓練耗時 (Time Cost) |
-| :--- | :---: | :---: | :---: | :---: |
-| 🏆 **exp2b_1d_img800** (P2-CBAM) | 800 x 800 px | **0.8749** | 0.6258 | 86.8 hr |
-| 🥈 **exp1a_yolo11s_baseline** (S基準) | 640 x 640 px | **0.8699** | 0.6284 | 63.9 hr |
-| 🥉 **exp2b_1a_img800** (S基準) | 800 x 800 px | **0.8692** | **0.6438** | 65.6 hr |
-| ❌ **exp1b_yolo11m_baseline** (M基準) | 640 x 640 px | **0.8648** | 0.4389 | 89.8 hr |
+### 🏆 核心模型排行榜 (精選自 [實驗結果.md](實驗結果.md))
 
+| 排名 | 訓練名稱 / 權重檔案 | 影像尺寸 (imgsz) | 最佳 mAP50 (偵測率) | 最佳 mAP50-95 (綜合精度) | 備註 / 實車部署與簡報定位 |
+| :---: | :--- | :---: | :---: | :---: | :--- |
+| 🥇 **1** | `train1` (Legacy Champion) | 640 px | **0.89500** | **0.69729** | **歷史表現最優**，口試與論文展示首選。收錄於 `best_weights/best_train1_legacy_20260505.pt` |
+| 🥈 **2** | `train3` (Legacy) | 640 px | 0.88359 | 0.67133 | 綜合表現次優。收錄於 `best_weights/best_train3_legacy_20260505.pt` |
+| 🥉 **3** | `exp2b_1a_img800` (S Baseline) | 800 px | 0.86921 | 0.64423 | **實車巡檢 FPS 優化首選**。收錄於 `best_weights/best_exp2b_img800_20260505.pt` |
+| **4** | `exp2a_1a_img640` (S Baseline) | 640 px | 0.86571 | 0.63694 | 一階段 Baseline 微調（640px 控制組） |
+| **7** | `exp2b_1d_img800` (P2-CBAM) | 800 px | 0.87493 | 0.63063 | YOLO11m 注意力機制優化（簡報主推部署對照） |
+
+* 完整 13 組實驗的歷史排行榜、精確率 (Precision) 與召回率 (Recall) 數據詳見：[實驗結果.md](實驗結果.md)
 * 完整對照實驗報告及 Loss 收斂折線圖詳見：[yolo_experiments_comparison.md](evaluation_results/yolo_experiments_comparison.md)
 
-### 📈 雙 Y 軸 Tradeoff 決策分析圖
-我們針對上述核心模型，繪製了精度 (mAP@0.5) 與計算耗時 (Hours) 的雙 Y 軸對照圖，做為自走車實車部署（選定 **YOLO11s P2-CBAM 800px**）的科學依據：
+### 📈 雙 Y 軸 Tradeoff 決策分析與部署選擇
+為了平衡實車巡檢的精度與算力，我們針對 Baseline 與注意力改進模型進行了 Tradeoff 決策分析：
 *   **決策圖實體路徑**：[evaluation_results/ppt_model_selection_comparison.png](evaluation_results/ppt_model_selection_comparison.png)
 
 ![簡報專用模型選擇與 Tradeoff 對比圖](evaluation_results/ppt_model_selection_comparison.png)
+
+自走車巡檢系統最終選用 **YOLO11s P2-CBAM (800px)** 或 **train1 (640px)** 作為實車部署的核心，確保在 RTX 4060 Ti 上能夠流暢運行並獲得精確的成熟度辨識結果。
 
 ---
 
