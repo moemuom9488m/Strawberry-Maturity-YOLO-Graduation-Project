@@ -32,8 +32,11 @@
 * **局部避障**: 光達 (LiDAR) 回傳的數據應作為 Costmap 的動態權重，若路徑阻斷，CCPP 必須在 100ms 內完成重新規劃。
 
 ### 3. 專案目錄與檔案管理
-*   **腳本收納**: 所有由 Agent 撰寫或維護的輔助腳本 (如 `error_logger.py`, `yolo_utils.py`) 必須統一放置於 `agent_tools/` 資料夾，維持根目錄整潔。Jupyter Notebook 必須透過 `from agent_tools import ...` 來呼叫這些工具。
-*   **筆記本維護規範**: 針對 `.ipynb` 檔案的任何一次性修改或修復，Agent 必須統一使用 `agent_tools/fix_notebook.py` 作為執行媒介，嚴禁產生如 `update_xxx.py` 等冗餘的一次性腳本。**且在每次讀取、修改或執行筆記本前，必須主動優先預防性調用 `fix_notebook.py` 進行代碼結構標準化與防衝突處理，防範編碼錯誤或 Kernel 假死。**
+*   **腳本收納**: 所有由 Agent 撰寫或維護的輔助腳本必須統一放置於 `agent_tools/` 資料夾，維持根目錄整潔。Jupyter Notebook 必須透過 `from agent_tools import ...` 來呼叫這些工具。此目錄下僅允許保留以下三個主要方向之核心工具，其餘單次任務腳本在執行完畢後必須立即刪除：
+    1. **核心感知與部署展示**：如 `gradio_yolo_app.py` (實車推論 App)、`maturity_dashboard.py` (數位孿生看板)、`gradcam_utils.py` (特徵圖計算)。
+    2. **YOLO 模型維護與比對**：如 `yolo_comparator.py` (排行榜自動生成器)、`yolo_utils.py` (自定義層註冊)。
+    3. **開發運作維護與分析**：如 `error_logger.py` (全局異常監控)、`fix_notebook.py` (筆記本標準化與修復)、`dataset_analyzer.py` (資料集分析)、`clear_notebook_outputs.py` (清理輸出利於 Git 提交)。
+*   **筆記本維護規範**: 針對 `.ipynb` 檔案的任何一次性修改或修復，Agent 必須統一使用 `agent_tools/fix_notebook.py` 作為執行媒介，嚴禁產生如 `update_xxx.py` 等冗餘的一次性腳本。**且在每次讀取、修改或執行筆記本前，必須主動優先預防性調用 `fix_notebook.py` 進行代碼結構標準化與防衝突處理，防範編碼錯誤或 Kernel 假死。此外，`fix_notebook.py` 腳本本身必須秉持單一職責與極簡原則，僅保留最新一次需求的修復內容，禁止堆積過時或冗餘的歷史修復邏輯。**
 *   **預防性編碼與環境校正**: 在 Windows 系統下執行任何終端機指令（如 `git`）、Python 腳本或筆記本前，必須預先於終端機宣告環境變數（如 `$env:PYTHONIOENCODING="utf-8"` 與 `[Console]::OutputEncoding = [System.Text.Encoding]::UTF8`）。所有由 Agent 撰寫或維護的 `.py` 檔案最頂端必須強制包含 `# -*- coding: utf-8 -*-` 宣告，以徹底消滅 Windows CP950 系統解碼衝突。
 *   **日誌集中**: 所有的維護日誌 (`.md`) 與全域報錯日誌 (`detection_errors.log`) 必須統一存放於 `logs/`。
 *   **權重保護**: 實車部署用的最佳權重，必須從 `runs/` 中抽出並集中存放在 `best_weights/` 以防覆蓋。

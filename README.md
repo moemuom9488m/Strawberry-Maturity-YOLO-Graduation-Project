@@ -89,7 +89,7 @@
 
 ![簡報專用模型選擇與 Tradeoff 對比圖](evaluation_results/ppt_model_selection_comparison.png)
 
-自走車巡檢系統最終選用 **YOLO11s P2-CBAM (800px)** 或 **train1 (640px)** 作為實車部署的核心，確保在 RTX 4060 Ti 上能夠流暢運行並獲得精確的成熟度辨識結果。
+自走車巡檢系統最終選用 **YOLO11s Baseline (800px)**（即 `exp2b_1a_img800`，實車巡檢 FPS 優化首選）或 **train1 (640px)** 作為實車部署的核心，確保在 RTX 4060 Ti 上能夠流暢運行並獲得精確的成熟度辨識結果。
 
 ---
 

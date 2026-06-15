@@ -1,6 +1,6 @@
 # 🍓 草莓成熟度監測：YOLOv11 超參數設定手冊
 
-![YOLO11s/m Baseline vs. P2-CBAM Parameter Comparison (Academic Table)](yolo_parameter_academic_comparison.png)
+![YOLO11s/m Baseline vs. P2-CBAM Parameter Comparison (Academic Table)](C:\Users\0419mch\.openclaw\reports\hallucination_20260602\yolo_parameter_academic_comparison.png)
 
 本手冊整理了 **畢業專題：草莓成熟度監測自走車** 中所進行的四個對照模型（官方標準 Baseline 與 P2-CBAM 論文改進架構，各包含 S 與 M 版本）的核心訓練參數對照。**本手冊參數與 [train_all.py](train_all.py) 以及二階段訓練腳本 [train_phase2_1a_lite.py](train_phase2_1a_lite.py) 完全對齊一致。**
 
